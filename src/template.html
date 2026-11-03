@@ -299,9 +299,14 @@ header.top .btn,.studyhead .btn{font-size:15px}
 
 @media (max-width:1180px){.mascot{width:84px}.mascot>svg{width:84px;height:112px}}
 @media (max-width:760px){
-  .mascot{left:auto;right:6px;width:70px}.mascot>svg{width:70px;height:94px}.mascot .bubble{left:auto;right:0}.mascot .bubble::after{left:auto;right:20px}
+  .mascot{position:relative;left:auto;bottom:auto;width:auto;display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:18px auto 0}
+  .mascot>svg{width:78px;height:104px}
+  .mascot .bubble{position:relative;bottom:auto;left:auto;order:2;opacity:1;transform:none;margin-bottom:40px;min-width:0;max-width:200px}
+  .mascot .bubble::after{left:-14px;bottom:12px;border-top-color:transparent;border-right-color:#fff}
+  .home-doll{position:relative;right:auto;bottom:auto;width:auto;display:flex;flex-direction:column;align-items:center;margin:4px auto -14px}
+  .home-doll .bubble{position:relative;top:auto;right:auto;max-width:220px}
   .btn.big{min-width:0;flex:1 1 30%;padding:10px 8px}.btn.big kbd{display:none}
-  .today{padding-right:22px!important;padding-bottom:140px!important}.flash{height:320px}
+  .today{padding-right:22px!important}.flash{height:320px}
 }
 /* ---------- modal / misc ---------- */
 .timer:empty{display:none}
@@ -575,10 +580,15 @@ function idb(){return new Promise((ok,no)=>{const r=indexedDB.open('onTiengTrung
 async function kvGet(k){const db=await idb();return new Promise(ok=>{const q=db.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>ok(q.result);q.onerror=()=>ok(null)})}
 async function kvSet(k,v){const db=await idb();return new Promise(ok=>{const t=db.transaction('kv','readwrite');t.objectStore('kv').put(v,k);t.oncomplete=ok;t.onerror=ok})}
 function fileSaveSoon(){if(fileState!=='on')return;clearTimeout(fileTimer);fileTimer=setTimeout(writeFile,Date.now()-lastFileSave>15000?800:8000)}
+let writing=false,writeAgain=false;
 async function writeFile(){
   if(!fh||fileState!=='on')return;
+  if(writing){writeAgain=true;return}          // đang ghi thì đợi xong rồi ghi tiếp, không ghi chồng
+  writing=true;
   try{const w=await fh.createWritable();await w.write(JSON.stringify(store));await w.close();lastFileSave=Date.now();showFileStatus()}
-  catch(e){fileState='need';showFileStatus()}
+  catch(e){let p='prompt';try{p=await fh.queryPermission({mode:'readwrite'})}catch(x){}
+    if(p!=='granted'){fileState='need';showFileStatus()}}  // chỉ hỏi lại quyền khi thật sự mất quyền
+  finally{writing=false;if(writeAgain){writeAgain=false;writeFile()}}
 }
 async function readFileStore(){const f=await fh.getFile();const t=await f.text();if(!t.trim())return null;const o=JSON.parse(t);return o&&o.p&&o.s?o:null}
 // dùng dữ liệu mới hơn giữa trình duyệt và file
