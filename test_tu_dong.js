@@ -91,8 +91,8 @@ ok('Không có lỗi JavaScript',errs.length===0,errs.join(' | '));
 // --- mobile
 const m=await b.newPage({viewport:{width:390,height:800},deviceScaleFactor:2,hasTouch:true});
 await m.route('https://script.google.com/**',r=>r.fulfill({status:200,body:'ok'}));const merrs=[];m.on('pageerror',e=>merrs.push(e.message));
-await m.goto(url);await m.waitForTimeout(500);await m.screenshot({path:'mob1.png'});
-await m.click('.lesson >> nth=0');await m.waitForTimeout(400);await m.screenshot({path:'mob2.png'});
+await m.goto(url);await m.waitForTimeout(500);await m.screenshot({path:require('path').join(__dirname,'dist','test_mob1.png')});
+await m.click('.lesson >> nth=0');await m.waitForTimeout(400);await m.screenshot({path:require('path').join(__dirname,'dist','test_mob2.png')});
 const overlap=await m.evaluate(()=>{const a=document.querySelector('#mascot').getBoundingClientRect();return [...document.querySelectorAll('.fc-actions .btn')].some(btn=>{const r=btn.getBoundingClientRect();return !(r.right<a.left||r.left>a.right||r.bottom<a.top||r.top>a.bottom)})});
 ok('Điện thoại: búp bê không che nút',!overlap);
 const hscroll=await m.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);ok('Điện thoại: không bị tràn ngang',!hscroll);
