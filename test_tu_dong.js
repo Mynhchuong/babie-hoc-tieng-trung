@@ -1,10 +1,11 @@
+// Test tự động toàn bộ app: npm test  (cần: npm install, chạy python3 build.py trước)
 const {chromium}=require('playwright');
 const url='file://'+require('path').resolve(__dirname,'dist/On_Tieng_Trung.html');
 const results=[];const ok=(name,cond,info='')=>results.push(`${cond?'✅':'❌'} ${name}${info?' — '+info:''}`);
 (async()=>{
 const b=await chromium.launch();
 const ctx=await b.newContext({viewport:{width:1300,height:850}});
-const p=await ctx.newPage();const errs=[];p.on('pageerror',e=>errs.push(e.message));p.on('console',m=>{if(m.type()==='error')errs.push('console: '+m.text())});
+const p=await ctx.newPage();await p.route('https://script.google.com/**',r=>r.fulfill({status:200,body:'ok'}));const errs=[];p.on('pageerror',e=>errs.push(e.message));p.on('console',m=>{if(m.type()==='error')errs.push('console: '+m.text())});
 await p.goto(url);await p.waitForTimeout(600);
 ok('Trang chủ hiển thị 15 bài',(await p.$$('.lesson')).length===15);
 // mở từng bài, đếm từ
@@ -89,7 +90,7 @@ ok('Lưu tiến độ sau khi tải lại trang',known1===known2&&known2>0,known
 ok('Không có lỗi JavaScript',errs.length===0,errs.join(' | '));
 // --- mobile
 const m=await b.newPage({viewport:{width:390,height:800},deviceScaleFactor:2,hasTouch:true});
-const merrs=[];m.on('pageerror',e=>merrs.push(e.message));
+await m.route('https://script.google.com/**',r=>r.fulfill({status:200,body:'ok'}));const merrs=[];m.on('pageerror',e=>merrs.push(e.message));
 await m.goto(url);await m.waitForTimeout(500);await m.screenshot({path:'mob1.png'});
 await m.click('.lesson >> nth=0');await m.waitForTimeout(400);await m.screenshot({path:'mob2.png'});
 const overlap=await m.evaluate(()=>{const a=document.querySelector('#mascot').getBoundingClientRect();return [...document.querySelectorAll('.fc-actions .btn')].some(btn=>{const r=btn.getBoundingClientRect();return !(r.right<a.left||r.left>a.right||r.bottom<a.top||r.top>a.bottom)})});

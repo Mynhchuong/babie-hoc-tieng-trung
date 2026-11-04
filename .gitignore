@@ -1,4 +1,6 @@
 dist/
 __pycache__/
 .DS_Store
+node_modules/
+package-lock.json
 windows/he_thong/che_do.txt

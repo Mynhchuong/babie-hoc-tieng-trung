@@ -1,5 +1,10 @@
 # Halken nhắc Babie học tiếng Trung — mã nguồn
 
+## Mở bằng VS Code
+- `Cmd+Shift+B` → **Build bộ cài** (ra `dist/Babie_hoc_tieng_Trung.zip`)
+- `Cmd+Shift+P` → *Tasks: Run Task* → **Xem thử app** / **Chạy test tự động** / **Mở thư mục dist**
+- Lần đầu chạy test: `npm install && npx playwright install chromium`
+
 ## Cập nhật bản mới (3 bước)
 1. Sửa cái cần sửa:
    - Từ vựng: `data/*.txt` (mỗi cuốn 1 file)

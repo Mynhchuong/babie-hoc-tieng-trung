@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🎀 Build bộ cài",
+      "type": "shell",
+      "command": "python3 build.py",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "👀 Xem thử app",
+      "type": "shell",
+      "command": "python3 build.py && open dist/On_Tieng_Trung.html",
+      "problemMatcher": []
+    },
+    {
+      "label": "✅ Chạy test tự động",
+      "type": "shell",
+      "command": "python3 build.py && npm test",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "📦 Mở thư mục dist (gửi cho bồ)",
+      "type": "shell",
+      "command": "open dist",
+      "problemMatcher": []
+    }
+  ]
+}
