@@ -1,0 +1,47 @@
+/* ---------- home dashboard ---------- */
+.dash{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;margin-bottom:22px}
+.today{padding:20px 22px;display:flex;gap:20px;align-items:center}
+.today h3{margin:0 0 2px;font-family:var(--fun);font-weight:800;font-size:24px;color:#fff;text-shadow:0 2px 0 rgba(180,20,100,.5)}
+.today p{margin:0 0 12px;font-size:14px;color:#fff;font-weight:600}
+.ring{--p:0;width:128px;height:128px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:conic-gradient(#fff calc(var(--p)*1%),rgba(255,255,255,.3) 0);box-shadow:0 0 0 4px var(--gold),0 5px 0 4px var(--brown)}
+.ring>div{width:96px;height:96px;border-radius:50%;background:linear-gradient(180deg,#ff6fb5,#e0218a);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 4px 0 rgba(255,255,255,.35)}
+.ring b{font-family:var(--fun);font-size:36px;color:#fff;line-height:1}
+.ring span{font-size:11px;color:#ffe3f1;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,auto);gap:4px 16px;font-size:12px;color:#fff;justify-content:start;font-weight:600}
+.stats b{display:block;font-family:var(--fun);font-weight:800;font-size:24px;color:#fff;line-height:1.1;text-shadow:0 2px 0 rgba(180,20,100,.5)}
+.cal{padding:14px 18px}
+.cal .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.cal .hd b{font-family:var(--fun);font-weight:800;font-size:18px;color:var(--hot)}
+.cal .hd button{position:relative;border:0;width:34px;height:34px;border-radius:50%;color:#fff;font-weight:800;font-size:18px;line-height:1;
+  background:linear-gradient(180deg,#ff9fd0,#e0218a);box-shadow:0 3px 0 var(--deep)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}
+.days .w{font-family:var(--fun);font-weight:800;font-size:12px;color:var(--muted)}
+.days .d{height:34px;border-radius:12px;display:grid;place-items:center;font-size:13px;font-family:var(--fun);font-weight:600;color:#d78db3;background:#fff4f9}
+.days .d.l1{background:#ffd1e7;color:var(--ink)}
+.days .d.l2{background:linear-gradient(180deg,#ffa6d3,#ff6fb5);color:#fff}
+.days .d.l3{background:linear-gradient(180deg,#ff6fb5,#e0218a);color:#fff;box-shadow:0 3px 0 var(--deep)}
+.days .d.l3::after{content:"♥";position:absolute;font-size:9px;transform:translate(11px,-11px)}
+.days .d{position:relative}
+.days .d.td{box-shadow:0 0 0 3px var(--gold)}
+.legend{display:flex;gap:6px;align-items:center;font-size:11px;color:var(--muted);margin-top:8px;justify-content:flex-end}
+.legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:14px}
+.lesson{padding:14px 16px 16px;position:relative;cursor:pointer;transition:transform .15s}
+.lesson:hover{transform:translateY(-4px) rotate(-.4deg)}
+.lesson .num{display:inline-block;font-family:var(--fun);font-weight:800;font-size:13px;color:#fff;padding:2px 12px 1px;border-radius:999px;
+  background:linear-gradient(180deg,#ff9fd0,#e0218a);box-shadow:0 3px 0 var(--deep)}
+.lesson .tt{font-family:var(--hz);font-size:21px;margin:10px 0 2px;color:var(--ink);font-weight:700}
+.lesson .tv{font-size:13px;color:var(--muted);min-height:18px}
+.lesson .meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:10px;font-family:var(--fun);font-weight:600}
+.lesson.sel{border-color:var(--gold);box-shadow:0 0 0 3px #e3a73a,0 6px 0 3px var(--brown)}
+.chk{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;
+  background:linear-gradient(180deg,#fff,#ffe3f0);box-shadow:inset 0 0 0 2px #ffb3d6,0 3px 0 #f5a3cb}
+.lesson.sel .chk{background:linear-gradient(180deg,#ff9fd0,#e0218a);box-shadow:0 3px 0 var(--deep)}
+.bar{height:16px;border-radius:999px;background:linear-gradient(180deg,#f06aa8,#ff8cc6);padding:3px;box-shadow:inset 0 2px 3px rgba(150,0,70,.35),0 0 0 2px #e2559a;margin-top:8px}
+.bar>i{display:block;height:100%;min-width:0;border-radius:999px;background:linear-gradient(180deg,#c9ff9e 0%,#6fdc4b 45%,#34b42c 100%);box-shadow:inset 0 2px 0 rgba(255,255,255,.6);position:relative}
+.selbar{position:sticky;bottom:12px;margin-top:18px;padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sec-title{font-family:var(--fun);font-weight:800;color:#fff;font-size:22px;text-shadow:0 2px 0 rgba(180,20,100,.45);margin:0}
+.lead{color:var(--deep);font-size:13px;margin:8px 0 0;font-weight:600}
+

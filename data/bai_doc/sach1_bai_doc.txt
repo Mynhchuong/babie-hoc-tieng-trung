@@ -1,0 +1,375 @@
+// Bài đọc / đối thoại — 時代華語 1 (mỗi mục = 1 track nghe -1 trong sách, VD 01-1-1)
+// Định dạng:
+//   @<sách>|<bài>|<mã nghe>|<loại: 對話一/對話二/短文>|<tên/bối cảnh chữ Hán>|<tên/bối cảnh tiếng Việt>
+//   <người nói>|<chữ Hán>|<pinyin>|<nghĩa tiếng Việt>   (đối thoại: mỗi lượt nói 1 dòng; bài đọc 短文: mỗi ĐOẠN văn 1 dòng, người nói để trống;
+//                                                          người nói '*' = chú thích hành động như (看地圖))
+// File nghe: audio/<mã nghe>.mp3 (VD audio/01-1-1.mp3). Nghĩa tiếng Việt do Claude dịch từ bản tiếng Anh trong sách.
+
+@1|1|01-1-1|對話一|在教室|Ở trong lớp
+中明|宜文，她是誰？|Yíwén, tā shì shéi?|Nghi Văn, cô ấy là ai vậy?
+宜文|她是新同學，叫友美。她很可愛。|Tā shì xīn tóngxué, jiào Yǒuměi. Tā hěn kěài.|Cô ấy là bạn học mới, tên là Hữu Mỹ. Cô ấy rất dễ thương.
+中明|她是哪國人？妳知道嗎？|Tā shì nǎ guó rén? Nǐ zhīdào ma?|Cô ấy là người nước nào? Bạn có biết không?
+宜文|我知道，她是日本人。|Wǒ zhīdào, tā shì Rìběn rén.|Mình biết, cô ấy là người Nhật.
+中明|她很漂亮。|Tā hěn piàoliàng.|Cô ấy rất xinh.
+
+@1|1|01-2-1|對話二|在教室|Ở trong lớp
+中明|妳好！我是李中明，請問妳叫什麼名字？|Nǐ hǎo! Wǒ shì Lǐ Zhōngmíng, qǐngwèn nǐ jiào shénme míngzi?|Chào bạn! Mình là Lý Trung Minh, cho mình hỏi bạn tên là gì?
+友美|我姓小林，叫友美。|Wǒ xìng Xiǎolín, jiào Yǒuměi.|Mình họ Kobayashi (Tiểu Lâm), tên là Hữu Mỹ.
+中明|請問妳是哪國人？|Qǐngwèn nǐ shì nǎ guó rén?|Cho mình hỏi bạn là người nước nào?
+友美|我是日本人，你呢？|Wǒ shì Rìběn rén, nǐ ne?|Mình là người Nhật, còn bạn?
+中明|我是印尼人。妳喜歡台灣嗎？|Wǒ shì Yìnní rén. Nǐ xǐhuān Táiwān ma?|Mình là người Indonesia. Bạn có thích Đài Loan không?
+友美|我喜歡台灣。|Wǒ xǐhuān Táiwān.|Mình thích Đài Loan.
+
+@1|1|01-3-1|短文|自我介紹|Tự giới thiệu
+|大家好！我姓小林，叫友美，我是日本人。我喜歡臺灣，台灣朋友很可愛。我愛吃水果，愛喝珍珠奶茶。謝謝大家！|Dàjiā hǎo! Wǒ xìng Xiǎolín, jiào Yǒuměi, wǒ shì Rìběn rén. Wǒ xǐhuān Táiwān, Táiwān péngyǒu hěn kěài. Wǒ ài chī shuǐguǒ, ài hē zhēnzhū nǎichá. Xièxie dàjiā!|Chào mọi người! Mình họ Kobayashi, tên là Hữu Mỹ, mình là người Nhật. Mình thích Đài Loan, bạn bè Đài Loan rất dễ thương. Mình thích ăn trái cây, thích uống trà sữa trân châu. Cảm ơn mọi người!
+
+@1|2|02-1-1|對話一|在中明家|Ở nhà Trung Minh
+媽媽|今天是星期一，你不去學校嗎？|Jīntiān shì xīngqí yī, nǐ bú qù xuéxiào ma?|Hôm nay là thứ Hai, con không đến trường à?
+中明|我早上沒有課，九點去圖書館。|Wǒ zǎoshàng méi yǒu kè, jiǔ diǎn qù túshūguǎn.|Sáng con không có tiết, chín giờ con đi thư viện.
+媽媽|中午呢？你中午回家嗎？|Zhōngwǔ ne? Nǐ zhōngwǔ huí jiā ma?|Còn buổi trưa? Trưa con có về nhà không?
+中明|我下午有課，中午不回家。|Wǒ xiàwǔ yǒu kè, zhōngwǔ bù huí jiā.|Chiều con có tiết, trưa con không về nhà.
+媽媽|你幾點下課？|Nǐ jǐ diǎn xiàkè?|Mấy giờ con tan học?
+中明|我四點四十分下課。|Wǒ sì diǎn sìshí fēn xiàkè.|Bốn giờ bốn mươi con tan học.
+
+@1|2|02-2-1|對話二|星期五下課以後|Sau giờ học thứ Sáu
+宜文|今天是星期五，明天是週末，你們要不要來我家？|Jīntiān shì xīngqí wǔ, míngtiān shì zhōumò, nǐmen yào bú yào lái wǒ jiā?|Hôm nay là thứ Sáu, mai là cuối tuần, các bạn có muốn đến nhà mình không?
+中明|明天是九月二十三號……啊！是妳的生日！|Míngtiān shì jiǔ yuè èrshísān hào... Ā! Shì nǐ de shēngrì!|Mai là ngày 23 tháng 9... A! Là sinh nhật của bạn!
+友美|宜文，生日快樂！|Yíwén, shēngrì kuàilè!|Nghi Văn, chúc mừng sinh nhật!
+宜文|謝謝！明天晚上六點來我家，好不好？|Xièxie! Míngtiān wǎnshàng liù diǎn lái wǒ jiā, hǎo bù hǎo?|Cảm ơn! Sáu giờ tối mai đến nhà mình nhé, được không?
+中明|沒問題。|Méi wèntí.|Không vấn đề gì.
+友美|好，明天見。|Hǎo, míngtiān jiàn.|Được, mai gặp nhé.
+
+@1|2|02-3-1|短文|友美做什麼？|Hữu Mỹ làm gì?
+|友美是學生，十九歲。她早上六點三十分起床，七點去學校，八點四十分上課；中午十二點下課、吃午飯；下午一點去圖書館；四點回家做飯，晚上六點吃飯，十點睡覺。友美很忙！|Yǒuměi shì xuésheng, shíjiǔ suì. Tā zǎoshàng liù diǎn sānshí fēn qǐchuáng, qī diǎn qù xuéxiào, bā diǎn sìshí fēn shàngkè; zhōngwǔ shíèr diǎn xiàkè, chī wǔfàn; xiàwǔ yì diǎn qù túshūguǎn; sì diǎn huí jiā zuòfàn, wǎnshàng liù diǎn chīfàn, shí diǎn shuìjiào. Yǒuměi hěn máng!|Hữu Mỹ là sinh viên, mười chín tuổi. Sáng cô ấy dậy lúc 6 giờ 30, 7 giờ đến trường, 8 giờ 40 vào học; trưa 12 giờ tan học, ăn trưa; 1 giờ chiều đến thư viện; 4 giờ về nhà nấu cơm, 6 giờ tối ăn cơm, 10 giờ đi ngủ. Hữu Mỹ bận quá!
+
+@1|3|03-1-1|對話一|在學校|Ở trường
+宜文|明天是友美的生日，我想送她一個禮物。|Míngtiān shì Yǒuměi de shēngrì, wǒ xiǎng sòng tā yí ge lǐwù.|Mai là sinh nhật của Hữu Mỹ, mình muốn tặng cô ấy một món quà.
+中明|妳想送她什麼？|Nǐ xiǎng sòng tā shénme?|Bạn muốn tặng cô ấy gì?
+宜文|友美愛看書，我想送她兩本中文書，你呢？|Yǒuměi ài kànshū, wǒ xiǎng sòng tā liǎng běn Zhōngwén shū, nǐ ne?|Hữu Mỹ thích đọc sách, mình muốn tặng cô ấy hai cuốn sách tiếng Trung, còn bạn?
+中明|我想買一些花和一個大蛋糕。|Wǒ xiǎng mǎi yìxiē huā hé yí ge dà dàngāo.|Mình muốn mua một ít hoa và một cái bánh kem lớn.
+宜文|我們一起去買，好不好？|Wǒmen yìqǐ qù mǎi, hǎo bù hǎo?|Chúng mình cùng đi mua nhé, được không?
+中明|好啊！|Hǎo ā!|Được chứ!
+
+@1|3|03-2-1|對話二|買禮物|Mua quà
+宜文|這種小鉛筆怎麼樣？|Zhè zhǒng xiǎo qiānbǐ zěnmeyàng?|Loại bút chì nhỏ này thế nào?
+中明|很可愛，友美喜歡可愛的東西。|Hěn kěài. Yǒuměi xǐhuān kěài de dōngxi.|Dễ thương lắm, Hữu Mỹ thích đồ dễ thương.
+宜文|我們買兩枝，好不好？兩枝五十塊錢。|Wǒmen mǎi liǎng zhī, hǎo bù hǎo? Liǎng zhī wǔshí kuài qián.|Mình mua hai cây nhé? Hai cây năm mươi đồng.
+中明|五十塊錢很便宜！妳看，哪個顏色漂亮？|Wǔshí kuài qián hěn piányí! Nǐ kàn, nǎ ge yánsè piàoliàng?|Năm mươi đồng rẻ quá! Bạn xem, màu nào đẹp?
+宜文|紅色、白色都好看。|Hóngsè, báisè dōu hǎokàn.|Màu đỏ, màu trắng đều đẹp.
+中明|我想友美喜歡白色，她常常穿白色的衣服。|Wǒ xiǎng Yǒuměi xǐhuān báisè, tā chángcháng chuān báisè de yīfu.|Mình nghĩ Hữu Mỹ thích màu trắng, cô ấy hay mặc quần áo màu trắng.
+宜文|好，我們買白的。|Hǎo, wǒmen mǎi bái de.|Được, mình mua màu trắng.
+
+@1|3|03-3-1|短文|友美的生日|Sinh nhật của Hữu Mỹ
+|今天是友美的生日，她請我、中明和國安一起去她家玩。|Jīntiān shì Yǒuměi de shēngrì, tā qǐng wǒ, Zhōngmíng hé Guó'ān yìqǐ qù tā jiā wán.|Hôm nay là sinh nhật Hữu Mỹ, cô ấy mời mình, Trung Minh và Quốc An cùng đến nhà cô ấy chơi.
+|我們送友美花、兩本中文書、兩枝可愛的小鉛筆和一個大蛋糕，她很喜歡這些禮物。友美請我們吃點心和水果，大家都很開心。|Wǒmen sòng Yǒuměi huā, liǎng běn Zhōngwén shū, liǎng zhī kěài de xiǎo qiānbǐ hé yí ge dà dàngāo, tā hěn xǐhuān zhèxiē lǐwù. Yǒuměi qǐng wǒmen chī diǎnxīn hé shuǐguǒ, dàjiā dōu hěn kāixīn.|Bọn mình tặng Hữu Mỹ hoa, hai cuốn sách tiếng Trung, hai cây bút chì nhỏ dễ thương và một cái bánh kem lớn, cô ấy rất thích những món quà này. Hữu Mỹ mời bọn mình ăn bánh ngọt và trái cây, mọi người đều rất vui.
+
+@1|4|04-1-1|對話一|咖啡還是茶？|Cà phê hay trà?
+中明|天氣好熱，我們去喝飲料，好不好？|Tiānqì hǎo rè, wǒmen qù hē yǐnliào, hǎo bù hǎo?|Trời nóng quá, mình đi uống nước nhé, được không?
+友美|好啊！你想喝什麼？咖啡還是茶？|Hǎo ā! Nǐ xiǎng hē shénme? Kāfēi háishi chá?|Được chứ! Bạn muốn uống gì? Cà phê hay trà?
+中明|咖啡、茶，我都喜歡。我也很餓，想吃一點兒東西。|Kāfēi, chá, wǒ dōu xǐhuān. Wǒ yě hěn è, xiǎng chī yìdiǎnr dōngxi.|Cà phê hay trà mình đều thích. Mình cũng đói lắm, muốn ăn chút gì đó.
+友美|這家餐廳人太多，我們去那家餐廳，好嗎？他們的牛肉麵很好吃，也很便宜。|Zhè jiā cāntīng rén tài duō, wǒmen qù nà jiā cāntīng, hǎo ma? Tāmen de niúròu miàn hěn hǎochī, yě hěn piányí.|Quán này đông người quá, mình qua quán kia nhé? Mì bò của họ rất ngon, lại rẻ nữa.
+中明|太好了！我最愛吃牛肉麵。他們也賣飲料嗎？|Tài hǎo le! Wǒ zuì ài chī niúròu miàn. Tāmen yě mài yǐnliào ma?|Tuyệt quá! Mình thích ăn mì bò nhất. Họ cũng bán đồ uống à?
+友美|他們賣很多種飲料。|Tāmen mài hěn duō zhǒng yǐnliào.|Họ bán nhiều loại đồ uống lắm.
+中明|我們現在去，好嗎？|Wǒmen xiànzài qù, hǎo ma?|Mình đi bây giờ nhé?
+友美|好。|Hǎo.|Được.
+
+@1|4|04-2-1|對話二|在餐廳櫃台點餐|Gọi món ở quầy nhà hàng
+中明|小姐，我們要點兩碗牛肉麵和兩杯茶。|Xiǎojiě, wǒmen yào diǎn liǎng wǎn niúròu miàn hé liǎng bēi chá.|Chị ơi, bọn em muốn gọi hai tô mì bò và hai ly trà.
+女店員|請問兩位要紅茶還是綠茶？|Qǐngwèn liǎng wèi yào hóngchá háishi lǜchá?|Xin hỏi hai bạn muốn trà đen hay trà xanh?
+友美|我要紅茶。|Wǒ yào hóngchá.|Mình muốn trà đen.
+中明|請給我們一杯紅茶、一杯綠茶。請問一共多少錢？|Qǐng gěi wǒmen yì bēi hóngchá, yì bēi lǜchá. Qǐngwèn yígòng duōshǎo qián?|Cho bọn em một ly trà đen, một ly trà xanh. Xin hỏi tất cả bao nhiêu tiền?
+女店員|一共兩百一十五塊錢。|Yígòng liǎng bǎi yīshíwǔ kuài qián.|Tổng cộng hai trăm mười lăm đồng.
+*|（中明給女店員一千塊錢）|(Zhōngmíng gěi nǚ diànyuán yì qiān kuài qián)|(Trung Minh đưa cho nhân viên một nghìn đồng)
+女店員|找您七百八十五塊錢，謝謝。|Zhǎo nín qī bǎi bāshíwǔ kuài qián, xièxie.|Trả lại anh bảy trăm tám mươi lăm đồng, cảm ơn anh.
+中明|一共兩百多塊錢，好便宜！|Yígòng liǎng bǎi duō kuài qián, hǎo piányí!|Tổng cộng hơn hai trăm đồng thôi, rẻ quá!
+
+@1|4|04-3-1|短文|買飲料|Mua đồ uống
+|台灣夏天的天氣很熱，很多人都喜歡喝飲料。飲料店很多，他們賣很多種飲料。果汁、牛奶、咖啡、茶都很好喝，有的很便宜，一杯二十多塊錢。我和朋友都很愛喝，我們每天都去買。|Táiwān xiàtiān de tiānqì hěn rè, hěn duō rén dōu xǐhuān hē yǐnliào. Yǐnliào diàn hěn duō, tāmen mài hěn duō zhǒng yǐnliào. Guǒzhī, niúnǎi, kāfēi, chá dōu hěn hǎohē, yǒude hěn piányí, yì bēi èrshí duō kuài qián. Wǒ hé péngyǒu dōu hěn ài hē, wǒmen měi tiān dōu qù mǎi.|Mùa hè ở Đài Loan thời tiết rất nóng, nhiều người thích uống nước giải khát. Có rất nhiều tiệm đồ uống, họ bán rất nhiều loại. Nước ép, sữa, cà phê, trà đều rất ngon, có loại rất rẻ, một ly hơn hai mươi đồng. Mình và bạn bè đều rất thích uống, ngày nào bọn mình cũng đi mua.
+
+@1|5|05-1-1|對話一|週末做什麼？|Cuối tuần làm gì?
+中明|友美，妳這個週末要做什麼？|Yǒuměi, nǐ zhè ge zhōumò yào zuò shénme?|Hữu Mỹ, cuối tuần này bạn định làm gì?
+友美|我要在家看書、聽音樂。|Wǒ yào zài jiā kànshū, tīng yīnyuè.|Mình định ở nhà đọc sách, nghe nhạc.
+中明|妳星期六下午有空嗎？我們一起去喝下午茶，怎麼樣？|Nǐ xīngqí liù xiàwǔ yǒukòng ma? Wǒmen yìqǐ qù hē xiàwǔ chá, zěnmeyàng?|Chiều thứ Bảy bạn rảnh không? Mình cùng đi uống trà chiều nhé, thế nào?
+友美|好啊！你想去哪裡？|Hǎo ā! Nǐ xiǎng qù nǎlǐ?|Được chứ! Bạn muốn đi đâu?
+中明|我知道一家很不錯的咖啡廳，那裡的冰淇淋很好吃。|Wǒ zhīdào yì jiā hěn búcuò de kāfēitīng, nàlǐ de bīngqílín hěn hǎochī.|Mình biết một quán cà phê khá hay, kem ở đó rất ngon.
+友美|他們有巧克力冰淇淋嗎？|Tāmen yǒu qiǎokèlì bīngqílín ma?|Họ có kem sô-cô-la không?
+中明|有啊！他們有很多種冰淇淋。|Yǒu ā! Tāmen yǒu hěn duō zhǒng bīngqílín.|Có chứ! Họ có rất nhiều loại kem.
+友美|我們這個星期六下午兩點半去吧。|Wǒmen zhè ge xīngqí liù xiàwǔ liǎng diǎn bàn qù ba.|Chiều thứ Bảy này hai giờ rưỡi mình đi nhé.
+中明|好。|Hǎo.|Được.
+
+@1|5|05-2-1|對話二|錢包在哪裡？|Ví ở đâu?
+中明|媽，我跟友美要去喝下午茶，可是我的錢包不在房間裡。|Mā, wǒ gēn Yǒuměi yào qù hē xiàwǔ chá, kěshì wǒ de qiánbāo bú zài fángjiān lǐ.|Mẹ ơi, con với Hữu Mỹ định đi uống trà chiều, nhưng ví của con không ở trong phòng.
+媽媽|客廳的桌子上有一個錢包，是不是你的？|Kètīng de zhuōzi shàng yǒu yí ge qiánbāo, shì bú shì nǐ de?|Trên bàn phòng khách có một cái ví, có phải của con không?
+中明|那不是我的，是哥哥的。我的錢包不在客廳裡。|Nà bú shì wǒ de, shì gēge de. Wǒ de qiánbāo bú zài kètīng lǐ.|Đó không phải của con, là của anh trai. Ví của con không ở trong phòng khách.
+媽媽|沙發下面呢？|Shāfā xiàmiàn ne?|Dưới ghế sofa thì sao?
+中明|沙發上面、下面跟旁邊都沒有。媽，妳幫我找，好嗎？|Shāfā shàngmiàn, xiàmiàn gēn pángbiān dōu méi yǒu. Mā, nǐ bāng wǒ zhǎo, hǎo ma?|Trên, dưới và bên cạnh sofa đều không có. Mẹ giúp con tìm với, được không?
+媽媽|我很忙，現在要去廚房做飯，你再去房間找吧。|Wǒ hěn máng, xiànzài yào qù chúfáng zuòfàn, nǐ zài qù fángjiān zhǎo ba.|Mẹ bận lắm, giờ phải vào bếp nấu cơm, con vào phòng tìm lại đi.
+*|（中明再去房間）|(Zhōngmíng zài qù fángjiān)|(Trung Minh quay lại phòng)
+中明|啊！在這裡！錢包在我的書下面。|Ā! Zài zhèlǐ! Qiánbāo zài wǒ de shū xiàmiàn.|A! Đây rồi! Ví nằm dưới cuốn sách của con.
+
+@1|5|05-3-1|短文|我的房間|Phòng của mình
+|我的房間裡有一張桌子、一張床跟一張沙發。沙發前面有一台很新的電視機，可是我不常看電視，我最喜歡在沙發上看書。我的書很多，有中文書，也有英文書。我房間的窗戶很大，我的貓喜歡在窗戶旁邊曬太陽。|Wǒ de fángjiān lǐ yǒu yì zhāng zhuōzi, yì zhāng chuáng gēn yì zhāng shāfā. Shāfā qiánmiàn yǒu yì tái hěn xīn de diànshìjī, kěshì wǒ bù cháng kàn diànshì, wǒ zuì xǐhuān zài shāfā shàng kànshū. Wǒ de shū hěn duō, yǒu Zhōngwén shū, yě yǒu Yīngwén shū. Wǒ fángjiān de chuānghù hěn dà, wǒ de māo xǐhuān zài chuānghù pángbiān shài tàiyáng.|Trong phòng mình có một cái bàn, một cái giường và một cái sofa. Phía trước sofa có một cái tivi rất mới, nhưng mình không hay xem tivi, mình thích nhất là ngồi đọc sách trên sofa. Sách của mình rất nhiều, có sách tiếng Trung và cả sách tiếng Anh. Cửa sổ phòng mình rất lớn, con mèo của mình thích nằm phơi nắng cạnh cửa sổ.
+
+@1|6|06-1-1|對話一|去海邊|Đi biển
+國安|今天天氣不錯，海邊的風景也很漂亮，我想去游泳，妳們想去嗎？|Jīntiān tiānqì búcuò, hǎibiān de fēngjǐng yě hěn piàoliàng, wǒ xiǎng qù yóuyǒng, nǐmen xiǎng qù ma?|Hôm nay thời tiết đẹp, cảnh biển cũng rất đẹp, mình muốn đi bơi, các bạn có muốn đi không?
+友美|我不會游泳。宜文，妳會游泳嗎？|Wǒ bú huì yóuyǒng. Yíwén, nǐ huì yóuyǒng ma?|Mình không biết bơi. Nghi Văn, bạn biết bơi không?
+宜文|我會游泳，可是游得不太好。|Wǒ huì yóuyǒng, kěshì yóu de bú tài hǎo.|Mình biết bơi, nhưng bơi không giỏi lắm.
+國安|我們去跑步，怎麼樣？|Wǒmen qù pǎobù, zěnmeyàng?|Hay mình đi chạy bộ nhé, thế nào?
+友美|我不喜歡跑步，我跑步跑得很慢。|Wǒ bù xǐhuān pǎobù, wǒ pǎobù pǎo de hěn màn.|Mình không thích chạy bộ, mình chạy rất chậm.
+宜文|打網球怎麼樣？中明說妳的網球打得很好，我們一起去打吧。|Dǎ wǎngqiú zěnmeyàng? Zhōngmíng shuō nǐ de wǎngqiú dǎ de hěn hǎo, wǒmen yìqǐ qù dǎ ba.|Chơi tennis thì sao? Trung Minh nói bạn chơi tennis rất giỏi, mình cùng đi chơi nhé.
+友美|好啊。|Hǎo ā.|Được chứ.
+
+@1|6|06-2-1|對話二|週末活動|Hoạt động cuối tuần
+國安|聽說這部電影很有趣，我們晚上一起去看，好不好？|Tīngshuō zhè bù diànyǐng hěn yǒuqù. Wǒmen wǎnshàng yìqǐ qù kàn, hǎo bù hǎo?|Nghe nói bộ phim này rất hay, tối nay mình cùng đi xem nhé?
+中明|我覺得有一點兒累，我想回家休息。|Wǒ juéde yǒu yìdiǎnr lèi, wǒ xiǎng huí jiā xiūxi.|Mình thấy hơi mệt, mình muốn về nhà nghỉ ngơi.
+國安|你不要常常在家上網、看電腦、玩手機，應該去運動。明天我有空，我們可以一起去騎腳踏車。|Nǐ búyào chángcháng zài jiā shàngwǎng, kàn diànnǎo, wán shǒujī, yīnggāi qù yùndòng. Míngtiān wǒ yǒukòng, wǒmen kěyǐ yìqǐ qù qí jiǎotàchē.|Bạn đừng ở nhà suốt, lên mạng, xem máy tính, chơi điện thoại, nên đi vận động đi. Mai mình rảnh, mình có thể cùng đi đạp xe.
+中明|可是我只想聽音樂、睡覺。|Kěshì wǒ zhǐ xiǎng tīng yīnyuè, shuìjiào.|Nhưng mình chỉ muốn nghe nhạc và ngủ thôi.
+國安|後天去呢？|Hòutiān qù ne?|Vậy ngày kia đi thì sao?
+中明|這兩天天氣有點兒冷，我們週末去，好嗎？|Zhè liǎng tiān tiānqì yǒudiǎnr lěng, wǒmen zhōumò qù, hǎo ma?|Hai hôm nay trời hơi lạnh, mình đi cuối tuần nhé, được không?
+
+@1|6|06-3-1|短文|我的興趣|Sở thích của mình
+|我有幾個好朋友，我們都喜歡學中文、聽音樂、唱歌。中明最愛唱歌，他的中文歌唱得很好。平常我們都有點兒忙，可是週末我們常常一起去運動，宜文游泳游得不錯，國安的籃球打得很好，我喜歡打網球，有時候我們也一起去看運動比賽。有這幾個好朋友，我真高興！|Wǒ yǒu jǐ ge hǎo péngyǒu, wǒmen dōu xǐhuān xué Zhōngwén, tīng yīnyuè, chànggē. Zhōngmíng zuì ài chànggē, tā de Zhōngwén gē chàng de hěn hǎo. Píngcháng wǒmen dōu yǒudiǎnr máng, kěshì zhōumò wǒmen chángcháng yìqǐ qù yùndòng, Yíwén yóuyǒng yóu de búcuò, Guó'ān de lánqiú dǎ de hěn hǎo, wǒ xǐhuān dǎ wǎngqiú, yǒushíhòu wǒmen yě yìqǐ qù kàn yùndòng bǐsài. Yǒu zhè jǐ ge hǎo péngyǒu, wǒ zhēn gāoxìng!|Mình có vài người bạn thân, chúng mình đều thích học tiếng Trung, nghe nhạc, hát. Trung Minh thích hát nhất, anh ấy hát nhạc tiếng Trung rất hay. Ngày thường bọn mình đều hơi bận, nhưng cuối tuần bọn mình thường cùng đi vận động, Nghi Văn bơi khá giỏi, Quốc An chơi bóng rổ rất hay, mình thích chơi tennis, thỉnh thoảng bọn mình cũng cùng đi xem thi đấu thể thao. Có mấy người bạn tốt như vậy, mình thật vui!
+
+@1|7|07-1-1|對話一|學校的下課休息時間|Giờ giải lao ở trường
+友美|元真，我們明天幾點去找妳的韓國朋友？|Yuánzhēn, wǒmen míngtiān jǐ diǎn qù zhǎo nǐ de Hánguó péngyǒu?|Nguyên Chân, mai mấy giờ mình đi gặp bạn Hàn Quốc của bạn?
+元真|我們下午四點要到天美飯店，她在那裡等我們。|Wǒmen xiàwǔ sì diǎn yào dào Tiānměi Fàndiàn, tā zài nǎlǐ děng wǒmen.|Bốn giờ chiều mình phải đến khách sạn Thiên Mỹ, cô ấy đợi bọn mình ở đó.
+友美|我們要怎麼去？坐捷運還是坐公車？|Wǒmen yào zěnme qù? Zuò jiéyùn háishi zuò gōngchē?|Mình đi bằng cách nào? Đi tàu điện (MRT) hay xe buýt?
+元真|聽說那家飯店不遠，我想我們可以從學校走路去。|Tīngshuō nà jiā fàndiàn bù yuǎn, wǒ xiǎng wǒmen kěyǐ cóng xuéxiào zǒulù qù.|Nghe nói khách sạn đó không xa, mình nghĩ có thể đi bộ từ trường đến.
+友美|可是我不知道怎麼走，妳知道嗎？|Kěshì wǒ bù zhīdào zěnme zǒu, nǐ zhīdào ma?|Nhưng mình không biết đi thế nào, bạn biết không?
+元真|我也不知道。我們可以先上網看地圖。|Wǒ yě bù zhīdào. Wǒmen kěyǐ xiān shàngwǎng kàn dìtú.|Mình cũng không biết. Mình có thể lên mạng xem bản đồ trước.
+*|（看錶）|(Kàn biǎo)|(Nhìn đồng hồ)
+友美|啊！上課了！我們先上課吧。|Ā! Shàngkè le! Wǒmen xiān shàngkè ba.|A! Vào học rồi! Mình vào học trước đã.
+元真|好。|Hǎo.|Được.
+
+@1|7|07-2-1|對話二|下課了，看地圖|Tan học, xem bản đồ
+元真|友美，妳看，天美飯店在大學路。我現在知道怎麼走了。|Yǒuměi, nǐ kàn, Tiānměi Fàndiàn zài Dàxué Lù. Wǒ xiànzài zhīdào zěnme zǒu le.|Hữu Mỹ, bạn xem, khách sạn Thiên Mỹ ở đường Đại Học. Giờ mình biết đi thế nào rồi.
+友美|（看地圖）啊！天美飯店在這裡！我知道這個地方，附近有郵局跟超級市場。|(Kàn dìtú) Ā! Tiānměi Fàndiàn zài zhèlǐ! Wǒ zhīdào zhè ge dìfāng, fùjìn yǒu yóujú gēn chāojí shìchǎng.|(Xem bản đồ) A! Khách sạn Thiên Mỹ ở đây này! Mình biết chỗ này, gần đó có bưu điện và siêu thị.
+元真|我想走路去一定沒問題。|Wǒ xiǎng zǒulù qù yídìng méi wèntí.|Mình nghĩ đi bộ chắc chắn không sao đâu.
+友美|可是我覺得那裡有點兒遠，走路去太累了。|Kěshì wǒ juéde nàlǐ yǒudiǎnr yuǎn, zǒulù qù tài lèi le.|Nhưng mình thấy chỗ đó hơi xa, đi bộ mệt lắm.
+元真|妳想怎麼去？|Nǐ xiǎng zěnme qù?|Bạn muốn đi bằng gì?
+友美|坐捷運又方便又舒服，我們可以坐捷運。|Zuò jiéyùn yòu fāngbiàn yòu shūfu, wǒmen kěyǐ zuò jiéyùn.|Đi tàu điện vừa tiện vừa thoải mái, mình có thể đi tàu điện.
+元真|好，我們明天坐捷運去吧。|Hǎo, wǒmen míngtiān zuò jiéyùn qù ba.|Được, mai mình đi tàu điện nhé.
+
+@1|7|07-3-1|短文|從我家坐捷運很方便|Từ nhà mình đi tàu điện (MRT) rất tiện
+|我家附近有三條捷運線，一條紅的、一條綠的和一條藍的。我平常坐紅線去學校上課，週末也坐捷運去運動、看電影。朋友常來找我，他們都覺得坐捷運來我家，又快又方便。|Wǒ jiā fùjìn yǒu sān tiáo jiéyùn xiàn, yì tiáo hóng de, yì tiáo lǜ de hé yì tiáo lán de. Wǒ píngcháng zuò hóng xiàn qù xuéxiào shàngkè, zhōumò yě zuò jiéyùn qù yùndòng, kàn diànyǐng. Péngyǒu cháng lái zhǎo wǒ, tāmen dōu juéde zuò jiéyùn lái wǒ jiā, yòu kuài yòu fāngbiàn.|Gần nhà mình có ba tuyến tàu điện, một tuyến đỏ, một tuyến xanh lá và một tuyến xanh dương. Ngày thường mình đi tuyến đỏ đến trường, cuối tuần cũng đi tàu điện để tập thể thao, xem phim. Bạn bè hay đến tìm mình, họ đều thấy đi tàu điện đến nhà mình vừa nhanh vừa tiện.
+|從我家到機場也不遠，開車去、坐捷運去都可以。機場附近的風景也很漂亮，我常去看風景、看飛機。|Cóng wǒ jiā dào jīchǎng yě bù yuǎn, kāichē qù, zuò jiéyùn qù dōu kěyǐ. Jīchǎng fùjìn de fēngjǐng yě hěn piàoliàng, wǒ cháng qù kàn fēngjǐng, kàn fēijī.|Từ nhà mình đến sân bay cũng không xa, lái xe đi hay đi tàu điện đều được. Cảnh quanh sân bay cũng rất đẹp, mình hay đến đó ngắm cảnh, xem máy bay.
+
+@1|8|08-1-1|對話一|這條裙子真好看|Chiếc váy này đẹp quá
+宜文|元真，妳的這條裙子真好看，我很喜歡。|Yuánzhēn, nǐ de zhè tiáo qúnzi zhēn hǎokàn, wǒ hěn xǐhuān.|Nguyên Chân, chiếc váy này của bạn đẹp quá, mình rất thích.
+元真|謝謝，這是我去年的生日禮物。|Xièxie, zhè shì wǒ qùnián de shēngrì lǐwù.|Cảm ơn, đây là quà sinh nhật năm ngoái của mình.
+宜文|聽說這個牌子的東西很貴，可是很多人喜歡。|Tīngshuō zhè ge páizi de dōngxi hěn guì, kěshì hěn duō rén xǐhuān.|Nghe nói đồ của hãng này rất đắt, nhưng nhiều người thích lắm.
+元真|是啊，因為這個牌子很有名，衣服、褲子和裙子也都很好看，所以很多人買。|Shì ā, yīnwèi zhè ge páizi hěn yǒumíng, yīfu, kùzi hé qúnzi yě dōu hěn hǎokàn, suǒyǐ hěn duō rén mǎi.|Đúng vậy, vì hãng này rất nổi tiếng, áo, quần và váy đều đẹp nên nhiều người mua.
+宜文|妳知道去哪裡買這個牌子的衣服嗎？|Nǐ zhīdào qù nǎlǐ mǎi zhè ge páizi de yīfu ma?|Bạn có biết mua quần áo hãng này ở đâu không?
+元真|知道，百貨公司都有，不難找。|Zhīdào, bǎihuògōngsī dōu yǒu, bù nán zhǎo.|Biết, ở trung tâm bách hóa nào cũng có, không khó tìm đâu.
+宜文|我很想去看，可是我最近胖了五公斤，我怕衣服不好買。|Wǒ hěn xiǎng qù kàn, kěshì wǒ zuìjìn pàng le wǔ gōngjīn, wǒ pà yīfu bù hǎo mǎi.|Mình rất muốn đi xem, nhưng dạo này mình mập lên năm ký, mình sợ khó mua được quần áo vừa.
+元真|妳胖了嗎？我不覺得啊，我跟妳一起去看。我也想去買今年夏天的新衣服。|Nǐ pàng le ma? Wǒ bù juéde ā, wǒ gēn nǐ yìqǐ qù kàn. Wǒ yě xiǎng qù mǎi jīnnián xiàtiān de xīn yīfu.|Bạn mập lên à? Mình không thấy vậy, mình đi xem cùng bạn. Mình cũng muốn mua quần áo mới cho mùa hè năm nay.
+宜文|好，我們找時間一起去。|Hǎo, wǒmen zhǎo shíjiān yìqǐ qù.|Được, mình tìm thời gian cùng đi nhé.
+
+@1|8|08-2-1|對話二|在百貨公司|Ở trung tâm bách hóa
+宜文|妳看，這條黃色的褲子不錯吧？|Nǐ kàn, zhè tiáo huángsè de kùzi búcuò ba?|Bạn xem, chiếc quần màu vàng này đẹp đúng không?
+元真|很好看。這條藍的也很漂亮，藍色是今年很流行的顏色。|Hěn hǎokàn. Zhè tiáo lán de yě hěn piàoliàng, lánsè shì jīnnián hěn liúxíng de yánsè.|Đẹp lắm. Chiếc màu xanh dương này cũng rất đẹp, xanh dương là màu rất thịnh hành năm nay.
+宜文|這兩條我都去穿穿看。|Zhè liǎng tiáo wǒ dōu qù chuānchuān kàn.|Hai chiếc này mình đều đi thử xem.
+*|（五分鐘以後）|(Wǔ fēnzhōng yǐhòu)|(Năm phút sau)
+元真|妳覺得怎麼樣？|Nǐ juéde zěnmeyàng?|Bạn thấy thế nào?
+宜文|都太短，也太小了。|Dōu tài duǎn, yě tài xiǎo le.|Cả hai đều quá ngắn, cũng quá nhỏ.
+元真|沒關係，我們可以下個週末再來看。對了，妳要買鞋子吧？|Méiguānxi, wǒmen kěyǐ xià ge zhōumò zài lái kàn. Duìle, nǐ yào mǎi xiézi ba?|Không sao, cuối tuần sau mình lại đến xem. À đúng rồi, bạn định mua giày đúng không?
+宜文|是啊，我想買一雙黑色的。|Shì ā, wǒ xiǎng mǎi yì shuāng hēisè de.|Đúng vậy, mình muốn mua một đôi màu đen.
+元真|鞋子都在一樓，我們到樓下去吧！九點了，百貨公司快要關了。|Xiézi dōu zài yī lóu, wǒmen dào lóu xià qù ba! Jiǔ diǎn le, bǎihuògōngsī kuàiyào guān le.|Giày đều ở tầng một, mình xuống tầng dưới đi! Chín giờ rồi, trung tâm sắp đóng cửa.
+宜文|電梯在那裡！我們現在去買。|Diàntī zài nàlǐ! Wǒmen xiànzài qù mǎi.|Thang máy ở đằng kia! Giờ mình đi mua thôi.
+
+@1|8|08-3-1|短文|年輕人喜歡新東西|Người trẻ thích đồ mới
+|百貨公司裡有很多衣服、鞋子和皮包，都是最新的，所以很多年輕女生喜歡到百貨公司去，漂亮的、流行的衣服，她們都想穿穿看。|Bǎihuògōngsī lǐ yǒu hěn duō yīfu, xiézi hé píbāo, dōu shì zuì xīn de, suǒyǐ hěn duō niánqīng nǚshēng xǐhuān dào bǎihuògōngsī qù, piàoliàng de, liúxíng de yīfu, tāmen dōu xiǎng chuānchuān kàn.|Trung tâm bách hóa có rất nhiều quần áo, giày và túi xách, đều là mẫu mới nhất, nên nhiều cô gái trẻ thích đến đó, quần áo đẹp, hợp thời trang là họ đều muốn mặc thử.
+|很多年輕男生愛在書店看汽車雜誌，汽車很貴，他們不一定可以買新車，可是都看得很開心。|Hěn duō niánqīng nánshēng ài zài shūdiàn kàn qìchē zázhì, qìchē hěn guì, tāmen bù yídìng kěyǐ mǎi xīn chē, kěshì dōu kàn de hěn kāixīn.|Nhiều chàng trai trẻ thích xem tạp chí xe hơi ở hiệu sách, xe rất đắt, họ chưa chắc mua được xe mới, nhưng xem vẫn rất vui.
+|我覺得有的舊東西很不錯，有的新東西也很有趣，我很喜歡看新車、新衣服，可是因為我的錢不多，所以我不常買。|Wǒ juéde yǒude jiù dōngxi hěn búcuò, yǒude xīn dōngxi yě hěn yǒuqù, wǒ hěn xǐhuān kàn xīn chē, xīn yīfu, kěshì yīnwèi wǒ de qián bù duō, suǒyǐ wǒ bù cháng mǎi.|Mình thấy có đồ cũ rất tốt, có đồ mới cũng rất thú vị, mình thích xem xe mới, quần áo mới, nhưng vì tiền không nhiều nên mình ít khi mua.
+
+@1|9|09-1-1|對話一|在學校|Ở trường
+國安|友美，這幾個句子的意思我不太懂，妳可以教我嗎？|Yǒuměi, zhè jǐ ge jùzi de yìsi wǒ bú tài dǒng, nǐ kěyǐ jiāo wǒ ma?|Hữu Mỹ, nghĩa của mấy câu này mình không hiểu lắm, bạn dạy mình được không?
+友美|我覺得有點兒難，我也不太懂。|Wǒ juéde yǒudiǎnr nán, wǒ yě bú tài dǒng.|Mình thấy hơi khó, mình cũng không hiểu lắm.
+國安|這課真的不好學。|Zhè kè zhēnde bù hǎo xué.|Bài này thật sự không dễ học.
+友美|我們可以去問家樂，他非常聰明，我想他懂。|Wǒmen kěyǐ qù wèn Jiālè, tā fēicháng cōngmíng, wǒ xiǎng tā dǒng.|Mình có thể đi hỏi Gia Lạc, cậu ấy rất thông minh, mình nghĩ cậu ấy hiểu.
+國安|那麼我們現在去找他。|Nàme wǒmen xiànzài qù zhǎo tā.|Vậy bây giờ mình đi tìm cậu ấy.
+友美|現在他在上書法課，我們四點去吧。|Xiànzài tā zài shàng shūfǎ kè, wǒmen sì diǎn qù ba.|Giờ cậu ấy đang học thư pháp, bốn giờ mình đi nhé.
+國安|可是從四點到五點半我要上英文課，六點去，怎麼樣？|Kěshì cóng sì diǎn dào wǔ diǎn bàn wǒ yào shàng Yīngwén kè, liù diǎn qù, zěnmeyàng?|Nhưng từ bốn giờ đến năm giờ rưỡi mình học tiếng Anh, sáu giờ đi, được không?
+友美|好。我先回宿舍做功課，再跟你一起去找他。|Hǎo. Wǒ xiān huí sùshè zuò gōngkè, zài gēn nǐ yìqǐ qù zhǎo tā.|Được. Mình về ký túc xá làm bài tập trước, rồi cùng bạn đi tìm cậu ấy.
+
+@1|9|09-2-1|對話二|在學校|Ở trường
+中明|期中考快要到了，老師說我們可以去圖書館對面的大教室看書。|Qīzhōngkǎo kuàiyào dào le, lǎoshī shuō wǒmen kěyǐ qù túshūguǎn duìmiàn de dà jiàoshì kànshū.|Sắp thi giữa kỳ rồi, thầy cô nói bọn mình có thể đến phòng học lớn đối diện thư viện để học bài.
+家樂|太好了！在那裡看書很舒服。我們每天都能用那間教室嗎？|Tài hǎo le! Zài nàlǐ kànshū hěn shūfu. Wǒmen měi tiān dōu néng yòng nà jiān jiàoshì ma?|Tuyệt quá! Học ở đó rất thoải mái. Ngày nào bọn mình cũng dùng được phòng đó không?
+中明|我們班只能禮拜一跟禮拜二下午用。|Wǒmen bān zhǐ néng lǐbài yī gēn lǐbài èr xiàwǔ yòng.|Lớp mình chỉ được dùng chiều thứ Hai và thứ Ba.
+家樂|可是這些時間我都有語言交換，不能去。|Kěshì zhèxiē shíjiān wǒ dōu yǒu yǔyán jiāohuàn, bù néng qù.|Nhưng những lúc đó mình đều có buổi trao đổi ngôn ngữ, không đi được.
+中明|別的時間可以嗎？|Bié de shíjiān kěyǐ ma?|Thời gian khác được không?
+家樂|我朋友最近比較忙，別的時間他沒有空。|Wǒ péngyǒu zuìjìn bǐjiào máng, bié de shíjiān tā méi yǒu kòng.|Bạn mình dạo này khá bận, lúc khác cậu ấy không rảnh.
+中明|我們去問老師，也許他可以幫你。|Wǒmen qù wèn lǎoshī, yěxǔ tā kěyǐ bāng nǐ.|Mình đi hỏi thầy, có thể thầy giúp được bạn.
+家樂|好，希望老師可以幫我。|Hǎo, xīwàng lǎoshī kěyǐ bāng wǒ.|Được, mong là thầy giúp được mình.
+
+@1|9|09-3-1|短文|我喜歡學中文|Mình thích học tiếng Trung
+|這個學期開始，從星期一到星期五我都有華語課，每天從上午八點四十分到中午十二點上課，下午一點寫功課，有時候也跟同學練習說中文。|Zhè ge xuéqí kāishǐ, cóng xīngqí yī dào xīngqí wǔ, wǒ dōu yǒu Huáyǔ kè, měi tiān cóng shàngwǔ bā diǎn sìshí fēn dào zhōngwǔ shí'èr diǎn shàngkè, xiàwǔ yì diǎn xiě gōngkè, yǒushíhòu yě gēn tóngxué liànxí shuō Zhōngwén.|Từ đầu học kỳ này, thứ Hai đến thứ Sáu mình đều có tiết tiếng Hoa, mỗi ngày học từ 8 giờ 40 sáng đến 12 giờ trưa, 1 giờ chiều làm bài tập, thỉnh thoảng cũng luyện nói tiếng Trung với bạn học.
+|最近我的台灣朋友想學日文，請我教他，我也請他教我中文。現在我非常忙，沒有很多時間讀書，可是因為有語言交換，所以我的中文進步了。|Zuìjìn wǒ de Táiwān péngyǒu xiǎng xué Rìwén, qǐng wǒ jiāo tā, wǒ yě qǐng tā jiāo wǒ Zhōngwén. Xiànzài wǒ fēicháng máng, méi yǒu hěn duō shíjiān dúshū, kěshì yīnwèi yǒu yǔyán jiāohuàn, suǒyǐ wǒ de Zhōngwén jìnbù le.|Gần đây bạn Đài Loan của mình muốn học tiếng Nhật, nhờ mình dạy, mình cũng nhờ bạn ấy dạy tiếng Trung. Bây giờ mình rất bận, không có nhiều thời gian học bài, nhưng nhờ trao đổi ngôn ngữ nên tiếng Trung của mình đã tiến bộ.
+|下個星期華語課有期中考，我有一點兒緊張，所以每天晚上都讀書，也練習寫字，希望下個星期的考試能考得很好。|Xià ge xīngqí Huáyǔ kè yǒu qīzhōngkǎo, wǒ yǒu yìdiǎnr jǐnzhāng, suǒyǐ měi tiān wǎnshàng dōu dúshū, yě liànxí xiězì, xīwàng xià ge xīngqí de kǎoshì néng kǎo de hěn hǎo.|Tuần sau lớp tiếng Hoa có thi giữa kỳ, mình hơi lo, nên tối nào cũng học bài và luyện viết chữ, hy vọng bài thi tuần sau làm tốt.
+
+@1|10|10-1-1|對話一|請假|Xin nghỉ học
+元真|老師，國安今天要請假。他發燒了，不能來上課。|Lǎoshī, Guó'ān jīntiān yào qǐngjià. Tā fāshāo le, bù néng lái shàngkè.|Thưa thầy, hôm nay Quốc An xin nghỉ ạ. Bạn ấy bị sốt, không đến lớp được.
+老師|他發燒了？那他應該去看醫生。|Tā fāshāo le? Nà tā yīnggāi qù kàn yīshēng.|Em ấy bị sốt à? Vậy em ấy nên đi khám bác sĩ.
+元真|國安跟我說，他今天要去看醫生，他家附近有一家不錯的醫院。|Guó'ān gēn wǒ shuō, tā jīntiān yào qù kàn yīshēng, tā jiā fùjìn yǒu yì jiā búcuò de yīyuàn.|Quốc An nói với em là hôm nay bạn ấy sẽ đi khám, gần nhà bạn ấy có một bệnh viện khá tốt.
+老師|最近很多人感冒，你們要戴口罩，也要常常洗手。|Zuìjìn hěn duō rén gǎnmào, nǐmen yào dài kǒuzhào, yě yào chángcháng xǐshǒu.|Gần đây nhiều người bị cảm, các em nhớ đeo khẩu trang và rửa tay thường xuyên.
+元真|老師，我很健康，不常生病。|Lǎoshī, wǒ hěn jiànkāng, bù cháng shēngbìng.|Thưa thầy, em rất khỏe, ít khi bị bệnh.
+老師|平常不生病的人也要注意。|Píngcháng bù shēngbìng de rén yě yào zhùyì.|Người ngày thường ít bệnh cũng phải chú ý.
+元真|對，我應該多注意身體健康。|Duì, wǒ yīnggāi duō zhùyì shēntǐ jiànkāng.|Vâng, em nên chú ý đến sức khỏe nhiều hơn.
+老師|妳可以帶一些水果去看國安，跟他說應該多喝水，也要多休息。|Nǐ kěyǐ dài yìxiē shuǐguǒ qù kàn Guó'ān, gēn tā shuō yīnggāi duō hē shuǐ, yě yào duō xiūxi.|Em có thể mang ít trái cây đến thăm Quốc An, nhắn bạn ấy nên uống nhiều nước và nghỉ ngơi nhiều.
+元真|好，我明天帶一些蘋果去看他。|Hǎo, wǒ míngtiān dài yìxiē píngguǒ qù kàn tā.|Vâng, mai em sẽ mang ít táo đến thăm bạn ấy.
+
+@1|10|10-2-1|對話二|看醫生|Đi khám bác sĩ
+醫生|你覺得哪裡不舒服？|Nǐ juéde nǎlǐ bù shūfu?|Em thấy khó chịu ở đâu?
+國安|我咳嗽、頭痛，鼻子也不舒服。|Wǒ késòu, tóu tòng, bízi yě bù shūfu.|Em ho, đau đầu, mũi cũng khó chịu.
+醫生|最近天氣冷了，很多人感冒了。|Zuìjìn tiānqì lěng le, hěn duō rén gǎnmào le.|Dạo này trời lạnh, nhiều người bị cảm.
+國安|對啊！聽說我們學校感冒、發燒的學生很多。|Duì ā! Tīngshuō wǒmen xuéxiào gǎnmào, fāshāo de xuéshēng hěn duō.|Đúng ạ! Nghe nói trường em có nhiều học sinh bị cảm, bị sốt.
+醫生|最近也有很多人肚子痛。|Zuìjìn yě yǒu hěn duō rén dùzi tòng.|Dạo này cũng có nhiều người đau bụng.
+國安|是因為吃的東西不乾淨嗎？|Shì yīnwèi chī de dōngxi bù gānjìng ma?|Có phải vì ăn đồ không sạch không ạ?
+醫生|不是，這也是因為感冒。|Bú shì, zhè yě shì yīnwèi gǎnmào.|Không phải, cái này cũng là do cảm.
+國安|請問我需要吃藥嗎？|Qǐngwèn wǒ xūyào chī yào ma?|Cho em hỏi em có cần uống thuốc không ạ?
+醫生|我會給你三天的藥。你要記得多喝一點兒水，要是發燒了，就吃紅色的藥。|Wǒ huì gěi nǐ sān tiān de yào. Nǐ yào jìde duō hē yìdiǎnr shuǐ, yàoshi fāshāo le, jiù chī hóngsè de yào.|Bác sẽ cho em thuốc ba ngày. Nhớ uống nhiều nước, nếu bị sốt thì uống viên thuốc màu đỏ.
+國安|好，謝謝醫生。|Hǎo, xièxie yīshēng.|Vâng, cảm ơn bác sĩ.
+
+@1|10|10-3-1|短文|我的同學感冒了|Bạn học của mình bị cảm
+|最近感冒的人很多，我的同學國安也感冒了，今天開始發燒了。他打電話跟我說，他不能來上課，請我幫他請假。我很擔心他，請他去看醫生，也告訴他要聽醫生的話，不要忘記多喝水、多休息。他說他會去看醫生，請我們不要擔心，如果他好了，就會來學校上課。今天我要帶一些水果去看他，也會跟他說今天的功課。我們都希望他明天能回學校上課。|Zuìjìn gǎnmào de rén hěn duō, wǒ de tóngxué Guó'ān yě gǎnmào le, jīntiān kāishǐ fāshāo le. Tā dǎ diànhuà gēn wǒ shuō, tā bù néng lái shàngkè, qǐng wǒ bāng tā qǐngjià. Wǒ hěn dānxīn tā, qǐng tā qù kàn yīshēng, yě gàosù tā yào tīng yīshēng de huà, bú yào wàngjì duō hē shuǐ, duō xiūxí. Tā shuō tā huì qù kàn yīshēng, qǐng wǒmen bú yào dānxīn, rúguǒ tā hǎo le, jiù huì lái xuéxiào shàngkè. Jīntiān wǒ yào dài yìxiē shuǐguǒ qù kàn tā, yě huì gēn tā shuō jīntiān de gōngkè. Wǒmen dōu xīwàng tā míngtiān néng huí xuéxiào shàngkè.|Gần đây nhiều người bị cảm, bạn học của mình là Quốc An cũng bị cảm, hôm nay bắt đầu sốt. Bạn ấy gọi điện nói không đến lớp được, nhờ mình xin nghỉ giúp. Mình rất lo cho bạn ấy, bảo bạn đi khám bác sĩ, dặn bạn nghe lời bác sĩ, đừng quên uống nhiều nước và nghỉ ngơi nhiều. Bạn ấy nói sẽ đi khám, bảo bọn mình đừng lo, nếu khỏi rồi bạn sẽ đến trường học. Hôm nay mình sẽ mang ít trái cây đến thăm bạn ấy, và nói cho bạn bài tập hôm nay. Bọn mình đều hy vọng mai bạn ấy có thể quay lại trường học.
+
+@1|11|11-1-1|對話一|宜文到宿舍去找友美|Nghi Văn đến ký túc xá tìm Hữu Mỹ
+宜文|友美，今天的功課妳寫了嗎？|Yǒuměi, jīntiān de gōngkè nǐ xiě le ma?|Hữu Mỹ, bài tập hôm nay bạn làm chưa?
+友美|我已經寫了，我現在在寫卡片。|Wǒ yǐjīng xiě le, wǒ xiànzài zài xiě kǎpiàn.|Mình làm rồi, giờ mình đang viết thiệp.
+宜文|給誰的卡片？|Gěi shéi de kǎpiàn?|Thiệp gửi cho ai vậy?
+友美|一個新朋友。妳看，這是他送我的卡片。|Yí ge xīn péngyǒu. Nǐ kàn, zhè shì tā sòng wǒ de kǎpiàn.|Một người bạn mới. Bạn xem, đây là tấm thiệp bạn ấy tặng mình.
+宜文|他寫的字真好看。你們是怎麼認識的？|Tā xiě de zì zhēn hǎokàn. Nǐmen shì zěnme rènshi de?|Chữ bạn ấy viết đẹp thật. Hai bạn quen nhau thế nào?
+友美|我們是上網認識的，我看到他寫的文章，然後留言問了他一個問題，他回答得很有趣。|Wǒmen shì shàngwǎng rènshi de, wǒ kàndào tā xiě de wénzhāng, ránhòu liúyán wèn le tā yí ge wèntí, tā huídá de hěn yǒuqù.|Bọn mình quen nhau qua mạng, mình đọc bài bạn ấy viết, rồi để lại bình luận hỏi một câu, bạn ấy trả lời rất thú vị.
+宜文|你們常上網聊天嗎？|Nǐmen cháng shàngwǎng liáotiān ma?|Hai bạn có hay chat với nhau trên mạng không?
+友美|對啊，差不多每個晚上都聊。昨天他說他想跟我見面。|Duì ā, chàbùduō měi ge wǎnshàng dōu liáo. Zuótiān tā shuō tā xiǎng gēn wǒ jiànmiàn.|Có chứ, gần như tối nào cũng nói chuyện. Hôm qua bạn ấy nói muốn gặp mình.
+宜文|妳呢？妳要跟他見面嗎？|Nǐ ne? Nǐ yào gēn tā jiànmiàn ma?|Còn bạn? Bạn có muốn gặp bạn ấy không?
+友美|我還沒決定。|Wǒ háiméi juédìng.|Mình chưa quyết định.
+
+@1|11|11-2-1|對話二|在教室裡|Trong lớp học
+宜文|妳跟那位新朋友見面了沒有？|Nǐ gēn nà wèi xīn péngyǒu jiànmiàn le méi yǒu?|Bạn gặp người bạn mới đó chưa?
+友美|我還沒決定要不要跟他見面。|Wǒ hái méi juédìng yào bú yào gēn tā jiànmiàn.|Mình chưa quyết định có gặp bạn ấy hay không.
+宜文|妳擔心什麼？|Nǐ dānxīn shénme?|Bạn lo điều gì vậy?
+友美|我有點兒緊張，我以前沒有這種經驗，所以覺得這樣有點兒奇怪。|Wǒ yǒudiǎnr jǐnzhāng, wǒ yǐqián méi yǒu zhè zhǒng jīngyàn, suǒyǐ juéde zhèyàng yǒudiǎnr qíguài.|Mình hơi hồi hộp, trước giờ mình chưa có trải nghiệm này nên thấy hơi lạ.
+宜文|妳不要緊張，我有辦法，我跟妳一起去。|Nǐ bú yào jǐnzhāng, wǒ yǒu bànfǎ, wǒ gēn nǐ yìqǐ qù.|Bạn đừng lo, mình có cách, mình đi cùng bạn.
+友美|太好了，謝謝妳幫我的忙。|Tài hǎo le, xièxie nǐ bāng wǒ de máng.|Tuyệt quá, cảm ơn bạn đã giúp mình.
+宜文|不客氣。妳打算什麼時候跟他見面？|Bú kèqì. Nǐ dǎsuàn shénme shíhòu gēn tā jiànmiàn?|Đừng khách sáo. Bạn định khi nào gặp bạn ấy?
+友美|可能這個週末吧。如果妳有空，我再跟他約時間。|Kěnéng zhè ge zhōumò ba. Rúguǒ nǐ yǒukòng, wǒ zài gēn tā yuē shíjiān.|Có lẽ là cuối tuần này. Nếu bạn rảnh, mình sẽ hẹn giờ với bạn ấy.
+宜文|有空啊，但是我明天不會來學校，等妳決定了，再給我打電話吧。|Yǒukòng ā, dànshì wǒ míngtiān bú huì lái xuéxiào, děng nǐ juédìng le, zài gěi wǒ dǎ diànhuà ba.|Rảnh chứ, nhưng mai mình không đến trường, bạn quyết định xong thì gọi điện cho mình nhé.
+
+@1|11|11-3-1|短文|我的新朋友|Người bạn mới của mình
+|今天我跟一個日本女生見面，她姓小林，叫友美。我們是在網路上認識的。友美看了我寫的文章，留言給我，她覺得我很有趣。我們常上網聊天，上個星期我寄了張卡片給她，約她見面。|Jīntiān wǒ gēn yí ge Rìběn nǚshēng jiànmiàn, tā xìng Xiǎolín, jiào Yǒuměi. Wǒmen shì zài wǎnglù shàng rènshi de. Yǒuměi kàn le wǒ xiě de wénzhāng, liúyán gěi wǒ, tā juéde wǒ hěn yǒuqù. Wǒmen cháng shàngwǎng liáotiān, shàng ge xīngqí wǒ jì le zhāng kǎpiàn gěi tā, yuē tā jiànmiàn.|Hôm nay mình gặp một cô gái Nhật, cô ấy họ Kobayashi, tên là Hữu Mỹ. Bọn mình quen nhau trên mạng. Hữu Mỹ đọc bài mình viết, để lại bình luận cho mình, cô ấy thấy mình rất thú vị. Bọn mình hay chat với nhau, tuần trước mình gửi cho cô ấy một tấm thiệp, hẹn cô ấy gặp mặt.
+|我們在一家餐廳見面，友美的同學也來了。那家餐廳很有名，菜單也做得很好看、很特別。我們點了幾盤菜，然後開始聊天，聊得很開心，也一起照了幾張相片。|Wǒmen zài yì jiā cāntīng jiànmiàn, Yǒuměi de tóngxué yě lái le. Nà jiā cāntīng hěn yǒumíng, càidān yě zuò de hěn hǎokàn, hěn tèbié. Wǒmen diǎn le jǐ pán cài, ránhòu kāishǐ liáotiān, liáo de hěn kāixīn, yě yìqǐ zhào le jǐ zhāng xiàngpiàn.|Bọn mình gặp nhau ở một nhà hàng, bạn học của Hữu Mỹ cũng đến. Nhà hàng đó rất nổi tiếng, thực đơn cũng được thiết kế rất đẹp, rất đặc biệt. Bọn mình gọi mấy món, rồi bắt đầu trò chuyện, nói chuyện rất vui, còn chụp chung vài tấm ảnh.
+|今天我的心情真好，因為友美太可愛了！我還想再約她出去，希望以後有機會常常跟她見面、聊天。|Jīntiān wǒ de xīnqíng zhēn hǎo, yīnwèi Yǒuměi tài kěài le! Wǒ hái xiǎng zài yuē tā chūqù, xīwàng yǐhòu yǒu jīhuì chángcháng gēn tā jiànmiàn, liáotiān.|Hôm nay tâm trạng mình thật tốt, vì Hữu Mỹ quá dễ thương! Mình còn muốn hẹn cô ấy đi chơi nữa, hy vọng sau này có dịp thường xuyên gặp gỡ, trò chuyện với cô ấy.
+
+@1|12|12-1-1|對話一|你想做什麼工作？|Bạn muốn làm nghề gì?
+中明|你昨天怎麼沒來上課？|Nǐ zuótiān zěnme méi lái shàngkè?|Hôm qua sao bạn không đến lớp?
+國安|我去參加畫畫比賽。你們上課上了什麼？|Wǒ qù cānjiā huàhuà bǐsài. Nǐmen shàngkè shàng le shénme?|Mình đi tham gia cuộc thi vẽ. Các bạn học gì vậy?
+中明|老師問我們想做什麼工作，大家都說得很高興。|Lǎoshī wèn wǒmen xiǎng zuò shénme gōngzuò, dàjiā dōu shuō de hěn gāoxìng.|Thầy hỏi bọn mình muốn làm nghề gì, mọi người đều nói rất hào hứng.
+國安|我知道友美想當護理師。別的同學呢？|Wǒ zhīdào Yǒuměi xiǎng dāng hùlǐshī. Biéde tóngxué ne?|Mình biết Hữu Mỹ muốn làm y tá. Các bạn khác thì sao?
+中明|宜文希望可以用中文和英文工作，所以她以後想當記者，元真想在銀行工作。|Yíwén xīwàng kěyǐ yòng Zhōngwén hé Yīngwén gōngzuò, suǒyǐ tā yǐhòu xiǎng dāng jìzhě, Yuánzhēn xiǎng zài yínháng gōngzuò.|Nghi Văn hy vọng được dùng tiếng Trung và tiếng Anh khi làm việc, nên sau này cô ấy muốn làm phóng viên, Nguyên Chân muốn làm ở ngân hàng.
+國安|那你畢業以後想做什麼？|Nà nǐ bìyè yǐhòu xiǎng zuò shénme?|Vậy sau khi tốt nghiệp bạn muốn làm gì?
+中明|我以前想當大公司的老闆，可是老闆要做的事情太多，現在覺得當醫生比較好。那你想做什麼？|Wǒ yǐqián xiǎng dāng dà gōngsī de lǎobǎn, kěshì lǎobǎn yào zuò de shìqing tài duō, xiànzài juéde dāng yīshēng bǐjiào hǎo. Nà nǐ xiǎng zuò shénme?|Trước đây mình muốn làm sếp công ty lớn, nhưng sếp phải làm quá nhiều việc, giờ mình thấy làm bác sĩ thì hơn. Còn bạn muốn làm gì?
+國安|當醫生很不錯，但是太忙了，我只想每天可以準時上班、下班。|Dāng yīshēng hěn búcuò, dànshì tài máng le, wǒ zhǐ xiǎng měi tiān kěyǐ zhǔnshí shàngbān, xiàbān.|Làm bác sĩ cũng hay, nhưng bận quá, mình chỉ muốn mỗi ngày đi làm và tan làm đúng giờ.
+
+@1|12|12-2-1|對話二|在麵包店工作|Làm việc ở tiệm bánh mì
+中明|國安，你每天下課以後都要去麵包店工作，辛苦嗎？|Guó'ān, nǐ měi tiān xiàkè yǐhòu dōu yào qù miànbāo diàn gōngzuò, xīnkǔ ma?|Quốc An, ngày nào tan học bạn cũng đi làm ở tiệm bánh mì, có vất vả không?
+國安|不辛苦。我很喜歡這個工作，因為可以學怎麼做麵包，而且同事也都對我很好。|Bù xīnkǔ. Wǒ hěn xǐhuān zhè ge gōngzuò, yīnwèi kěyǐ xué zěnme zuò miànbāo, érqiě tóngshì yě dōu duì wǒ hěn hǎo.|Không vất vả. Mình rất thích công việc này, vì học được cách làm bánh mì, hơn nữa đồng nghiệp cũng đều đối xử với mình rất tốt.
+中明|這樣你在學校的成績，不會有問題嗎？|Zhèyàng nǐ zài xuéxiào de chéngjī, bú huì yǒu wèntí ma?|Vậy điểm số ở trường của bạn có bị ảnh hưởng không?
+國安|不會啊！我都先做功課，再去工作。|Bú huì ā! Wǒ dōu xiān zuò gōngkè, zài qù gōngzuò.|Không đâu! Mình luôn làm bài tập trước rồi mới đi làm.
+中明|我以前在餐廳上過班，因為太累了，常常睡得不夠。|Wǒ yǐqián zài cāntīng shàng guò bān, yīnwèi tài lèi le, chángcháng shuì de bú gòu.|Trước đây mình từng làm ở nhà hàng, vì mệt quá nên thường ngủ không đủ.
+國安|這樣真的很辛苦。|Zhèyàng zhēnde hěn xīnkǔ.|Vậy thì thật sự rất vất vả.
+中明|有時候早上起得太晚，上課遲到了，而且沒時間準備考試，所以就不做了。|Yǒushíhòu zǎoshàng qǐ de tài wǎn, shàngkè chídào le, érqiě méi shíjiān zhǔnbèi kǎoshì, suǒyǐ jiù bú zuò le.|Có lúc sáng dậy quá muộn, đi học trễ, lại không có thời gian ôn thi, nên mình nghỉ luôn.
+國安|我下午四點到六點上班，工作時間不長，所以沒問題。|Wǒ xiàwǔ sì diǎn dào liù diǎn shàngbān, gōngzuò shíjiān bù cháng, suǒyǐ méi wèntí.|Mình đi làm từ 4 giờ đến 6 giờ chiều, thời gian làm không dài nên không sao.
+中明|兩個小時也可以嗎？那你們麵包店還需要人嗎？|Liǎng ge xiǎoshí yě kěyǐ ma? Nà nǐmen miànbāo diàn hái xūyào rén ma?|Hai tiếng cũng được à? Vậy tiệm bánh mì của bạn còn cần người không?
+國安|不知道，我明天看到老闆的時候，幫你問他。|Bù zhīdào, wǒ míngtiān kàndào lǎobǎn de shíhòu, bāng nǐ wèn tā.|Mình không biết, mai gặp sếp mình sẽ hỏi giúp bạn.
+
+@1|12|12-3-1|短文|工作|Công việc
+|昨天我看了一個電視節目，有很多父母在節目上談自己的孩子，他們說現在年輕人覺得結不結婚不重要，快樂比較重要；找工作的時候，錢多不多不重要，重要的是喜不喜歡這個工作。|Zuótiān wǒ kàn le yí ge diànshì jiémù, yǒu hěn duō fùmǔ zài jiémù shàng tán zìjǐ de háizi, tāmen shuō xiànzài niánqīng rén juéde jié bù jiéhūn bú zhòngyào, kuàilè bǐjiào zhòngyào; zhǎo gōngzuò de shíhòu, qián duō bù duō bú zhòngyào, zhòngyào de shì xǐ bù xǐhuān zhè ge gōngzuò.|Hôm qua mình xem một chương trình truyền hình, có nhiều bậc cha mẹ nói về con mình, họ bảo bây giờ người trẻ thấy kết hôn hay không không quan trọng, vui vẻ mới quan trọng; khi tìm việc, lương cao hay không không quan trọng, quan trọng là có thích công việc đó hay không.
+|節目裡有人說，很多年輕人喜歡在有冷氣的辦公室裡工作，休息時間還可以喝咖啡、上網，工廠裡辛苦的工作沒有人要做，所以工人常常不夠。|Jiémù lǐ yǒu rén shuō, hěn duō niánqīng rén xǐhuān zài yǒu lěngqì de bàngōngshì lǐ gōngzuò, xiūxí shíjiān hái kěyǐ hē kāfēi, shàngwǎng, gōngchǎng lǐ xīnkǔ de gōngzuò méi yǒu rén yào zuò, suǒyǐ gōngrén chángcháng bú gòu.|Trong chương trình có người nói, nhiều người trẻ thích làm việc trong văn phòng có máy lạnh, giờ nghỉ còn được uống cà phê, lên mạng; công việc vất vả trong nhà máy thì không ai muốn làm, nên thường thiếu công nhân.
+|如果大家都只喜歡做舒服的工作，那辛苦的工作誰要做呢？|Rúguǒ dàjiā dōu zhǐ xǐhuān zuò shūfu de gōngzuò, nà xīnkǔ de gōngzuò shéi yào zuò ne?|Nếu ai cũng chỉ thích làm việc nhàn hạ, vậy việc vất vả ai sẽ làm?
+
+@1|13|13-1-1|對話一|國安給中明打電話|Quốc An gọi điện cho Trung Minh
+國安|喂，中明，半個小時以前我寄了一封電子郵件給你，你看到了嗎？|Wèi, Zhōngmíng, bàn ge xiǎoshí yǐqián wǒ jì le yì fēng diànzǐ yóujiàn gěi nǐ, nǐ kàndào le ma?|Alô, Trung Minh, nửa tiếng trước mình có gửi cho bạn một email, bạn xem chưa?
+中明|剛剛我的手機網路有點兒問題，不能看電子郵件，你寄的是什麼？|Gānggāng wǒ de shǒujī wǎnglù yǒudiǎnr wèntí, bù néng kàn diànzǐ yóujiàn, nǐ jì de shì shénme?|Vừa nãy mạng điện thoại của mình hơi có vấn đề, không xem được email, bạn gửi gì vậy?
+國安|博物館的網址。下禮拜六老師要帶我們去參觀，你可以先看看。|Bówùguǎn de wǎngzhǐ. Xià lǐbài liù lǎoshī yào dài wǒmen qù cānguān, nǐ kěyǐ xiān kànkan.|Địa chỉ trang web của bảo tàng. Thứ Bảy tuần sau thầy sẽ dẫn bọn mình đi tham quan, bạn có thể xem trước.
+中明|好。（看看手機）現在沒問題了，我看到了。|Hǎo. (Kànkan shǒujī) Xiànzài méi wèntí le, wǒ kàndào le.|Được. (Xem điện thoại) Giờ không sao rồi, mình xem được rồi.
+國安|網站上有地址，那個地方在我家附近，從我家出去，往右轉，差不多五分鐘就到了。|Wǎngzhàn shàng yǒu dìzhǐ, nà ge dìfāng zài wǒ jiā fùjìn, cóng wǒ jiā chūqù, wǎng yòu zhuǎn, chàbùduō wǔ fēnzhōng jiù dào le.|Trên trang web có địa chỉ, chỗ đó gần nhà mình, từ nhà mình đi ra, rẽ phải, khoảng năm phút là tới.
+中明|我們應該幾點到？|Wǒmen yīnggāi jǐ diǎn dào?|Mình nên đến lúc mấy giờ?
+國安|早上九點在博物館門口見，要記得準時到。|Zǎoshàng jiǔ diǎn zài bówùguǎn ménkǒu jiàn, yào jìdé zhǔnshí dào.|Chín giờ sáng gặp ở cổng bảo tàng, nhớ đến đúng giờ nhé.
+中明|我們上個星期六去運動的時候，我到得太晚，真不好意思。下個星期我一定會準時。|Wǒmen shàng ge xīngqí liù qù yùndòng de shíhòu, wǒ dào de tài wǎn, zhēn bùhǎoyìsi. Xià ge xīngqí wǒ yídìng huì zhǔnshí.|Thứ Bảy tuần trước đi tập thể thao mình đến quá trễ, thật ngại quá. Tuần sau mình nhất định sẽ đúng giờ.
+
+@1|13|13-2-1|對話二|在博物館門口|Ở cổng bảo tàng
+老師|博物館五分鐘以後就要開門了，大家都到了吧？|Bówùguǎn wǔ fēnzhōng yǐhòu jiùyào kāi mén le, dàjiā dōu dào le ba?|Năm phút nữa bảo tàng mở cửa rồi, mọi người đến đủ cả chưa?
+國安|中明說他快要到了。|Zhōngmíng shuō tā kuàiyào dào le.|Trung Minh nói bạn ấy sắp đến rồi ạ.
+家樂|老師，我們要不要先去排隊買票？|Lǎoshī, wǒmen yào bú yào xiān qù páiduì mǎi piào?|Thưa thầy, mình có nên đi xếp hàng mua vé trước không ạ?
+老師|差不多需要排十分鐘的隊，那好吧，我們先去排隊。|Chàbùduō xūyào pái shí fēnzhōng de duì, nà hǎo ba, wǒmen xiān qù páiduì.|Khoảng mười phút xếp hàng, vậy thì được, mình đi xếp hàng trước.
+*|（票買了，中明還沒到。）|(Piào mǎi le, Zhōngmíng háiméi dào.)|(Mua vé xong, Trung Minh vẫn chưa đến.)
+老師|今天我們打算參觀三個小時，會有人給我們介紹。進去以後，記得要安靜，不可以說話說得太大聲。|Jīntiān wǒmen dǎsuàn cānguān sān ge xiǎoshí, huì yǒu rén gěi wǒmen jièshào. Jìnqù yǐhòu, jìdé yào ānjìng, bù kěyǐ shuōhuà shuō de tài dàshēng.|Hôm nay chúng ta dự định tham quan ba tiếng, sẽ có người giới thiệu. Khi vào trong nhớ giữ yên lặng, không được nói chuyện quá to.
+家樂|老師，我剛剛先用手機上網看了很多有趣的圖片，真想馬上就看到博物館裡的東西。|Lǎoshī, wǒ gānggāng xiān yòng shǒujī shàngwǎng kàn le hěn duō yǒuqù de túpiàn, zhēn xiǎng mǎshàng jiù kàndào bówùguǎn lǐ de dōngxi.|Thưa thầy, vừa nãy em dùng điện thoại lên mạng xem nhiều hình ảnh thú vị, em thật muốn xem ngay những thứ trong bảo tàng.
+老師|我知道你非常喜歡歷史，我想你今天一定會很開心。|Wǒ zhīdào nǐ fēicháng xǐhuān lìshǐ, wǒ xiǎng nǐ jīntiān yídìng huì hěn kāixīn.|Thầy biết em rất thích lịch sử, thầy nghĩ hôm nay em nhất định sẽ rất vui.
+家樂|我也在網路上找了很多文章，那些介紹和故事都非常有趣。|Wǒ yě zài wǎnglù shàng zhǎo le hěn duō wénzhāng, nàxiē jièshào hé gùshì dōu fēicháng yǒuqù.|Em cũng tìm nhiều bài viết trên mạng, những phần giới thiệu và câu chuyện đó đều rất thú vị.
+老師|那如果大家有問題就可以問你了。|Nà rúguǒ dàjiā yǒu wèntí jiù kěyǐ wèn nǐ le.|Vậy nếu mọi người có câu hỏi thì có thể hỏi em rồi.
+家樂|要是我知道，一定會告訴大家！|Yàoshi wǒ zhīdào, yídìng huì gàosù dàjiā!|Nếu em biết thì nhất định sẽ nói cho mọi người!
+國安|（往前看）中明來了！|(Wǎng qián kàn) Zhōngmíng lái le!|(Nhìn về phía trước) Trung Minh đến rồi!
+老師|好，我們進去參觀吧。|Hǎo, wǒmen jìnqù cānguān ba.|Được rồi, mình vào tham quan thôi.
+
+@1|13|13-3-1|短文|手機和我們的生活|Điện thoại và cuộc sống của chúng ta
+|我們一天用幾個小時的手機呢？打電話、算錢、看天氣、看地圖、看朋友的留言，都需要手機。|Wǒmen yì tiān yòng jǐ ge xiǎoshí de shǒujī ne? Dǎ diànhuà, suàn qián, kàn tiānqì, kàn dìtú, kàn péngyǒu de liúyán, dōu xūyào shǒujī.|Một ngày chúng ta dùng điện thoại mấy tiếng? Gọi điện, tính tiền, xem thời tiết, xem bản đồ, xem tin nhắn của bạn bè, đều cần đến điện thoại.
+|我上個星期坐捷運去參觀一個科學展。出了捷運站以後，我不知道往哪個方向走，馬上看了手機的網路地圖，然後就知道怎麼走了。我從捷運站出去，先往右轉，過了第一個十字路口，再走五分鐘就到了。有手機真方便！|Wǒ shàng ge xīngqí zuò jiéyùn qù cānguān yí ge kēxué zhǎn. Chū le jiéyùnzhàn yǐhòu, wǒ bù zhīdào wǎng nǎ ge fāngxiàng zǒu, mǎshàng kàn le shǒujī de wǎnglù dìtú, ránhòu jiù zhīdào zěnme zǒu le. Wǒ cóng jiéyùn zhàn chūqù, xiān wǎng yòu zhuǎn, guò le dì yī ge shízì lùkǒu, zài zǒu wǔ fēnzhōng jiù dào le. Yǒu shǒujī zhēn fāngbiàn!|Tuần trước mình đi tàu điện đến xem một triển lãm khoa học. Ra khỏi ga tàu điện, mình không biết đi hướng nào, liền xem bản đồ trên điện thoại, rồi biết đường đi ngay. Mình đi ra khỏi ga, rẽ phải trước, qua ngã tư đầu tiên, đi thêm năm phút là tới. Có điện thoại thật tiện!
+|我們每天從家裡出去以後，最怕什麼事？忘了帶錢？忘了帶手機？還是手機壞了？如果世界上沒有手機了，我們的生活會怎麼樣呢？|Wǒmen měi tiān cóng jiā lǐ chūqù yǐhòu, zuì pà shénme shì? Wàngle dài qián? Wàngle dài shǒujī? Háishì shǒujī huài le? Rúguǒ shìjiè shàng méi yǒu shǒujī le, wǒmen de shēnghuó huì zěnmeyàng ne?|Mỗi ngày ra khỏi nhà, chúng ta sợ nhất điều gì? Quên mang tiền? Quên mang điện thoại? Hay là điện thoại bị hỏng? Nếu trên đời không còn điện thoại, cuộc sống của chúng ta sẽ ra sao?
+
+@1|14|14-1-1|對話一|十二月三十日|Ngày 30 tháng 12
+老師|家樂，你在台灣住了多久了？參加過台灣的新年活動嗎？|Jiālè, nǐ zài Táiwān zhù le duōjiǔ le? Cānjiā guo Táiwān de xīnnián huódòng ma?|Gia Lạc, em sống ở Đài Loan bao lâu rồi? Em đã tham gia hoạt động đón năm mới ở Đài Loan chưa?
+家樂|我在台灣住了半年了，這是我第一次在台灣過新年。台灣人在一年的最後一天有什麼特別的活動？|Wǒ zài Táiwān zhù le bàn nián le, zhè shì wǒ dì yī cì zài Táiwān guò xīnnián. Táiwān rén zài yì nián de zuìhòu yì tiān yǒu shénme tèbié de huódòng?|Em sống ở Đài Loan nửa năm rồi, đây là lần đầu em đón năm mới ở Đài Loan. Người Đài Loan có hoạt động đặc biệt nào vào ngày cuối năm không ạ?
+老師|十二月三十一號的晚上，很多城市都有跨年晚會，我最喜歡的是台北101的演唱會，有很多表演，又熱鬧又好看。|Shíèr yuè sānshíyī hào de wǎnshàng, hěn duō chéngshì dōu yǒu kuànián wǎnhuì, wǒ zuì xǐhuān de shì Táiběi Yīlíngyī de yǎnchànghuì, yǒu hěn duō biǎoyǎn, yòu rènào yòu hǎokàn.|Tối ngày 31 tháng 12, nhiều thành phố có tiệc đón giao thừa, thầy thích nhất là buổi hòa nhạc ở Taipei 101, có nhiều tiết mục, vừa náo nhiệt vừa đẹp mắt.
+家樂|跟朋友一起去一定會很有意思，大家要不要一起去？|Gēn péngyǒu yìqǐ qù yídìng huì hěn yǒuyìsi, dàjiā yào bú yào yìqǐ qù?|Đi cùng bạn bè chắc chắn rất thú vị, mọi người có muốn cùng đi không?
+老師|如果大家要去跨年，要多帶一件衣服。去年我在那裡站了一晚，因為時間太久，天氣也太冷，回家以後就感冒了。|Rúguǒ dàjiā yào qù kuànián, yào duō dài yí jiàn yīfu. Qùnián wǒ zài nàlǐ zhàn le yì wǎn, yīnwèi shíjiān tài jiǔ, tiānqì yě tài lěng, huíjiā yǐhòu jiù gǎnmào le.|Nếu mọi người đi đón giao thừa thì nhớ mang thêm một cái áo. Năm ngoái thầy đứng ở đó cả đêm, vì thời gian quá lâu, trời lại quá lạnh, về nhà là bị cảm.
+宜文|我家在台北101大樓附近，大家可以先來我家，我們一起吃晚飯，再去看演唱會。|Wǒ jiā zài Táiběi Yīlíngyī dàlóu fùjìn, dàjiā kěyǐ xiān lái wǒ jiā, wǒmen yìqǐ chī wǎnfàn, zài qù kàn yǎnchànghuì.|Nhà em ở gần tòa nhà Taipei 101, mọi người có thể đến nhà em trước, cùng ăn tối rồi đi xem hòa nhạc.
+國安|太好了！我們可以每個人都準備一些好吃的東西。|Tài hǎo le! Wǒmen kěyǐ měi ge rén dōu zhǔnbèi yìxiē hǎochī de dōngxi.|Tuyệt quá! Mỗi người chúng ta có thể chuẩn bị ít đồ ăn ngon.
+宜文|老師，請您也跟大家一起來我家，好嗎？|Lǎoshī, qǐng nín yě gēn dàjiā yìqǐ lái wǒ jiā, hǎo ma?|Thưa thầy, mời thầy cũng đến nhà em cùng mọi người nhé?
+老師|好啊！那我也準備一些飲料。大家一起跨年吧！|Hǎo ā! Nà wǒ yě zhǔnbèi yìxiē yǐnliào. Dàjiā yìqǐ kuànián ba!|Được chứ! Vậy thầy cũng chuẩn bị ít đồ uống. Mọi người cùng đón giao thừa nào!
+
+@1|14|14-2-1|對話二|在宜文家|Ở nhà Nghi Văn
+宜文|歡迎大家，請進！|Huānyíng dàjiā, qǐng jìn!|Chào mừng mọi người, mời vào!
+家樂|謝謝！妳家前面的公園有很多花跟樹，環境真好！|Xièxie! Nǐ jiā qiánmiàn de gōngyuán yǒu hěn duō huā gēn shù, huánjìng zhēn hǎo!|Cảm ơn bạn! Công viên trước nhà bạn có nhiều hoa và cây, môi trường thật tốt!
+國安|我跟友美買了幾瓶酒，也帶了大家都喜歡的餃子、包子和牛肉湯。|Wǒ gēn Yǒuměi mǎi le jǐ píng jiǔ, yě dài le dàjiā dōu xǐhuān de jiǎozi, bāozi hé niúròu tāng.|Mình với Hữu Mỹ mua mấy chai rượu, còn mang theo sủi cảo, bánh bao và canh bò mà ai cũng thích.
+宜文|這麼多東西很重吧？|Zhème duō dōngxi hěn zhòng ba?|Nhiều đồ như vậy chắc nặng lắm nhỉ?
+國安|不重，我很高興能幫大家準備。|Bú zhòng, wǒ hěn gāoxìng néng bāng dàjiā zhǔnbèi.|Không nặng đâu, mình rất vui được giúp mọi người chuẩn bị.
+老師|我買了珍珠奶茶，希望大家會喜歡。|Wǒ mǎi le zhēnzhū nǎichá, xīwàng dàjiā huì xǐhuān.|Thầy mua trà sữa trân châu, mong mọi người sẽ thích.
+宜文|大家準備了這麼多東西。老師，請您先拿吧！|Dàjiā zhǔnbèi le zhème duō dōngxi. Lǎoshī, qǐng nín xiān ná ba!|Mọi người chuẩn bị nhiều đồ quá. Thưa thầy, mời thầy lấy trước ạ!
+家樂|老師，跨年的時候，如果不想去看演唱會，還有別的活動嗎？|Lǎoshī, kuànián de shíhòu, rúguǒ bù xiǎng qù kàn yǎnchànghuì, hái yǒu biéde huódòng ma?|Thưa thầy, lúc đón giao thừa, nếu không muốn đi xem hòa nhạc thì còn hoạt động nào khác không ạ?
+老師|有啊！我小的時候在山上住了七、八年，每一年的第一天，我都跟家人一起看日出。|Yǒu ā! Wǒ xiǎo de shíhòu zài shān shàng zhù le qī, bā nián, měi yì nián de dì yī tiān, wǒ dōu gēn jiārén yìqǐ kàn rìchū.|Có chứ! Hồi nhỏ thầy sống trên núi bảy, tám năm, ngày đầu tiên của mỗi năm thầy đều cùng gia đình ngắm bình minh.
+家樂|跨年的時候，英國的教堂有很多活動，也有人去聽音樂會。|Kuànián de shíhòu, Yīngguó de jiàotáng yǒu hěn duō huódòng, yě yǒu rén qù tīng yīnyuèhuì.|Lúc giao thừa, nhà thờ ở Anh có nhiều hoạt động, cũng có người đi nghe hòa nhạc.
+友美|在日本，跨年的時候，很多人在家跟家人一起看電視。但是我喜歡和朋友一起跨年，比在家看電視有趣。|Zài Rìběn, kuànián de shíhòu, hěn duō rén zài jiā gēn jiārén yìqǐ kàn diànshì. Dànshì wǒ xǐhuān hé péngyǒu yìqǐ kuànián, bǐ zài jiā kàn diànshì yǒuqù.|Ở Nhật, lúc giao thừa nhiều người ở nhà cùng gia đình xem tivi. Nhưng mình thích đón giao thừa cùng bạn bè, thú vị hơn ở nhà xem tivi.
+國安|我也喜歡跟朋友一起跨年，而且今年比以前有意思多了，因為在台灣跟你們一起玩，覺得很特別。|Wǒ yě xǐhuān gēn péngyǒu yìqǐ kuànián, érqiě jīnnián bǐ yǐqián yǒuyìsi duō le, yīnwèi zài Táiwān gēn nǐmen yìqǐ wán, juéde hěn tèbié.|Mình cũng thích đón giao thừa cùng bạn bè, hơn nữa năm nay thú vị hơn trước nhiều, vì được chơi cùng các bạn ở Đài Loan, thấy rất đặc biệt.
+宜文|我同意，我也覺得今年很有意思。|Wǒ tóngyì, wǒ yě juéde jīnnián hěn yǒuyìsi.|Mình đồng ý, mình cũng thấy năm nay rất thú vị.
+
+@1|14|14-3-1|短文|跨年|Đón giao thừa
+|一年的最後一天，每個國家都有慶祝跨年的活動。參加這些活動的年輕人很多，他們喜歡跟朋友去熱鬧的地方玩。在臺灣，年輕人最喜歡的跨年活動是去看演唱會。但是，交通是一個問題，需要很多警察在捷運站幫忙，因為人真的太多了，如果不小心，可能會受傷，所以有的人覺得在家裡看電視比出去玩好。|Yì nián de zuìhòu yì tiān, měi ge guójiā dōu yǒu qìngzhù kuànián de huódòng. Cānjiā zhèxiē huódòng de niánqīng rén hěn duō, tāmen xǐhuān gēn péngyǒu qù rènào de dìfāng wán. Zài Táiwān, niánqīng rén zuì xǐhuān de kuànián huódòng shì qù kàn yǎnchànghuì. Dànshì, jiāotōng shì yí ge wèntí, xūyào hěn duō jǐngchá zài jiéyùn zhàn bāngmáng, yīnwèi rén zhēnde tài duō le, rúguǒ bù xiǎoxīn, kěnéng huì shòushāng, suǒyǐ yǒude rén juéde zài jiā lǐ kàn diànshì bǐ chūqù wán hǎo.|Ngày cuối cùng của năm, nước nào cũng có hoạt động chào mừng giao thừa. Có rất nhiều người trẻ tham gia các hoạt động này, họ thích cùng bạn bè đến nơi náo nhiệt vui chơi. Ở Đài Loan, hoạt động giao thừa được người trẻ thích nhất là đi xem hòa nhạc. Nhưng giao thông là một vấn đề, cần nhiều cảnh sát hỗ trợ ở các ga tàu điện, vì người thật sự quá đông, nếu không cẩn thận có thể bị thương, nên có người thấy ở nhà xem tivi còn hơn ra ngoài chơi.
+|今年是我第一次在台灣過新年。我跟老師、同學們先去一個同學家吃晚飯，再去參加101大樓的跨年活動。我覺得最有意思的是看演唱會，很多人一起唱歌、跳舞，真熱鬧。我們都覺得今年在台北跨年是一個最特別的經驗。|Jīnnián shì wǒ dì yī cì zài Táiwān guò xīnnián. Wǒ gēn lǎoshī, tóngxuémen xiān qù yí ge tóngxué jiā chī wǎnfàn, zài qù cānjiā Yīlíngyī Dàlóu de kuànián huódòng. Wǒ juéde zuì yǒuyìsi de shì kàn yǎnchànghuì, hěn duō rén yìqǐ chànggē, tiàowǔ, zhēn rènào. Wǒmen dōu juéde jīnnián zài Táiběi kuànián shì yí ge zuì tèbié de jīngyàn.|Năm nay là lần đầu tiên mình đón năm mới ở Đài Loan. Mình cùng thầy và các bạn học đến nhà một bạn ăn tối trước, rồi đi tham gia hoạt động giao thừa ở tòa nhà 101. Mình thấy thú vị nhất là xem hòa nhạc, nhiều người cùng hát, nhảy múa, thật náo nhiệt. Chúng mình đều thấy năm nay đón giao thừa ở Đài Bắc là một trải nghiệm đặc biệt nhất.
+
+@1|15|15-1-1|對話一|十二生肖|Mười hai con giáp
+宜文|我們下個星期要學第十五課，我剛才先看了一點兒，書上有很多種動物，我覺得很有意思。|Wǒmen xià ge xīngqí yào xué dì shíwǔ kè, wǒ gāngcái xiān kàn le yìdiǎnr, shū shàng yǒu hěn duō zhǒng dòngwù, wǒ juéde hěn yǒuyìsi.|Tuần sau mình học bài 15, vừa nãy mình xem trước một chút, trong sách có nhiều loài động vật, mình thấy rất thú vị.
+友美|有哪些動物？|Yǒu nǎxiē dòngwù?|Có những con vật nào?
+宜文|我記得有羊、馬、兔子……，最特別的是龍。（打開課本）妳看看……|Wǒ jìde yǒu yáng, mǎ, tùzi..., zuì tèbié de shì lóng. (Dǎkāi kèběn) Nǐ kànkan...|Mình nhớ có dê, ngựa, thỏ..., đặc biệt nhất là rồng. (Mở sách ra) Bạn xem này...
+友美|原來是十二生肖，真的很有意思。|Yuánlái shì shíèr shēngxiào, zhēnde hěn yǒuyìsi.|Hóa ra là mười hai con giáp, thật sự rất thú vị.
+宜文|什麼是十二生肖？|Shénme shì shíèr shēngxiào?|Mười hai con giáp là gì?
+友美|華人用不一樣的動物代表每一年，一共有十二種動物。|Huárén yòng bù yíyàng de dòngwù dàibiǎo měi yì nián, yígòng yǒu shíèr zhǒng dòngwù.|Người Hoa dùng những con vật khác nhau đại diện cho mỗi năm, tổng cộng có mười hai con vật.
+國安|越南也有十二生肖，可是我們沒有兔年，有貓年。我是貓年出生的，屬貓。|Yuènán yě yǒu shíèr shēngxiào, kěshì wǒmen méi yǒu tù nián, yǒu māo nián. Wǒ shì māo nián chūshēng de, shǔ māo.|Việt Nam cũng có mười hai con giáp, nhưng bọn mình không có năm Thỏ mà có năm Mèo. Mình sinh năm Mèo, tuổi Mèo.
+宜文|真的啊？好有趣！|Zhēnde ā? Hǎo yǒuqù!|Thật hả? Thú vị quá!
+友美|原來越南的生肖跟中國的有點兒不一樣。|Yuánlái Yuènán de shēngxiào gēn Zhōngguó de yǒudiǎnr bù yíyàng.|Hóa ra con giáp của Việt Nam hơi khác với của Trung Quốc.
+宜文|我好想知道我屬什麼。|Wǒ hǎo xiǎng zhīdào wǒ shǔ shénme.|Mình rất muốn biết mình tuổi con gì.
+國安|很簡單，上網一查就知道了。|Hěn jiǎndān, shàngwǎng yì chá jiù zhīdào le.|Đơn giản thôi, lên mạng tra là biết ngay.
+宜文|好，我上網查查看。|Hǎo, wǒ shàngwǎng cháchá kàn.|Được, mình lên mạng tra thử.
+
+@1|15|15-2-1|對話二|燈籠|Chiếc đèn lồng
+宜文|中明，你手裡拿著什麼？|Zhōngmíng, nǐ shǒu lǐ ná zhe shénme?|Trung Minh, trong tay bạn cầm gì vậy?
+中明|這是燈籠。|Zhè shì dēnglóng.|Đây là đèn lồng.
+宜文|燈籠上的小老虎好可愛。|Dēnglóng shàng de xiǎo lǎohǔ hǎo kěài.|Chú hổ nhỏ trên đèn lồng dễ thương quá.
+中明|這是我朋友做的，因為他屬虎。妳知道十二生肖嗎？|Zhè shì wǒ péngyǒu zuò de, yīnwèi tā shǔ hǔ. Nǐ zhīdào shíèr shēngxiào ma?|Cái này bạn mình làm, vì bạn ấy tuổi Dần (hổ). Bạn có biết mười hai con giáp không?
+宜文|知道，友美跟我講過。|Zhīdào, Yǒuměi gēn wǒ jiǎng guo.|Biết, Hữu Mỹ từng kể cho mình nghe.
+中明|這個星期六是元宵節，妳跟友美會去看燈會嗎？|Zhè ge xīngqí liù shì Yuánxiāojié, nǐ gēn Yǒuměi huì qù kàn dēnghuì ma?|Thứ Bảy này là Tết Nguyên Tiêu, bạn với Hữu Mỹ có đi xem hội đèn lồng không?
+宜文|友美說她想去，我還沒決定去不去。燈會好玩嗎？|Yǒuměi shuō tā xiǎng qù, wǒ háiméi juédìng qù bú qù. Dēnghuì hǎowán ma?|Hữu Mỹ nói cô ấy muốn đi, mình chưa quyết định có đi không. Hội đèn lồng có vui không?
+中明|我去年去看了，很多大人帶著小孩去看燈會，非常熱鬧，我照了很多相片。|Wǒ qùnián qù kàn le, hěn duō dàrén dài zhe xiǎohái qù kàn dēnghuì, fēicháng rènào, wǒ zhào le hěn duō xiàngpiàn.|Năm ngoái mình có đi xem, nhiều người lớn dẫn trẻ con đi xem hội đèn, rất náo nhiệt, mình chụp rất nhiều ảnh.
+宜文|那我這個週末一定要去看看。|Nà wǒ zhè ge zhōumò yídìng yào qù kànkan.|Vậy cuối tuần này mình nhất định phải đi xem.
+中明|我週末還要工作，打算一下班就去看燈會。我們可以約友美一起去。|Wǒ zhōumò hái yào gōngzuò, dǎsuàn yí xiàbān jiù qù kàn dēnghuì. Wǒmen kěyǐ yuē Yǒuměi yìqǐ qù.|Cuối tuần mình còn phải đi làm, định tan làm là đi xem hội đèn. Mình có thể hẹn Hữu Mỹ đi cùng.

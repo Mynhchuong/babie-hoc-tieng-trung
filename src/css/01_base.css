@@ -1,0 +1,30 @@
+:root{
+  --ink:#5a1340; --muted:#b24c86; --line:#ffb3d6;
+  --pink:#ff4fa3; --hot:#e0218a; --deep:#b3166b; --soft:#ffe6f2;
+  --gold:#f6c94c; --gold2:#c9861e; --brown:#9a5512;
+  --green:#3cc23a; --red:#e4323f;
+  --red-soft:#ffe0ef; --green-soft:#e2f9da; --blue:#e0218a; --blue-soft:#ffe6f2; --pink2:#ff8cc6;
+  --hz:"Microsoft JhengHei","微軟正黑體","PingFang TC","Noto Sans TC",sans-serif;
+  --ui:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --fun:"Baloo 2","Segoe UI",system-ui,sans-serif;
+  --script:"Pacifico","Segoe Script",cursive;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;color:var(--ink);font-family:var(--ui);font-size:16px}
+body{background:
+  radial-gradient(circle at 8% 12%,rgba(255,255,255,.55) 0 40px,transparent 42px),
+  radial-gradient(circle at 92% 20%,rgba(255,255,255,.35) 0 70px,transparent 72px),
+  radial-gradient(circle at 85% 85%,rgba(255,255,255,.4) 0 55px,transparent 57px),
+  radial-gradient(circle at 15% 78%,rgba(255,255,255,.3) 0 90px,transparent 92px),
+  radial-gradient(circle at 50% 50%,rgba(255,255,255,.18) 0 160px,transparent 162px),
+  radial-gradient(#fff 1px,transparent 1.6px) 0 0/34px 34px,
+  linear-gradient(160deg,#ff8cc6 0%,#ffb7da 38%,#ffd8ea 70%,#ffc0df 100%);
+  background-attachment:fixed}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+.wrap{max-width:1040px;margin:0 auto;padding:18px 16px 70px}
+.spacer{flex:1}
+.muted{color:var(--muted)} .small{font-size:13px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--deep);margin-top:10px;text-align:center}
+kbd{font-family:var(--fun);font-size:11px;border:1.5px solid var(--line);border-bottom-width:3px;border-radius:6px;padding:0 5px;background:#fff;color:var(--hot)}
+

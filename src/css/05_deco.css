@@ -1,0 +1,21 @@
+/* ---------- icon trang trí ---------- */
+.ic{width:1em;height:1em;flex:none;overflow:visible}
+.brand-ic{width:52px;height:52px;margin:-6px -4px -6px -8px;transform:rotate(-12deg)}
+.corner-ic{position:absolute;transform:rotate(var(--r,0deg));pointer-events:none;z-index:2}
+.today,.cal{position:relative}
+.cal{padding-top:22px}
+.lesson-ic{position:absolute;right:12px;top:46px;width:52px;height:52px;transform:rotate(8deg);opacity:.95;transition:transform .2s}
+.lesson:hover .lesson-ic{transform:rotate(-6deg) scale(1.15)}
+.lesson .tt,.lesson .tv{padding-right:44px}
+.top-ic{position:absolute;top:-34px;left:50%;width:62px;height:62px;margin-left:-31px;z-index:3;pointer-events:none}
+.q{margin-top:26px}
+.flash{margin-top:26px}
+.face{overflow:visible}
+.deco{position:fixed;inset:0;pointer-events:none;z-index:0}
+.deco .fl{position:absolute;height:auto;aspect-ratio:1;animation:floaty 6s ease-in-out infinite;transform:rotate(var(--r))}
+.deco .tw{position:absolute;height:auto;aspect-ratio:1;animation:tw 3s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-14px) rotate(calc(var(--r)*-1))}}
+@keyframes tw{0%,100%{opacity:.3;transform:scale(.7)}50%{opacity:1;transform:scale(1.1)}}
+@media (max-width:1260px){.deco .fl{opacity:.45;width:48px!important}}
+@media (max-width:760px){.deco .fl{display:none}.brand-ic{width:40px;height:40px}}
+

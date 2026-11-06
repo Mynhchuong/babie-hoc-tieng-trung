@@ -19,7 +19,12 @@ Trang HTML **một file, chạy offline** để ôn từ vựng tiếng Trung �
 ## Cấu trúc
 ```
 data/sach1_thoi_dai_hoa_ngu_1.txt   Từ vựng 時代華語 1 (15 bài, 726 từ)
-src/template.html                   TOÀN BỘ app (HTML+CSS+JS, font & icon nhúng base64). ~1170 dòng
+data/bai_doc/*.txt                  Bài đọc/đối thoại (mã nghe 01-1-1…): chữ Hán|pinyin|nghĩa Việt; 短文 mỗi đoạn 1 dòng. Sách 1: 44 mục
+audio/                              File nghe <mã nghe>.mp3 (mp3/m4a/wav/ogg) — build chép vào dist/audio + bộ cài; thiếu thì dùng giọng máy
+src/template.html                   Khung HTML (placeholder /*__CSS__*/, <!--__ICONS__-->, /*__JS__*/)
+src/css/NN_*.css                    CSS chia theo phần (00_fonts = font base64, 01_base ... 07_fx)
+src/js/NN_*.js                      JS chia theo phần (00_store … 15_main); script thường, biến toàn cục
+src/icons.svg                       Sprite icon + búp bê (<symbol id="i-...">)
 build.py                            Gộp data → HTML, đóng gói bộ cài → dist/
 config.json                         {"report_url": "<Apps Script web app URL>"}
 windows/installer_head.bat          Đầu bộ cài; build.py nối zip base64 sau dòng ::PAYLOAD::
@@ -51,7 +56,8 @@ chữ Hán|pinyin|nghĩa tiếng Việt
 - Trùng chữ Hán trong cùng bài là cố ý (2 nghĩa): Bài 4 `多`, Bài 7 `到`. Trắc nghiệm đã loại đáp án nhiễu trùng chữ/trùng nghĩa.
 - Sách 1 Bài 15 chỉ có 2 phần hội thoại (PDF hết ở đó), 31 từ.
 
-## template.html — bản đồ code
+## Mã nguồn app — bản đồ code (src/css, src/js)
+build.py nối file theo **thứ tự tên** (`00_`, `01_`...) rồi nhúng vào template → vẫn ra 1 HTML offline. Thêm phần mới = tạo file có số thứ tự phù hợp; JS dùng chung biến toàn cục nên file đứng sau dùng được hàm/biến của file đứng trước (và hàm được gọi lúc chạy thì thứ tự không quan trọng). `/*__DATA__*/` ở 00_store.js, `/*__REPORT__*/` ở 02_report.js.
 Biến toàn cục (script thường, không module): `DATA` (thay `/*__DATA__*/null`), `REPORT_URL` (thay `/*__REPORT__*/''`), `store` (localStorage key `onTiengTrung_v1`: `{p:{id:{k,w,st}}, s:settings, log:{'YYYY-MM-DD':{s,a,f,t,l}}, e:{id:nghĩa đã sửa}, updated}`), `S`=store.s, `LOG`, `EDIT`, `ALL` (mảng từ phẳng), `view`, `mode`, `deck`, `gen`, `keyHandler`.
 - `P(id)` lấy/tạo tiến độ 1 từ. `save()` → localStorage + `fileSaveSoon()`.
 - **Tự lưu file**: `initFile/pickNewFile/pickOldFile/resumeFile/writeFile` (ghi tuần tự, handle lưu IndexedDB `onTiengTrung/kv/fh`). Banner ở trang chủ khi chưa bật / cần cấp quyền lại.
@@ -92,6 +98,15 @@ Biến toàn cục (script thường, không module): `DATA` (thay `/*__DATA__*/
 - Ken đã tạo project Apps Script, chạy `caiDat`, deploy Web app (Execute as Me, Anyone). URL nằm trong `config.json`.
 - Sửa `Code.gs` xong phải: Triển khai → Quản lý triển khai → ✏️ → Phiên bản mới (giữ nguyên URL).
 - Sheet "Babie học tiếng Trung - Nhật ký" (tab Nhật ký, Tổng quan); email ~21h hằng ngày (`GIO_GUI_EMAIL`), có cả email "chưa học".
+
+## Bài đọc, ôn tập ngắt quãng, giọng đọc (thêm 11/2026)
+- **Bài đọc** (`src/js/12_reading.js`, tab "Bài đọc" ở mỗi bài): dữ liệu `data/bai_doc/`, build gắn vào `lesson.readings`. Tiếng Việt do Claude dịch từ bản Anh trong sách → nên có người đọc lại. Chữ Hán `lang="zh-Hant"`, font nét 400.
+- **Ôn tập ngắt quãng kiểu Anki** (`src/js/13_review.js`): thẻ = `store.p[id]` thêm `due,iv,ef,s('l'|'r'),ls,rp,lp` (id = sách-bài-thứ tự nên **dùng chung mọi sách, gộp tất cả sách khi ôn**; chip lọc sách chỉ hiện khi >1 sách, báo cáo cho Ken luôn tính gộp). Từ vào sổ khi trả lời ở Thẻ/Trắc nghiệm/Viết (`srsPractice`); chỉ thẻ đến hạn mới được chấm lịch ở phiên ôn (`srsGrade`, `srsNext` = SM-2 rút gọn: bước học 1 & 10 phút, Quên ×0.3, Khó ×1.2, Nhớ ×ef, Dễ ×ef×1.3). Có 4 cách ôn: lật thẻ / trắc nghiệm / gõ pinyin / xen kẽ. Tiến độ cũ được nhập vào sổ một lần (`S.srs1`). Nhật ký ngày thêm `rv` (số lượt ôn), `rg` (đếm Quên/Khó/Nhớ/Dễ) → tỉ lệ nhớ.
+- **Combo**: tiết chế (chữ nhỏ từ x3); chuỗi đúng ≥5 thì búp bê nhảy (`dance()`), ≥8 nhanh hơn. Bồ đã bảo bản nhiều hiệu ứng quá "game" → đừng thêm viền sáng/pháo hoa/điểm bay.
+- **Lưu tiến độ chống mất** (`src/js/00_store.js`, `01_backup.js`, `01_autosave.js`): ⚠️ khôi phục dữ liệu PHẢI qua `replaceStoreAndReload(raw)` (đặt `noSave`), vì `beforeunload`/`pagehide` tự `save()`/`writeFile()` sẽ ghi đè dữ liệu cũ lên (lỗi cũ làm khôi phục không có tác dụng). Nối dữ liệu bằng `mergeStores` (bản mới làm gốc, bổ sung phần thiếu — không ghi đè). IndexedDB `kv` giữ `bk:latest`, `bk:d:<ngày>` (14 ngày), `bk:pre:<phiên bản>` (3 bản, cất nguyên dữ liệu cũ khi `APP_VER` đổi — build.py ghi dấu giờ). Máy trống mà có bản sao → `autoRecover()`. Cài đặt có danh sách bản sao + nút Khôi phục. "Để sau" của banner tự lưu file chỉ hoãn 3 ngày.
+- **Báo cáo học tập** (`src/js/14_stats.js`, nút 📈 Báo cáo): 3 tab Hôm nay / Điểm mạnh·yếu / Thành quả (huy hiệu, từ mới thuộc theo tuần). Dữ liệu theo dõi qua `track()`: `p.c` (đúng), `p.w` (sai), `p.kd` (ngày đầu thuộc), `LOG[ngày].m/tm/wr`, `store.ec` (nhầm pinyin theo luật `PY_RULES`). Thêm kiểu ôn mới thì gọi `srsPractice(id,ok,kind)` để vào báo cáo.
+- **Tự cập nhật app (phương án A, thêm 11/2026)**: `build.py` tạo `dist/update/` (`manifest.json` = phiên bản + SHA256 từng file, `On_Tieng_Trung.html`, `audio/*`, `_headers` CORS) — đẩy nguyên thư mục này lên nơi đặt `update_url` trong `config.json` (để trống = tắt). Máy bồ: Task Scheduler `OnTiengTrung_CapNhat` (mỗi 2 giờ, chạy bù khi bật máy) → `chay_cap_nhat.vbs` → `cap_nhat.ps1`: tải manifest, chỉ tải file khác hash, kiểm SHA256, thay file (trang app sau cùng, giữ `.bak`), chỉ nhận đường dẫn `On_Tieng_Trung.html` / `audio/<tên an toàn>`; **không đụng tiến độ, giờ nhắc, biểu tượng, script `he_thong`** (đổi script Windows vẫn phải gửi zip). Menu Start có "Cập nhật app ngay" (`mo_cap_nhat.vbs` → `-Hien`). Trong app: Cài đặt → "🔄 Cập nhật app" (phiên bản + nút kiểm tra, `checkUpdate()`), mở bản mới lần đầu thì báo `thay_doi.txt` (dòng đầu). Đẩy lên GitHub Pages: `./publish_gh_pages.sh` (Ken tự chạy — công bố app ra mạng). ⚠️ **`cap_nhat.ps1` chưa được chạy thử trên PowerShell/Windows thật** (máy dev không có PowerShell) → thử trên máy bồ bằng bản thử trước.
+- **Giọng đọc**: ưu tiên giọng nam zh-TW (`MALE_VOICES`), chọn tay trong Cài đặt (`S.voice`). `S.shuffle` mặc định bật (migration `S.shuf2`).
 
 ## Việc còn mở
 1. **Repo đang PUBLIC** mà có `config.json` chứa URL Apps Script → Ken chưa trả lời có chuyển Private không. Hỏi lại / nhắc.

@@ -1,0 +1,29 @@
+/* ---------- bài đọc ---------- */
+.rdopts{margin:0 0 14px}
+.rd{padding:16px 18px 20px;margin-bottom:22px}
+.rl-h{font-family:var(--fun);color:var(--deep);margin:22px 4px 12px;font-size:20px}
+.rd-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;font-family:var(--fun);color:var(--deep)}
+.rd-h .code{font-weight:800;font-size:15px;background:var(--soft);border:2px solid var(--line);border-radius:999px;padding:2px 12px}
+.rd-h .rt{font-size:22px;font-family:var(--hz);color:var(--ink)}
+.aud{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;font-size:14px;color:var(--deep)}
+.aud audio{flex:1;min-width:220px;max-width:420px;height:40px}
+.aud .noaud{font-weight:600}
+.rdb{padding:12px 22px 14px}
+.rl{display:flex;gap:14px;padding:12px 0;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.12);border-radius:10px}
+.rl:last-child{border-bottom:0}
+.rl:hover{background:rgba(255,255,255,.06)}
+.rl .who{flex:0 0 76px;font-family:var(--hz);font-weight:400;color:#ffd34d;font-size:18px;padding-top:6px}
+.rl .rtx{flex:1;min-width:0}
+.rl .rhz{font-family:var(--hz);font-size:clamp(22px,3.4vw,30px);line-height:1.55;color:#fff;font-weight:400;text-shadow:none}
+.rl .rpy,.rl .rvi{display:none;color:rgba(255,255,255,.9);font-family:var(--ui);font-weight:500;text-shadow:none;letter-spacing:0;font-size:17px;line-height:1.55;margin-top:3px}
+.rl .rvi{color:#cfe3ff;font-style:italic;font-size:16px}
+#rdAll.py .rpy,#rdAll.vi .rvi,.rl.open .rpy,.rl.open .rvi{display:block}
+.rl.note{cursor:default}.rl.note .rhz{font-size:20px;font-weight:400;color:rgba(255,255,255,.75)}
+.rl.note .rpy,.rl.note .rvi{font-size:15px}
+.rl .who:empty{display:none}
+.rl:not([data-r]) .rhz{padding-left:90px}
+@media (max-width:640px){
+  .rl .who{flex-basis:56px;font-size:16px}
+  .rdb{padding:8px 14px 10px}
+  .rl:not([data-r]) .rhz{padding-left:0}
+}

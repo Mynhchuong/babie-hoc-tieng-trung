@@ -1,0 +1,67 @@
+/* ---------- study ---------- */
+.opts{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--deep);margin:12px 0 0;background:#fff;border-radius:18px;padding:10px 16px;border:2px dashed #ffb3d6;font-weight:600}
+.opts label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.opts input{accent-color:var(--hot);width:17px;height:17px}
+.seg{display:inline-flex;border-radius:999px;overflow:hidden;box-shadow:0 0 0 2px #ffb3d6}
+.seg button{border:0;background:#fff;padding:5px 12px;color:var(--hot);font-family:var(--fun);font-weight:800}
+.seg button.on{background:linear-gradient(180deg,#ff9fd0,#e0218a);color:#fff}
+#stage{margin-top:18px}
+.progress{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--deep);margin-bottom:14px;font-family:var(--fun);font-weight:800}
+.progress .bar{flex:1;margin:0}
+.timer{font-family:var(--fun);font-weight:800;font-size:14px;color:var(--deep);margin-left:auto;background:#fff0f7;border-radius:999px;padding:5px 12px}
+.flash{perspective:1400px;height:350px;cursor:pointer;user-select:none}
+.flash .in{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.flash.flip .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.face.back{transform:rotateY(180deg)}
+.big-hz{font-family:var(--hz);font-weight:700;font-size:clamp(56px,12vw,110px);line-height:1.15;word-break:break-all;color:#fff;
+  text-shadow:0 4px 0 #d0287f,0 8px 18px rgba(150,0,70,.35)}
+.py{font-family:var(--fun);font-weight:800;font-size:26px;color:var(--hot);margin-top:8px}
+.vi{font-family:var(--fun);font-weight:800;font-size:clamp(24px,4.6vw,34px);line-height:1.3;color:#fff;text-shadow:0 2px 0 rgba(180,20,100,.5)}
+.face .corner{position:absolute;top:12px;left:18px;font-family:var(--fun);font-weight:800;font-size:13px;color:#fff;letter-spacing:.08em;text-transform:uppercase;
+  background:rgba(224,33,138,.55);padding:2px 12px;border-radius:999px}
+.spk{position:absolute;top:12px;right:14px;width:46px;height:46px;border-radius:50%;border:0;font-size:20px;display:grid;place-items:center;
+  background:linear-gradient(180deg,#ff9fd0,#e0218a);box-shadow:inset 0 4px 0 rgba(255,255,255,.45),0 4px 0 var(--deep),0 0 0 3px var(--gold)}
+.spk:active{transform:translateY(3px);box-shadow:0 1px 0 var(--deep),0 0 0 3px var(--gold)}
+.actions{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.q{padding:34px 20px 26px;text-align:center;position:relative}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.choice{position:relative;text-align:left;padding:14px 16px;border-radius:16px;min-height:62px;display:flex;gap:12px;align-items:center;
+  font-family:var(--fun);font-weight:800;font-size:17px;color:#b0135f;border:3px solid var(--gold);
+  background:linear-gradient(118deg,transparent 0 30%,rgba(255,255,255,.45) 30% 38%,transparent 38%),linear-gradient(180deg,#ffe0ef,#ffb6d8);
+  box-shadow:0 4px 0 var(--gold2),0 8px 14px rgba(200,40,120,.2);transition:transform .08s}
+.choice:hover{filter:brightness(1.04)}
+.choice:active{transform:translateY(3px);box-shadow:0 1px 0 var(--gold2)}
+.choice .k{flex:none;width:28px;height:28px;border-radius:50%;color:#fff;display:grid;place-items:center;font-size:13px;background:linear-gradient(180deg,#ff9fd0,#e0218a);box-shadow:0 2px 0 var(--deep)}
+.choice.hzc{font-family:var(--hz);font-size:26px}
+.choice.ok{color:#fff;background:linear-gradient(180deg,#a8f78e,#2fb12b);box-shadow:0 4px 0 #1e8a1c}
+.choice.bad{color:#fff;background:linear-gradient(180deg,#ff9a9a,#d1222e);box-shadow:0 4px 0 #9c111b}
+.write input{width:100%;font-size:24px;padding:13px 20px;border-radius:999px;border:3px solid var(--gold);background:linear-gradient(180deg,#c8105d,#e0216f);color:#fff;
+  font-family:var(--fun);font-weight:800;outline:none;box-shadow:inset 0 4px 6px rgba(80,0,30,.4),0 4px 0 var(--gold2);margin-top:6px;text-align:center}
+.write input::placeholder{color:#ffb7d5;font-weight:600}
+.feedback{margin-top:14px;padding:12px 16px;border-radius:18px;font-size:16px;font-weight:700;color:#fff}
+.feedback.ok{background:linear-gradient(180deg,#8be66f,#2fb12b);box-shadow:0 4px 0 #1e8a1c}
+.feedback.bad{background:linear-gradient(180deg,#ff8a8a,#d1222e);box-shadow:0 4px 0 #9c111b}
+.done{padding:40px 20px;text-align:center}
+.done p{font-family:var(--fun);font-weight:800;font-size:18px}
+.done .score{font-family:var(--fun);font-weight:800;font-size:72px;line-height:1;color:#fff;text-shadow:0 5px 0 #d0287f}
+.star{border:0;background:transparent;font-size:22px;color:#ffd6e8;text-shadow:0 2px 0 #f5a3cb}
+.star.on{color:#ffd21f;text-shadow:0 2px 0 #d69a00}
+.btn.star{color:#ffc1dc} .btn.star.on{color:#ffcc12;text-shadow:0 2px 0 #c98a00}
+
+/* ---------- list ---------- */
+.search{flex:1;min-width:200px;padding:10px 18px;border-radius:999px;border:3px solid #ffc4df;background:#fff;font-size:15px;outline:none;font-weight:600;color:var(--ink)}
+.search:focus{border-color:var(--hot)}
+table.list{width:100%;border-collapse:collapse}
+table.list td,table.list th{padding:9px 8px;border-bottom:2px dashed #ffd6ea;text-align:left;vertical-align:middle}
+table.list th{font-family:var(--fun);font-weight:800;font-size:14px;color:var(--hot)}
+table.list .hz{font-family:var(--hz);font-size:23px;white-space:nowrap;font-weight:700}
+table.list .py{font-size:16px;margin:0;color:var(--hot)}
+.vi-ed{width:100%;min-width:150px;border:2px solid transparent;background:transparent;border-radius:12px;padding:6px 10px;font:inherit;color:var(--ink)}
+.vi-ed:hover{border-color:#ffc4df;background:#fff}
+.vi-ed:focus{outline:none;border-color:var(--hot);background:#fff}
+.vi-ed.edited{background:#fff3f9;border-color:#ffa6d1}
+.pill{display:inline-block;font-size:11px;padding:2px 10px;border-radius:99px;font-family:var(--fun);font-weight:800;color:#fff;background:linear-gradient(180deg,#8be66f,#2fb12b)}
+.pill.r{background:linear-gradient(180deg,#ff8a8a,#d1222e)}
+
+

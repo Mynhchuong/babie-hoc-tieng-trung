@@ -1,0 +1,46 @@
+/* ================= BẢNG TỪ VỰNG NAVY (tập trung) ================= */
+.board{position:relative;background:#041E42;color:#fff;border-radius:28px;border:0;
+  box-shadow:0 8px 0 #020f22,0 20px 40px rgba(4,30,66,.35)}
+.board .big-hz{color:#fff;text-shadow:none;font-weight:700}
+.board .big-hz.sm{font-size:clamp(48px,9vw,72px)}
+.board .py{color:#fff;opacity:.92;text-shadow:none;font-size:28px;letter-spacing:.02em}
+.board .vi{color:#fff;text-shadow:none}
+.board .divider{width:60px;height:3px;border-radius:3px;background:rgba(255,255,255,.35);margin:14px auto}
+.board .corner{background:rgba(255,255,255,.12);color:rgba(255,255,255,.85)}
+.board .muted,.board .small,.board p{color:rgba(255,255,255,.75)!important;text-shadow:none;font-weight:600}
+.board .spk{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.55);box-shadow:none}
+.board .spk:active{box-shadow:none}
+.board.write input{background:#fff;color:#041E42;border:3px solid #fff;box-shadow:none}
+.board.write input::placeholder{color:#8a9bb5}
+.board .feedback.ok,.board .feedback.bad{box-shadow:none}
+.board.face{position:absolute;inset:0}
+.today .stats{grid-template-columns:repeat(2,auto);gap:6px 22px}
+.tap-hint{position:absolute;bottom:14px;left:0;right:0;font-size:13px;color:rgba(255,255,255,.6);font-weight:600}
+
+/* ---- flashcard tương tác ---- */
+.flash{position:relative;touch-action:pan-y;height:380px;transition:transform .25s,opacity .25s}
+.flash .stamp{position:absolute;top:22px;z-index:5;padding:6px 16px;border-radius:12px;font-family:var(--fun);font-weight:800;font-size:22px;opacity:0;pointer-events:none;border:4px solid}
+.flash .stamp.yes{left:22px;color:#5fe04a;border-color:#5fe04a;transform:rotate(-12deg);background:rgba(4,30,66,.85)}
+.flash .stamp.no{right:22px;color:#ff6b75;border-color:#ff6b75;transform:rotate(12deg);background:rgba(4,30,66,.85)}
+.flash.enter{animation:cardIn .38s cubic-bezier(.2,1.3,.4,1)}
+.flash.enter.from-left{animation:cardInL .38s cubic-bezier(.2,1.3,.4,1)}
+@keyframes cardIn{from{opacity:0;transform:translateY(24px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes cardInL{from{opacity:0;transform:translateX(-80px) rotate(-6deg)}to{opacity:1;transform:none}}
+.q.board{animation:cardIn .35s cubic-bezier(.2,1.3,.4,1)}
+
+/* ---- nút lớn, rõ ràng ---- */
+.fc-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn.big{display:flex;flex-direction:column;align-items:center;gap:1px;min-width:116px;padding:12px 18px 10px;border-radius:22px;font-size:16px}
+.btn.big .i{font-size:26px;line-height:1.1;font-family:var(--ui);font-weight:800}
+.btn.big b{font-weight:800;white-space:nowrap}
+.btn.big kbd{margin-top:4px;background:rgba(255,255,255,.85);border-color:rgba(0,0,0,.08);color:inherit;font-size:11px}
+.btn.big.primary kbd,.btn.big.yes kbd,.btn.big.no kbd{color:#5a1340}
+.btn.big::before{left:18px;right:18px;height:30%}
+.btn.starb .i{color:#f5c6dc;text-shadow:0 2px 0 #f5a3cb}
+.btn.starb.on{background:linear-gradient(180deg,#fff7c2,#ffd34d);color:#8a5a00;box-shadow:0 4px 0 #c98a00,0 8px 16px rgba(200,140,0,.3)}
+.btn.starb.on .i{color:#fff;text-shadow:0 2px 0 #c98a00}
+.btn.big-l{padding:12px 24px;font-size:16px}
+.tabs.modes .tab{display:flex;align-items:center;gap:8px;padding:10px 20px 9px 12px;font-size:16px}
+.tab-ic{width:32px;height:32px}
+header.top .btn,.studyhead .btn{font-size:15px}
+

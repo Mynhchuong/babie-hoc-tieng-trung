@@ -1,0 +1,41 @@
+/* ---------- top bar ---------- */
+header.top,.studyhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border-radius:26px;padding:10px 14px 10px 22px;
+  box-shadow:0 5px 0 #f48cbf,0 14px 30px rgba(200,40,120,.18);margin-bottom:18px;border:3px solid #ffd1e6}
+.brand{font-family:var(--script);font-size:30px;color:var(--hot);line-height:1.2;text-shadow:0 2px 0 #ffd1e6;white-space:nowrap}
+.brand small{font-family:var(--fun);font-size:13px;color:var(--muted);margin-left:8px;font-weight:600}
+.studyhead h2{margin:0;font-size:19px;font-family:var(--fun);font-weight:800;color:var(--hot)}
+.studyhead h2 .hzt{font-family:var(--hz)}
+
+/* ---------- jelly buttons ---------- */
+.btn{position:relative;border:0;border-radius:999px;padding:9px 20px 8px;font-family:var(--fun);font-weight:800;font-size:15px;letter-spacing:.02em;
+  color:var(--hot);background:linear-gradient(180deg,#ffffff 0%,#ffeaf4 60%,#ffd6ea 100%);
+  box-shadow:inset 0 -3px 0 rgba(224,33,138,.12),0 4px 0 #f5a3cb,0 7px 14px rgba(200,40,120,.18);transition:transform .08s,box-shadow .08s,filter .15s}
+.btn::before{content:"";position:absolute;left:14px;right:14px;top:3px;height:38%;border-radius:999px;background:linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,0));pointer-events:none}
+.btn:hover{filter:brightness(1.04) saturate(1.1)}
+.btn:active{transform:translateY(3px);box-shadow:inset 0 -2px 0 rgba(0,0,0,.08),0 1px 0 #f5a3cb}
+.btn.primary{color:#fff;text-shadow:0 1px 0 rgba(150,0,70,.45);background:linear-gradient(180deg,#ff9fd0 0%,#ff5aa9 45%,#e0218a 100%);
+  box-shadow:inset 0 -3px 0 rgba(140,0,70,.25),0 4px 0 var(--deep),0 8px 16px rgba(200,20,110,.35)}
+.btn.primary:active{box-shadow:0 1px 0 var(--deep)}
+.btn.yes{color:#fff;text-shadow:0 1px 0 rgba(0,90,0,.4);background:linear-gradient(180deg,#a8f78e 0%,#5fd84a 50%,#2fb12b 100%);box-shadow:inset 0 -3px 0 rgba(0,80,0,.2),0 4px 0 #1e8a1c,0 8px 16px rgba(30,140,30,.3)}
+.btn.no{color:#fff;text-shadow:0 1px 0 rgba(120,0,0,.4);background:linear-gradient(180deg,#ff9a9a 0%,#f24b55 50%,#d1222e 100%);box-shadow:inset 0 -3px 0 rgba(120,0,0,.2),0 4px 0 #9c111b,0 8px 16px rgba(200,30,40,.3)}
+.btn.ghost{background:transparent;box-shadow:none;color:var(--deep)} .btn.ghost::before{display:none}
+.btn:disabled{opacity:.45;cursor:default;transform:none}
+.btn.round{width:44px;height:44px;padding:0;display:inline-grid;place-items:center;font-size:19px}
+
+/* tabs = pill game buttons */
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{position:relative;border:0;border-radius:999px;padding:8px 18px 7px;font-family:var(--fun);font-weight:800;font-size:15px;color:var(--hot);
+  background:linear-gradient(180deg,#fff,#ffe3f0);box-shadow:0 4px 0 #f5a3cb,0 6px 12px rgba(200,40,120,.15)}
+.tab.on{color:#fff;text-shadow:0 1px 0 rgba(150,0,70,.45);background:linear-gradient(180deg,#ff9fd0 0%,#ff5aa9 45%,#e0218a 100%);box-shadow:inset 0 -3px 0 rgba(140,0,70,.25),0 4px 0 var(--deep)}
+.tab::before{content:"";position:absolute;left:12px;right:12px;top:3px;height:38%;border-radius:999px;background:linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,0))}
+
+/* ---------- cards ---------- */
+.card{background:#fff;border:3px solid #ffc4df;border-radius:26px;box-shadow:0 6px 0 #f48cbf,0 16px 30px rgba(200,40,120,.18)}
+.card.gold{color:#fff;border:5px solid var(--gold);
+  background:
+    linear-gradient(118deg,transparent 0 22%,rgba(255,255,255,.28) 22% 33%,transparent 33% 37%,rgba(255,255,255,.2) 37% 40%,transparent 40%),
+    linear-gradient(180deg,#ff9fcc 0%,#f77fb8 100%);
+  box-shadow:0 0 0 3px #e3a73a,0 7px 0 3px var(--brown),0 18px 34px rgba(150,40,90,.3),inset 0 0 0 3px rgba(255,255,255,.45)}
+.gold .muted,.gold .small{color:#fff;font-weight:600;font-size:14px;text-shadow:0 1px 0 rgba(180,20,100,.4)}
+.gold .py{color:#fff;text-shadow:0 2px 0 rgba(180,20,100,.5)}
+

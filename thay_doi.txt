@@ -1,0 +1,2 @@
+# Dòng đầu tiên (không bắt đầu bằng #) = 'có gì mới' hiện sau khi app tự cập nhật. Sửa trước mỗi lần đẩy bản mới.
+Thêm bài đọc, ôn tập kiểu Anki, báo cáo học tập

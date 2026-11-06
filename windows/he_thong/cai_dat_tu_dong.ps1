@@ -52,6 +52,13 @@ try {
   $start = Join-Path ([Environment]::GetFolderPath('Programs')) 'Babie học tiếng Trung'
   [void](New-Lnk $html '' 'Babie học tiếng Trung.lnk' $start)
   [void](New-Lnk 'wscript.exe' ('"' + (Join-Path $dest 'he_thong\mo_cai_dat.vbs') + '"') 'Đổi giờ nhắc học.lnk' $start)
+  # Co dia chi cap nhat (cap_nhat.json) thi them nut "Cap nhat app ngay"
+  $coCapNhat = $false
+  try {
+    $cu = Join-Path $dest 'he_thong\cap_nhat.json'
+    if (Test-Path -LiteralPath $cu) { $coCapNhat = [bool](([string]((Get-Content -LiteralPath $cu -Raw | ConvertFrom-Json).url)).Trim()) }
+  } catch {}
+  if ($coCapNhat) { [void](New-Lnk 'wscript.exe' ('"' + (Join-Path $dest 'he_thong\mo_cap_nhat.vbs') + '"') 'Cập nhật app ngay.lnk' $start) }
 
   # Bao Windows lam moi man hinh + icon ngay
   try {
@@ -76,10 +83,24 @@ try {
   Register-ScheduledTask -TaskName $taskName -Action $a -Trigger $tr -Settings $set -Description 'Nhac hoc tieng Trung moi ngay' -Force | Out-Null
   $times = @((Get-ScheduledTask -TaskName $taskName).Triggers | ForEach-Object { ([datetime]$_.StartBoundary).ToString('HH:mm') }) -join ' và '
 
+  # 4. Tu cap nhat app (chi khi co dia chi cap nhat): chay ngam moi 2 gio, bo lo thi chay bu khi bat may.
+  #    Loi o buoc nay KHONG duoc lam hong ca bo cai.
+  if ($coCapNhat) {
+    try {
+      $uvbs = Join-Path $dest 'he_thong\chay_cap_nhat.vbs'
+      $ut = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(10) -RepetitionInterval (New-TimeSpan -Hours 2) -RepetitionDuration (New-TimeSpan -Days 3650)
+      $ua = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument ('"' + $uvbs + '"')
+      $us = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Minutes 20)
+      Register-ScheduledTask -TaskName 'OnTiengTrung_CapNhat' -Action $ua -Trigger $ut -Settings $us -Description 'Tu cap nhat app hoc tieng Trung' -Force | Out-Null
+      Start-Process -FilePath 'wscript.exe' -ArgumentList ('"' + $uvbs + '"')
+    } catch {}
+  }
+
   $msg = "Cài xong rồi nè ♥`n`n" +
          "•  Biểu tượng nằm ở: $desk`n   (chưa thấy thì bấm chuột phải ngoài màn hình → Làm mới / Refresh)`n`n" +
          "•  Ngoài màn hình có biểu tượng hồng 'Babie học tiếng Trung' — bấm đúp vào là học.`n`n" +
          "•  Mỗi ngày lúc $times máy sẽ nhắc học tiếng Trung.`n`n" +
+         $(if ($coCapNhat) { "•  App tự cập nhật khi có bản mới (cần có mạng), tiến độ học vẫn giữ nguyên.`n`n" } else { '' }) +
          "Bấm OK để mở luôn nha!"
   [void][System.Windows.Forms.MessageBox]::Show($msg, 'Halken nhắc Babie học tiếng Trung ♥', 'OK', 'Information')
   Start-Process -FilePath $html

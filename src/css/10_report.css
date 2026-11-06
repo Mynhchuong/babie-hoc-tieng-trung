@@ -1,0 +1,19 @@
+/* ---------- báo cáo học tập ---------- */
+.rp-tabs{margin:10px 0 6px}
+#rpBody h4{font-family:var(--fun);color:var(--deep);margin:18px 0 6px;font-size:16px}
+#rpBody .srs-stats{grid-template-columns:repeat(3,1fr)}
+.hzs{font-family:var(--hz);font-size:18px}
+.rrow{display:grid;grid-template-columns:minmax(120px,38%) 1fr auto;gap:10px;align-items:center;padding:4px 0;font-size:14px}
+.rrow em{font-style:normal;font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
+.rbar{height:12px;background:#f3d7e6;border-radius:99px;overflow:hidden}
+.rbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#ff9fd0,#e0218a)}
+.rbar.g i{background:linear-gradient(90deg,#8fe08a,#3cc23a)}.rbar.y i{background:linear-gradient(90deg,#ffd98a,#ffb35a)}.rbar.r i{background:linear-gradient(90deg,#ff9f9f,#e4323f)}
+.rp-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.rp-box{border-radius:18px;padding:10px 14px;margin-top:8px}.rp-box h4{margin:4px 0 6px!important}
+.rp-box ul{margin:0;padding-left:18px}.rp-box li{margin:3px 0;font-size:14px}
+.rp-box.good{background:#e8fae4;border:2px solid #a8e5a1}.rp-box.bad{background:#fff1e0;border:2px solid #ffcf8f}.rp-box.tip{background:#e8f1ff;border:2px solid #b5d0ff}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.bdg{border-radius:16px;padding:8px 6px;text-align:center;background:#f4eef2;color:#a7899b;filter:grayscale(1);opacity:.75;font-size:12px}
+.bdg span{font-size:26px;display:block}.bdg b{display:block;line-height:1.2}.bdg small{font-weight:700}
+.bdg.on{background:linear-gradient(180deg,#fff7c2,#ffe27a);color:#8a5a00;filter:none;opacity:1;box-shadow:0 3px 0 #e0a800}
+@media (max-width:640px){.rp-cols{grid-template-columns:1fr}.rrow{grid-template-columns:1fr auto}.rrow .rbar{grid-column:1/-1;order:3}#rpBody .srs-stats{grid-template-columns:repeat(2,1fr)}}
