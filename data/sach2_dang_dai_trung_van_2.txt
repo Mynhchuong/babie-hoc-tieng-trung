@@ -1,0 +1,675 @@
+// 當代中文課程 2 (A Course in Contemporary Chinese, Book 2) — từ vựng 15 bài, mỗi bài gồm Vocabulary I rồi Vocabulary II
+// (kể cả mục Names = tên riêng, Phrases = cụm từ). Pinyin theo sách (cách đọc Đài Loan). Nghĩa tiếng Việt do Claude dịch từ bản tiếng Anh trong sách.
+// ⚠️ ID từ = sách-bài-thứ tự: chỉ thêm vào CUỐI bài, không chèn giữa / xóa / đổi thứ tự.
+#2|1|請問，到師大怎麼走？|Xin hỏi, đến Sư Đại đi thế nào?
+走|zǒu|đi (bộ), đi tới
+路人|lùrén|người qua đường
+幫忙|bāngmáng|giúp đỡ
+迷路|mílù|bị lạc đường
+下|xià|tiếp theo, kế tiếp
+路口|lùkǒu|ngã tư, giao lộ
+段|duàn|đoạn (lượng từ cho đoạn đường)
+過|guò|đi qua, băng qua
+第|dì|thứ (số thứ tự)
+紅綠燈|hónglǜdēng|đèn giao thông
+告訴|gàosù|nói cho biết
+提款機|tíkuǎnjī|máy rút tiền (ATM)
+超商|chāoshāng|cửa hàng tiện lợi
+應該|yīnggāi|nên, cần phải
+郵局|yóujú|bưu điện
+提|tí|rút (tiền)
+那邊|nàbiān / nèibiān|bên kia, đằng kia
+師大|Shīdà|Đại học Sư phạm Quốc lập Đài Loan (NTNU)
+和平東路|Hépíng Dōng Lù|đường Hòa Bình Đông
+往前|wǎng qián|đi về phía trước
+右轉|yòu zhuǎn|rẽ phải
+聽起來|tīng qǐlái|nghe có vẻ
+看見|kànjiàn|nhìn thấy
+下載|xiàzài|tải xuống
+地圖|dìtú|bản đồ
+好用|hǎoyòng|dễ dùng, tiện dụng
+著|zhe|trợ từ chỉ hành động đang diễn ra / tiếp diễn
+日用品|rìyòngpǐn|đồ dùng hằng ngày
+經過|jīngguò|đi ngang qua
+巷子|xiàngzi|ngõ, hẻm
+餓|è|đói
+一邊|yìbiān|vừa… vừa… (hai việc cùng lúc)
+發現|fāxiàn|phát hiện
+離|lí|cách (từ nơi nào đó)
+背包|bèibāo|ba lô
+正好|zhènghǎo|vừa hay, đúng lúc
+最後|zuìhòu|cuối cùng
+枝|zhī|cây (lượng từ cho bút)
+筆|bǐ|bút
+本|běn|cuốn (lượng từ cho sách)
+本子|běnzi|quyển vở
+左轉|zuǒ zhuǎn|rẽ trái
+師大路上|Shīdà Lù shàng|trên đường Sư Đại
+麵店|miàn diàn|tiệm mì
+#2|2|還是坐捷運吧！|Vẫn là đi tàu điện (MRT) đi!
+還是|háishì|hay là, tốt hơn là (nên)
+早|zǎo|chào buổi sáng
+約|yuē|hẹn, mời (làm gì vào giờ nhất định)
+對面|duìmiàn|đối diện, phía bên kia
+直接|zhíjiē|trực tiếp, thẳng
+不必|búbì|không cần, không nhất thiết
+換|huàn|đổi, chuyển (tuyến, xe)
+車站|chēzhàn|trạm xe, ga tàu
+麻煩|máfán|phiền phức, rắc rối
+趕快|gǎnkuài|mau, nhanh lên
+走|zǒu|rời đi, đi (chào tạm biệt)
+班次|bāncì|chuyến (xe, tàu, chuyến bay theo lịch)
+禮拜|lǐbài|tuần
+見|jiàn|gặp, thấy
+電腦展|diànnǎo zhǎn|triển lãm máy tính
+世貿展覽館|Shìmào Zhǎnlǎn Guǎn|Trung tâm Triển lãm Thương mại Thế giới (Đài Bắc)
+展覽館|zhǎnlǎn guǎn|nhà triển lãm
+台北101|Táiběi 101|Taipei 101, tòa nhà cao nhất Đài Loan (cao nhất thế giới 2004–2010)
+台北|Táiběi|Đài Bắc
+2號線|èr hào xiàn|tuyến số 2 (tàu điện Đài Bắc)
+別急|bié jí|đừng vội, cứ từ từ
+飛機|fēijī|máy bay
+轉機|zhuǎn jī|quá cảnh, chuyển chuyến bay
+機場|jīchǎng|sân bay
+巴士|bāshì|xe buýt
+市區|shìqū|nội thành, khu trung tâm
+下|xià|xuống (xe)
+交通|jiāotōng|giao thông
+便利|biànlì|tiện lợi
+到處|dàochù|khắp nơi
+路線|lùxiàn|tuyến đường
+複雜|fùzá|phức tạp
+輕鬆|qīngsōng|nhẹ nhàng, thoải mái, dễ dàng
+東部|dōngbù|miền đông, phía đông
+海邊|hǎibiān|bờ biển
+島|dǎo|đảo
+搭|dā|đi (xe, tàu, máy bay), đáp
+船|chuán|thuyền, tàu
+地|de|trợ từ trạng ngữ (chỉ cách thức)
+美美|Měiměi|Mỹ Mỹ (tên một cô gái)
+法國|Fǎguó|nước Pháp
+歐洲|Ōuzhōu|châu Âu
+悠遊卡|yōuyóukǎ|thẻ EasyCard (thẻ đi tàu điện)
+綠島|Lǜdǎo|đảo Lục Đảo (Green Island), phía đông nam đảo chính
+東南邊|dōngnán biān|phía đông nam
+好好地|hǎohǎo de|làm cho đàng hoàng, cẩn thận
+#2|3|你的中文進步了！|Tiếng Trung của bạn tiến bộ rồi!
+進步|jìnbù|tiến bộ
+早|zǎo|sớm
+考試|kǎoshì|kỳ thi, bài thi
+準備|zhǔnbèi|chuẩn bị
+考|kǎo|thi
+聽寫|tīngxiě|nghe viết (chính tả)
+容易|róngyì|dễ
+小學|xiǎoxué|trường tiểu học
+漢字|hànzì|chữ Hán
+高中|gāozhōng|trung học phổ thông
+過|guò|trợ từ chỉ đã từng trải qua
+才|cái|mới (chỉ mới, đến lúc đó mới)
+說話|shuōhuà|nói chuyện
+不夠|bú gòu|không đủ, chưa đủ
+流利|liúlì|lưu loát
+雖然|suīrán|tuy rằng
+環境|huánjìng|môi trường, hoàn cảnh xung quanh
+同意|tóngyì|đồng ý
+報紙|bàozhǐ|báo (giấy)
+麵包|miànbāo|bánh mì
+演講|yǎnjiǎng|bài diễn thuyết, buổi nói chuyện
+噢|òu|ồ
+活動中心|huódòng zhōngxīn|trung tâm sinh hoạt
+想起來|xiǎng qǐlái|nhớ ra, nghĩ ra
+選|xuǎn|chọn
+作業|zuòyè|bài tập về nhà
+練習|liànxí|luyện tập
+半夜|bànyè|nửa đêm, khuya
+高興|gāoxìng|vui, hài lòng
+平常|píngcháng|bình thường, thường ngày
+爬山|páshān|leo núi
+認識|rènshì|quen biết, làm quen
+聊天|liáotiān|trò chuyện, tán gẫu
+文化|wénhuà|văn hóa
+廣告|guǎnggào|quảng cáo
+位|wèi|vị (lượng từ lịch sự cho người)
+了解|liǎojiě|hiểu, tìm hiểu
+生活|shēnghuó|cuộc sống, sinh hoạt
+陽明山|Yángmíng Shān|núi Dương Minh
+外國人|wàiguó rén|người nước ngoài
+一些|yìxiē|một ít, một vài
+#2|4|我打工，我教法文|Mình làm thêm, mình dạy tiếng Pháp
+高美玲|Gāo Měilíng|Cao Mỹ Linh (cô gái đến từ Pháp)
+打工|dǎgōng|làm thêm
+主任|zhǔrèn|chủ nhiệm, giám đốc
+介紹|jièshào|giới thiệu
+歲|suì|tuổi
+語言學|yǔyánxué|ngôn ngữ học
+經驗|jīngyàn|kinh nghiệm
+談|tán|bàn, nói chuyện, thảo luận
+當|dāng|đảm nhiệm, làm (chức vụ)
+助教|zhùjiào|trợ giảng
+上午|shàngwǔ|buổi sáng
+除了|chúle|ngoài… ra
+年級|niánjí|năm học, lớp
+暑假|shǔjià|kỳ nghỉ hè
+請教|qǐngjiào|xin chỉ giáo, thỉnh giáo
+貴|guì|quý (cách nói kính trọng)
+薪水|xīnshuǐ|tiền lương
+算|suàn|tính, tính toán
+按照|ànzhào|dựa theo, theo
+教授|jiàoshòu|giáo sư
+鐘點費|zhōngdiǎnfèi|tiền công theo giờ
+份|fèn|phần, việc (lượng từ cho công việc)
+法文|Fǎwén|tiếng Pháp
+亞洲|Yàzhōu|châu Á
+西班牙語|Xībānyá yǔ|tiếng Tây Ban Nha
+英文|Yīngwén|tiếng Anh
+三年級|sān niánjí|năm thứ ba (lớp 3, năm 3 đại học)
+法律|fǎlǜ|pháp luật, luật
+夠|gòu|đủ
+履歷表|lǚlìbiǎo|sơ yếu lý lịch (CV)
+面談|miàntán|phỏng vấn, gặp mặt trao đổi
+華僑|Huáqiáo|Hoa kiều
+辦公室|bàngōngshì|văn phòng
+談話|tánhuà|nói chuyện, trò chuyện
+情形|qíngxíng|tình hình
+適合|shìhé|phù hợp
+說明|shuōmíng|giải thích, trình bày
+然後|ránhòu|sau đó, rồi thì
+月底|yuèdǐ|cuối tháng
+發|fā|phát (lương), trả (lương)
+馬上|mǎshàng|ngay lập tức
+答應|dāying|đồng ý, nhận lời
+順利|shùnlì|thuận lợi, suôn sẻ
+黃|Huáng|họ Hoàng (nghĩa đen "màu vàng")
+沒想到|méi xiǎngdào|không ngờ
+#2|5|吃喜酒|Dự tiệc cưới
+喜酒|xǐjiǔ|tiệc cưới, rượu mừng
+恭喜|gōngxǐ|chúc mừng
+新娘|xīnniáng|cô dâu
+參加|cānjiā|tham gia, tham dự
+婚禮|hūnlǐ|lễ cưới
+西裝|xīzhuāng|âu phục, bộ vest
+正式|zhèngshì|trang trọng, chính thức
+客人|kèrén|khách
+手|shǒu|tay
+照相機|zhàoxiàngjī|máy ảnh
+新郎|xīnláng|chú rể
+站|zhàn|đứng
+白|bái|trắng
+帥|shuài|đẹp trai (nam)
+禮服|lǐfú|lễ phục
+座位|zuòwèi|chỗ ngồi
+看起來|kàn qǐlái|trông có vẻ
+結婚|jiéhūn|kết hôn
+日子|rìzi|ngày (ngày tháng), ngày tốt
+親戚|qīnqī|họ hàng
+熱鬧|rènào|náo nhiệt, sôi động
+慶祝|qìngzhù|ăn mừng, chúc mừng
+件|jiàn|chiếc, cái (lượng từ cho áo, việc)
+喜事|xǐshì|việc vui, đám hỷ
+請客|qǐngkè|mời khách, đãi khách
+紅包|hóngbāo|bao lì xì, phong bì đỏ
+送|sòng|tặng, tiễn
+新人|xīnrén|đôi tân hôn (chú rể, cô dâu)
+喜宴|xǐyàn|tiệc cưới
+敬酒|jìngjiǔ|mời rượu, nâng ly chúc
+大人|dàrén|người lớn
+小孩|xiǎohái|trẻ con
+不得了|bùdéliǎo|ghê gớm, vô cùng
+另外|lìngwài|ngoài ra, khác
+糖|táng|kẹo, đường
+離開|líkāi|rời đi
+句|jù|câu (lượng từ cho câu nói)
+祝福|zhùfú|chúc phúc
+話|huà|lời nói
+一會兒|yìhuǐr|một lát
+有說有笑|yǒushuō yǒuxiào|vừa nói vừa cười
+有吃有喝|yǒuchī yǒuhē|có ăn có uống (đầy đủ đồ ăn thức uống)
+#2|6|我打算搬到學校附近|Mình định dọn đến gần trường
+李東健|Lǐ Dōngjiàn|Lý Đông Kiện (chàng trai đến từ Seoul)
+搬|bān|dọn, chuyển (đến)
+河邊|hé biān|bờ sông
+公園|gōngyuán|công viên
+腳踏車|jiǎotàchē|xe đạp
+正在|zhèngzài|đang (trong lúc)
+網站|wǎngzhàn|trang web
+資料|zīliào|tài liệu, thông tin
+搬家|bān jiā|chuyển nhà
+近|jìn|gần
+合約|héyuē|hợp đồng
+到期|dàoqí|hết hạn
+還好|háihǎo|may mà, cũng may
+光線|guāngxiàn|ánh sáng
+重要|zhòngyào|quan trọng
+如果|rúguǒ|nếu
+別的|biéde|cái khác, khác
+合適|héshì|phù hợp, vừa
+少|shǎo|thiếu
+可惜|kěxí|đáng tiếc
+放|fàng|để, đặt
+兩邊|liǎngbiān|hai bên, cả hai nơi
+願意|yuànyì|sẵn lòng, bằng lòng
+開|kāi|lái (xe)
+存|cún|lưu, cất giữ
+隨身碟|suíshēndié|USB
+什麼樣|shénmeyàng|như thế nào, loại nào
+慢慢來|mànmàn lái|cứ từ từ
+不急|bùjí|không vội
+相當|xiāngdāng|khá, tương đối
+自行車|zìxíngchē|xe đạp
+床|chuáng|giường
+桌子|zhuōzi|bàn
+椅子|yǐzi|ghế
+家具|jiājù|đồ nội thất
+而且|érqiě|hơn nữa, mà còn
+吵|chǎo|ồn ào
+生活費|shēnghuófèi|chi phí sinh hoạt
+低|dī|thấp
+留|liú|ở lại, để lại
+長|cháng|dài
+討論|tǎolùn|thảo luận
+社團|shètuán|câu lạc bộ, hội nhóm
+活動|huódòng|hoạt động
+失望|shīwàng|thất vọng
+放心|fàngxīn|yên tâm
+用|yòng|dùng
+首爾|Shǒu'ěr|Seoul (Hàn Quốc)
+#2|7|垃圾車來了！|Xe rác đến rồi!
+垃圾|lèsè|rác
+倒|dào|đổ (rác)
+丟|diū|vứt, ném
+收|shōu|thu gom
+以為|yǐwéi|tưởng rằng (nhưng thực ra không phải)
+回收|huíshōu|tái chế, thu hồi
+規定|guīdìng|quy định
+要不然|yàobùrán|nếu không thì
+皮包|píbāo|ví, túi xách
+跑|pǎo|chạy
+追|zhuī|đuổi theo
+有趣|yǒuqù|thú vị
+不壞|bú huài|không tệ
+天天|tiāntiān|mỗi ngày
+汽水罐|qìshuǐ guàn|lon nước ngọt có ga
+紙杯|zhǐbēi|ly giấy
+放下|fàngxià|đặt xuống
+走出來|zǒu chūlái|đi ra
+怎麼辦|zěnmebàn|làm sao đây?
+聊|liáo|trò chuyện
+忽然|hūrán|đột nhiên
+聲音|shēngyīn|âm thanh, tiếng
+奇怪|qíguài|kỳ lạ
+袋子|dàizi|túi
+輛|liàng|chiếc (lượng từ cho xe)
+一定|yídìng|nhất định, cố định
+地點|dìdiǎn|địa điểm
+為了|wèile|để, vì (mục đích)
+保護|bǎohù|bảo vệ
+分類|fēnlèi|phân loại
+利用|lìyòng|tận dụng, sử dụng
+紙|zhǐ|giấy
+瓶子|píngzi|chai, lọ
+塑膠|sùjiāo|nhựa
+資源|zīyuán|tài nguyên
+回收桶|huíshōutǒng|thùng thu gom tái chế
+城市|chéngshì|thành phố
+聽見|tīngjiàn|nghe thấy
+開過來|kāi guòlái|lái tới
+走過去|zǒu guòqù|đi qua đó
+丟進去|diū jìnqù|ném vào
+路上|lùshàng|trên đường
+#2|8|學功夫|Học võ công (Kung Fu)
+功夫|gōngfū|võ công, kung fu
+叫|jiào|gọi (để ai chú ý)
+見|jiàn|trợ từ kết quả của nhìn/nghe (thấy)
+推|tuī|đẩy
+體育館|tǐyùguǎn|nhà thi đấu, phòng tập thể dục
+太極拳|tàijíquán|Thái Cực quyền
+師父|shīfù|sư phụ
+天分|tiānfèn|năng khiếu, thiên phú
+懂|dǒng|hiểu
+起來|qǐlái|thức dậy, dậy
+動作|dòngzuò|động tác
+輕|qīng|nhẹ, nhẹ nhàng
+腿|tuǐ|chân (cẳng chân)
+了|liǎo|bổ ngữ khả năng (…được)
+下去|xiàqù|tiếp tục (làm tiếp)
+興趣|xìngqù|hứng thú, sở thích
+借|jiè|mượn
+有天分|yǒu tiānfèn|có năng khiếu
+學會|xué huì|học được, thành thạo
+起不來|qǐ bù lái|không dậy nổi
+走不了路|zǒu bù liǎo lù|không đi nổi
+好處|hǎochù|lợi ích
+抱怨|bàoyuàn|phàn nàn, than phiền
+公尺|gōngchǐ|mét
+總是|zǒngshì|luôn luôn
+完|wán|xong, hết (bổ ngữ hoàn thành)
+體力|tǐlì|thể lực, sức khỏe
+整天|zhěngtiān|cả ngày
+精神|jīngshén|tinh thần, sức sống
+本來|běnlái|vốn dĩ, ban đầu
+可能|kěnéng|có thể, có lẽ
+回|huí|về, trở lại
+影響|yǐngxiǎng|ảnh hưởng
+身體|shēntǐ|cơ thể, sức khỏe
+練|liàn|luyện tập
+想起|xiǎngqǐ|nhớ lại
+#2|9|那個城市好漂亮|Thành phố đó đẹp quá
+春假|chūnjià|kỳ nghỉ xuân
+好|hǎo|bổ ngữ kết quả: xong, đâu vào đấy
+到|dào|bổ ngữ kết quả: được, đạt được
+特色|tèsè|nét đặc sắc, đặc trưng
+夠|gòu|đủ
+顏色|yánsè|màu sắc
+廟|miào|miếu, chùa
+像|xiàng|giống, như
+教堂|jiàotáng|nhà thờ
+南部|nánbù|miền nam, phía nam
+潛水|qiánshuǐ|lặn (lặn biển)
+各|gè|các, mỗi
+魚|yú|cá
+酸|suān|chua
+檸檬|níngméng|chanh
+味道|wèidào|mùi vị
+泰國|Tàiguó|Thái Lan
+比起來|bǐ qǐlái|so với
+極了|jíle|vô cùng, cực kỳ
+忘不了|wàng bù liǎo|không thể quên
+鄉下|xiāngxià|nông thôn, miền quê
+氣氛|qìfēn|bầu không khí
+鎮|zhèn|thị trấn
+不同|bùtóng|khác nhau
+現代|xiàndài|hiện đại
+公寓|gōngyù|căn hộ, chung cư
+馬路|mǎlù|đường phố
+寬|kuān|rộng
+汽車|qìchē|xe hơi, ô tô
+建築|jiànzhú|kiến trúc, tòa nhà
+老|lǎo|cũ, già
+層|céng|tầng (lượng từ cho tầng)
+北部|běibù|miền bắc, phía bắc
+熱情|rèqíng|nhiệt tình, hiếu khách
+擠|jǐ|đông đúc, chen chúc
+飲料|yǐnliào|đồ uống
+巴黎|Bālí|Paris
+高雄市|Gāoxióng Shì|thành phố Cao Hùng (miền nam Đài Loan)
+中南部|zhōngnánbù|miền trung nam
+買得起|mǎi de qǐ|mua nổi
+百貨公司|bǎihuò gōngsī|trung tâm bách hóa
+越來越|yuèláiyuè|càng ngày càng
+#2|10|歡迎到我家來包餃子|Mời đến nhà mình gói sủi cảo
+馬丁|Mǎdīng|Martin (chàng trai đến từ Anh)
+包|bāo|gói
+餃子|jiǎozi|sủi cảo
+脫|tuō|cởi (quần áo, giày)
+鞋|xié|giày
+關|guān|đóng
+門|mén|cửa
+春捲|chūnjuǎn|nem cuốn, chả giò
+泡菜|pàocài|kim chi, rau muối
+飯廳|fàntīng|phòng ăn
+下|xià|chứa được (đủ chỗ)
+洗|xǐ|rửa, giặt
+做菜|zuòcài|nấu ăn
+水餃|shuǐjiǎo|sủi cảo luộc
+煮|zhǔ|nấu, luộc
+壞|huài|hỏng
+破|pò|rách, vỡ
+餡兒|xiànr|nhân (bánh)
+扁|biǎn|dẹt, bẹt
+材料|cáiliào|nguyên liệu
+道|dào|món (lượng từ cho món ăn)
+飽|bǎo|no
+光|guāng|hết sạch
+鍋子|guōzi|nồi, chảo
+筷子|kuàizi|đũa
+碗|wǎn|bát, chén
+韓國|Hánguó|Hàn Quốc
+看不出來|kàn bù chūlái|nhìn không ra
+酸辣湯|suānlà tāng|súp chua cay
+學期|xuéqí|học kỳ
+趁|chèn|nhân lúc, tranh thủ
+皮|pí|vỏ, da (vỏ bánh)
+嘗|cháng|nếm
+大白菜|dàbáicài|cải thảo
+加|jiā|thêm
+鹽|yán|muối
+拌|bàn|trộn
+辣椒|làjiāo|ớt
+調味料|tiáowèiliào|gia vị
+裝|zhuāng|đựng, đóng gói
+玻璃|bōlí|thủy tinh, kính
+壽司|shòusī|sushi
+像|xiàng|chẳng hạn như, như là
+食物|shíwù|thức ăn, thực phẩm
+做起來|zuò qǐlái|làm thì (khi bắt tay vào làm)
+#2|11|台灣好玩的地方真多|Đài Loan có nhiều nơi vui chơi quá
+其他|qítā|khác, còn lại
+假期|jiàqí|kỳ nghỉ
+溫泉|wēnquán|suối nước nóng
+建議|jiànyì|đề nghị, gợi ý
+票|piào|vé
+考慮|kǎolǜ|cân nhắc, suy nghĩ
+順便|shùnbiàn|tiện thể
+湖|hú|hồ
+原住民|yuánzhùmín|người bản địa
+趟|tàng|chuyến (lượng từ cho chuyến đi)
+後來|hòulái|sau đó, về sau
+注意|zhùyì|chú ý
+沙灘|shātān|bãi cát, bãi biển
+錢包|qiánbāo|ví tiền
+不見|bújiàn|biến mất, mất
+被|bèi|bị (câu bị động)
+偷|tōu|ăn trộm
+安全|ānquán|an toàn
+值得|zhíde|đáng, xứng đáng
+墾丁|Kěndìng|Kenting (Cảnh Đinh), cực nam Đài Loan, nổi tiếng bãi biển và rừng mưa nhiệt đới
+台中|Táizhōng|Đài Trung (miền trung Đài Loan)
+日月潭|Rìyuè Tán|Hồ Nhật Nguyệt (miền trung Đài Loan)
+水上活動|shuǐshàng huódòng|hoạt động trên nước
+風景區|fēngjǐngqū|khu thắng cảnh
+又|yòu|lại (rồi lại)
+遍|biàn|lượt, lần (xem hết một lượt)
+民宿|mínsù|nhà nghỉ dân dã (homestay)
+運氣|yùnqì|vận may
+摩托車|mótuōchē|xe máy
+熱帶|rèdài|vùng nhiệt đới
+植物|zhíwù|thực vật, cây cối
+所有|suǒyǒu|tất cả
+白天|báitiān|ban ngày
+躺|tǎng|nằm
+黃昏|huánghūn|hoàng hôn
+條|tiáo|con (lượng từ cho đường phố, cá)
+街|jiē|phố
+啤酒|píjiǔ|bia
+上|shàng|trợ từ chỉ tiếp xúc, gắn kết (… lên, … vào)
+又|yòu|vừa… vừa…, lại
+浪漫|làngmàn|lãng mạn
+家鄉|jiāxiāng|quê hương
+觀光客|guānguāngkè|khách du lịch
+曬太陽|shài tàiyáng|phơi nắng, tắm nắng
+水上摩托車|shuǐshàng mótuōchē|mô tô nước
+愛上|àishàng|phải lòng, yêu thích
+#2|12|怎麼吃才健康？|Ăn thế nào mới khỏe mạnh?
+新|xīn|mới
+開|kāi|mở (cửa hàng)
+素食|sùshí|đồ ăn chay
+速食|sùshí|đồ ăn nhanh
+錯|cuò|sai
+肉|ròu|thịt
+欸|èi|này (thán từ gọi sự chú ý)
+讓|ràng|để, khiến, cho phép
+吃素|chīsù|ăn chay
+漢堡|hànbǎo|bánh hamburger
+變|biàn|trở nên, biến thành
+胖|pàng|mập, béo
+素菜|sùcài|món chay
+油膩|yóunì|béo ngậy, nhiều dầu mỡ
+樣|yàng|loại, thứ (lượng từ cho món ăn)
+好奇|hàoqí|tò mò
+女孩|nǚhái|bé gái, cô gái
+青菜|qīngcài|rau xanh
+瘦|shòu|gầy, ốm
+室友|shìyǒu|bạn cùng phòng
+豬肉|zhūròu|thịt heo
+西方|xīfāng|phương Tây, thuộc phương Tây
+完全|wánquán|hoàn toàn
+鹹|xián|mặn
+炸|zhá|chiên giòn (rán ngập dầu)
+烤|kǎo|nướng
+沙拉|shālā|salad
+麥當勞|Màidāngláo|McDonald's
+速食店|sùshí diàn|tiệm đồ ăn nhanh
+只要|zhǐyào|chỉ cần
+討厭|tǎoyàn|ghét, khó chịu
+餐|cān|bữa (lượng từ cho bữa ăn)
+宗教|zōngjiào|tôn giáo
+關係|guānxi|quan hệ, liên quan
+薯條|shǔtiáo|khoai tây chiên
+作法|zuòfǎ|cách làm
+越|yuè|càng (越…越…)
+簡單|jiǎndān|đơn giản
+蒸|zhēng|hấp
+有機|yǒujī|hữu cơ
+食品|shípǐn|thực phẩm
+地球|dìqiú|Trái Đất
+污染|wūrǎn|ô nhiễm
+嚴重|yánzhòng|nghiêm trọng
+衛生|wèishēng|vệ sinh
+營養|yíngyǎng|dinh dưỡng
+什麼的|shénmede|…gì đó, vân vân
+#2|13|我的手機掉了|Điện thoại của mình bị rơi mất rồi
+林愛麗|Lín Àilì|Lâm Ái Lệ (cô gái đến từ Canada)
+掉|diào|rơi, mất
+低頭|dītóu|cúi đầu
+傳|chuán|gửi (tin nhắn, email)
+過|guò|trợ từ hoàn thành (đã… xong)
+簡訊|jiǎnxùn|tin nhắn văn bản (SMS)
+功能|gōngnéng|chức năng
+生氣|shēngqì|tức giận
+叫|jiào|bảo, kêu (ai làm gì)
+罵|mà|mắng
+健身房|jiànshēnfáng|phòng tập gym
+啦|la|trợ từ cuối câu (了 + 啊)
+查|chá|tra cứu, kiểm tra
+班機|bānjī|chuyến bay
+訂位|dìngwèi|đặt chỗ
+電|diàn|điện
+充電|chōngdiàn|sạc pin
+糊塗|hútú|lú lẫn, hồ đồ
+喔|ō|trợ từ cuối câu (gợi ý, nhắc nhở)
+義大利|Yìdàlì|nước Ý
+拿走|názǒu|lấy đi
+撿到|jiǎndào|nhặt được
+留下|liúxià|giữ lại
+網路|wǎnglù|Internet, mạng
+發生|fāshēng|xảy ra
+事情|shìqíng|sự việc, chuyện
+消息|xiāoxí|tin tức
+透過|tòuguò|thông qua
+世界|shìjiè|thế giới
+節省|jiéshěng|tiết kiệm
+起床|qǐchuáng|thức dậy (ra khỏi giường)
+檢查|jiǎnchá|kiểm tra
+郵件|yóujiàn|thư, email
+立刻|lìkè|lập tức
+上傳|shàngchuán|tải lên, đăng
+正常|zhèngcháng|bình thường
+談|tán|bàn, nói chuyện
+現代人|xiàndài rén|người hiện đại
+比方說|bǐfāng shuō|ví dụ như
+做到|zuòdào|làm được
+第一手|dìyīshǒu|trực tiếp, từ nguồn đầu tiên
+急著|jízhe|vội vàng (làm gì)
+打招呼|dǎ zhāohū|chào hỏi
+面對面|miàn duì miàn|mặt đối mặt
+#2|14|我要開始找工作了|Mình sắp bắt đầu tìm việc
+將來|jiānglái|tương lai
+徵求|zhēngqiú|tuyển, tìm kiếm (người)
+教師|jiàoshī|giáo viên
+認為|rènwéi|cho rằng, nghĩ rằng
+畢業|bìyè|tốt nghiệp
+發展|fāzhǎn|phát triển
+連|lián|ngay cả, thậm chí
+想法|xiǎngfǎ|suy nghĩ, ý tưởng
+不但|búdàn|không những
+繼續|jìxù|tiếp tục
+使用|shǐyòng|sử dụng
+實現|shíxiàn|thực hiện, biến thành hiện thực
+招待|zhāodài|tiếp đãi
+研究所|yánjiùsuǒ|viện nghiên cứu, cao học
+聚|jù|tụ họp
+香港|Xiānggǎng|Hồng Kông
+上海|Shànghǎi|Thượng Hải
+說到|shuōdào|nhắc đến
+念完|niànwán|học xong
+分公司|fēngōngsī|chi nhánh
+捨不得|shěbùde|luyến tiếc, không nỡ
+聚一聚|jù yí jù|tụ họp một chút
+當時|dāngshí|lúc đó
+聲調|shēngdiào|thanh điệu
+發音|fāyīn|phát âm
+準|zhǔn|chuẩn xác
+企業|qǐyè|doanh nghiệp
+管理|guǎnlǐ|quản lý
+系|xì|khoa (trường đại học)
+經濟|jīngjì|kinh tế
+幫助|bāngzhù|giúp đỡ, sự giúp đỡ
+有關|yǒuguān|có liên quan
+語法|yǔfǎ|ngữ pháp
+研究|yánjiù|nghiên cứu
+教書|jiāoshū|dạy học
+方法|fāngfǎ|phương pháp
+目的|mùdì|mục đích
+國際|guójì|quốc tế
+翻譯|fānyì|phiên dịch, dịch
+外交|wàijiāo|ngoại giao
+人員|rényuán|nhân viên, nhân sự
+充實|chōngshí|làm phong phú, bổ sung
+專業|zhuānyè|chuyên ngành, chuyên môn
+能力|nénglì|năng lực
+加拿大|Jiānádà|Canada
+企業管理系|qǐyè guǎnlǐ xì|khoa quản trị kinh doanh (企管系)
+國際關係|guójì guānxì|quan hệ quốc tế
+#2|15|過春節|Đón Tết Âm lịch
+春節|chūnjié|Tết Âm lịch, Tết Nguyên Đán
+伯伯|bóbó|bác (cách gọi người lớn tuổi, bạn của bố)
+年夜飯|niányèfàn|bữa cơm tất niên
+打擾|dǎrǎo|làm phiền
+女兒|nǚ'ér|con gái
+國外|guówài|nước ngoài
+圍爐|wéilú|quây quần ăn bữa cơm tất niên
+意思|yìsī|ý nghĩa
+全家|quánjiā|cả nhà
+孩子|háizi|con cái, trẻ con
+吉祥|jíxiáng|cát tường, may mắn
+年紀|niánjì|tuổi tác
+過年|guò nián|ăn Tết
+除夕夜|chúxì yè|đêm giao thừa
+睡著|shuìzháo|ngủ thiếp đi
+壓歲錢|yāsuìqián|tiền lì xì
+恭喜發財|gōngxǐ fācái|chúc mừng phát tài
+好了|hǎo le|được rồi
+節日|jiérì|ngày lễ, lễ hội
+打掃|dǎsǎo|dọn dẹp, quét dọn
+另外|lìngwài|ngoài ra
+春聯|chūnlián|câu đối Tết
+除夕|chúxì|đêm giao thừa (30 Tết)
+年糕|niángāo|bánh gạo năm mới (bánh tổ)
+橘子|júzi|quả quýt
+守歲|shǒusuì|thức đón giao thừa
+說法|shuōfǎ|cách nói, quan niệm
+晚|wǎn|muộn
+活|huó|sống, hoạt bát
+平安|píng'ān|bình an
+出門|chūmén|ra ngoài
+拜年|bàinián|chúc Tết
+又|yòu|lại, lần nữa
+起來|qǐlái|bắt đầu (bổ ngữ chỉ sự bắt đầu)
+華人|Huárén|người Hoa
+貼上|tiēshàng|dán lên
+年年有餘|niánnián yǒuyú|năm nào cũng dư dả (niên niên hữu dư)
+步步高升|bùbù gāoshēng|thăng tiến từng bước
+大吉大利|dàjí dàlì|đại cát đại lợi
+放鞭炮|fàng biānpào|đốt pháo
+大年初一|dànián chūyī|mùng Một Tết
+大年初五|dànián chūwǔ|mùng Năm Tết

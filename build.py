@@ -10,7 +10,9 @@ DIST = os.path.join(ROOT, 'dist')
 
 # ---- 1. Đọc từ vựng: mỗi file trong data/ là 1 cuốn sách ----
 # Dòng "#<sách>|<bài>|<tên bài chữ Hán>|<tên bài tiếng Việt>"  rồi các dòng "chữ Hán|pinyin|nghĩa"
-BOOK_NAMES = {1: ('時代華語 1', '時代華語1'), 2: ('當代中文課程 2', '當代中文2')}
+BOOK_NAMES = {1: ('時代華語 1', '時代華語1'), 2: ('當代中文課程 2', '當代中文2'), 3: ('當代中文課程 1', '當代中文1')}
+# Thứ tự hiện trong app (ID sách giữ nguyên vì tiến độ gắn theo ID): 時代華語1 → 當代中文1 → 當代中文2
+BOOK_ORDER = [1, 3, 2]
 books = {}
 for path in sorted(glob.glob(os.path.join(ROOT, 'data', '*.txt'))):
     cur = None
@@ -50,7 +52,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'data', 'bai_doc', '*.txt'))):
             parts = line.split('|')
             assert cur and len(parts) == 4, f'Sai định dạng ({path}): {line}'
             cur['lines'].append(parts)
-data = {'books': [books[k] for k in sorted(books)]}
+data = {'books': [books[k] for k in sorted(books, key=lambda k: BOOK_ORDER.index(k) if k in BOOK_ORDER else 99 + k)]}
 total = sum(len(l['words']) for b in data['books'] for l in b['lessons'])
 print(f'{len(data["books"])} cuốn, {total} từ, {n_read} bài đọc')
 

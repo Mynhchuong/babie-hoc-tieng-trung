@@ -19,8 +19,11 @@ Trang HTML **một file, chạy offline** để ôn từ vựng tiếng Trung �
 ## Cấu trúc
 ```
 data/sach1_thoi_dai_hoa_ngu_1.txt   Từ vựng 時代華語 1 (15 bài, 726 từ)
+data/sach3_dang_dai_trung_van_1.txt  Từ vựng 當代中文課程 1 (cuốn cơ bản, sách ID 3; 15 bài, 569 từ). Nghĩa Việt do Claude dịch → nên có người đọc lại.
+data/sach2_dang_dai_trung_van_2.txt  Từ vựng 當代中文課程 2 (15 bài, 657 từ; mỗi bài = Vocabulary I + II gồm cả mục People/Names/Phrases). Nghĩa Việt do Claude dịch từ bản Anh trong sách → nên có người đọc lại. Chưa có bài đọc/file nghe cho sách 2.
 data/bai_doc/*.txt                  Bài đọc/đối thoại (mã nghe 01-1-1…): chữ Hán|pinyin|nghĩa Việt; 短文 mỗi đoạn 1 dòng. Sách 1: 44 mục
-audio/                              File nghe <mã nghe>.mp3 (mp3/m4a/wav/ogg) — build chép vào dist/audio + bộ cài; thiếu thì dùng giọng máy
+audio/                              File nghe <mã nghe>.mp3 — build chép vào dist/audio + bộ cài + dist/update; thiếu thì dùng giọng máy. ⚠️ NẰM TRONG .gitignore (bản quyền sách, repo public) — không commit/push. Tạo bằng `python3 nen_audio.py "<thư mục nguồn>" d1` (ffmpeg, mono 48kbps, ~27MB cho 60 file)
+nen_audio.py                        Nén file nghe sách: chỉ lấy track 01–04 mỗi bài (01 Đối thoại 1 · 02 Từ vựng 1 · 03 Đối thoại 2 · 04 Từ vựng 2); track 05+ là luyện phát âm, bỏ
 src/template.html                   Khung HTML (placeholder /*__CSS__*/, <!--__ICONS__-->, /*__JS__*/)
 src/css/NN_*.css                    CSS chia theo phần (00_fonts = font base64, 01_base ... 07_fx)
 src/js/NN_*.js                      JS chia theo phần (00_store … 15_main); script thường, biến toàn cục
@@ -53,7 +56,7 @@ chữ Hán|pinyin|nghĩa tiếng Việt
 - Pinyin theo **cách đọc Đài Loan** như trong sách (VD 星期 xīngqí, 垃圾 lèsè). Nhiều cách đọc: `nǎ / něi`; phần tuỳ chọn trong ngoặc: `yǒu (yì)diǎn (r)` — chế độ Viết chấp nhận mọi biến thể.
 - Dòng `//` = ghi chú. `BOOK_NAMES` trong build.py đặt tên cuốn theo số sách.
 - ⚠️ **ID từ = `sách-bài-thứ tự`** (VD `1-3-5`). Tiến độ, ★, nghĩa đã sửa gắn theo ID này → **chỉ thêm từ vào CUỐI bài, không chèn giữa/xóa/đổi thứ tự**. Sửa nghĩa/pinyin tại chỗ thì OK.
-- Trùng chữ Hán trong cùng bài là cố ý (2 nghĩa): Bài 4 `多`, Bài 7 `到`. Trắc nghiệm đã loại đáp án nhiễu trùng chữ/trùng nghĩa.
+- Trùng chữ Hán trong cùng bài là cố ý (2 nghĩa): Sách 1 Bài 4 `多`, Bài 7 `到`; Sách 2 Bài 11 `又` (2 mục). Trắc nghiệm đã loại đáp án nhiễu trùng chữ/trùng nghĩa.
 - Sách 1 Bài 15 chỉ có 2 phần hội thoại (PDF hết ở đó), 31 từ.
 
 ## Mã nguồn app — bản đồ code (src/css, src/js)
@@ -108,10 +111,13 @@ Biến toàn cục (script thường, không module): `DATA` (thay `/*__DATA__*/
 - **Tự cập nhật app (phương án A, thêm 11/2026)**: `build.py` tạo `dist/update/` (`manifest.json` = phiên bản + SHA256 từng file, `On_Tieng_Trung.html`, `audio/*`, `_headers` CORS) — đẩy nguyên thư mục này lên nơi đặt `update_url` trong `config.json` (để trống = tắt). Máy bồ: Task Scheduler `OnTiengTrung_CapNhat` (mỗi 2 giờ, chạy bù khi bật máy) → `chay_cap_nhat.vbs` → `cap_nhat.ps1`: tải manifest, chỉ tải file khác hash, kiểm SHA256, thay file (trang app sau cùng, giữ `.bak`), chỉ nhận đường dẫn `On_Tieng_Trung.html` / `audio/<tên an toàn>`; **không đụng tiến độ, giờ nhắc, biểu tượng, script `he_thong`** (đổi script Windows vẫn phải gửi zip). Menu Start có "Cập nhật app ngay" (`mo_cap_nhat.vbs` → `-Hien`). Trong app: Cài đặt → "🔄 Cập nhật app" (phiên bản + nút kiểm tra, `checkUpdate()`), mở bản mới lần đầu thì báo `thay_doi.txt` (dòng đầu). Đẩy lên GitHub Pages: `./publish_gh_pages.sh` (Ken tự chạy — công bố app ra mạng). ⚠️ **`cap_nhat.ps1` chưa được chạy thử trên PowerShell/Windows thật** (máy dev không có PowerShell) → thử trên máy bồ bằng bản thử trước.
 - **Giọng đọc**: ưu tiên giọng nam zh-TW (`MALE_VOICES`), chọn tay trong Cài đặt (`S.voice`). `S.shuffle` mặc định bật (migration `S.shuf2`).
 
+## Sách 3 — 當代中文課程 1 (thêm 11/2026)
+- **ID sách**: 時代華語1 = 1, 當代中文2 = 2, 當代中文1 = 3 (ID không đổi vì tiến độ gắn theo ID). Thứ tự hiện trong app do `BOOK_ORDER=[1,3,2]` ở build.py → chỉ số sách trong `DATA.books` (`S.book`, `w.book`, khóa chọn bài `bi:n`) ≠ ID sách.
+- Bài đọc `data/bai_doc/sach3_bai_doc.txt`: mỗi bài 4 mục khớp 4 track — `d1-LL-01` Đối thoại 1, `d1-LL-02` đọc Từ vựng 1 (không có dòng thoại, chỉ phát audio), `d1-LL-03` Đối thoại 2, `d1-LL-04` đọc Từ vựng 2. App hiển thị mã bỏ tiền tố (`01-01`) cho khớp mã in trong sách (`codeOf`). Tiền tố `d1-` để khỏi trùng với mã của cuốn 當代中文2 (cũng đánh `01-01…`, chưa có file nghe → tiền tố `d2-`).
+- PDF nguồn nằm ở `~/Documents/Phồn thể/` (課本 + 作業本 + file nghe 課本 141 file). Vocab 15 bài: Vocab I bắt đầu ở các trang PDF 30,52,73,94,114,132,161,189,211,231,253,275,299,329,353; Vocab II 33,55,75,96,117,135,164,191,214,234,256,278,303,332,357. Đối thoại có chữ Hán + pinyin ngay trên trang (từ bài 6 có thêm khung "Text in Pinyin" riêng); đối thoại có thể bắt đầu từ trang trước trang tiêu đề bài.
+- Gói cài giờ ~19MB (.bat ~25MB) vì có file nghe. **Chưa thử bộ cài lớn này trên Windows thật** (PowerShell đọc cả file bằng ReadAllLines rồi giải nén base64). Nếu máy bồ lỗi → tách file nghe ra khỏi bộ cài, dùng kênh tự cập nhật.
+
 ## Việc còn mở
 1. **Repo đang PUBLIC** mà có `config.json` chứa URL Apps Script → Ken chưa trả lời có chuyển Private không. Hỏi lại / nhắc.
-2. **Sách 2 `當代中文課程2`** (15 bài, mỗi bài Vocabulary I + II) chưa làm. Trang PDF bắt đầu phần từ vựng:
-   - Vocab I: 31, 53, 82, 110, 136, 162, 188, 214, 242, 271, 297, 329, 353, 389, 415
-   - Vocab II: 34, 56, 84, 113, 138, 165, 190, 217, 245, 274, 300, 332, 356, 392, 418
-   - Mỗi phần ~2 trang. Cách hiệu quả nhất phiên trước: render trang (pdftoppm ~110dpi, crop cột trái chứa số + chữ Hán + pinyin + nghĩa Anh) rồi đọc ảnh; OCR tesseract chi_tra sai nhiều. Tạo `data/sach2_dang_dai_trung_van_2.txt` với `#2|<bài>|...`.
+2. **Sách 2 đã có từ vựng** (xem `data/sach2_…`). Còn thiếu: bài đọc (`data/bai_doc/`) và file nghe của sách 2 nếu bồ cần. Cách đã dùng để đọc PDF: pdftoppm 100dpi, cắt cột (số · Hán · pinyin · nghĩa Anh, bỏ cột chú âm) rồi đọc ảnh; mục "People in the Dialogue" nằm TRÊN bảng Vocabulary ở một số bài (4, 6, 10, 13) — dễ sót.
 3. Trang trí trong `.board` phải giữ tối giản (yêu cầu Ken).

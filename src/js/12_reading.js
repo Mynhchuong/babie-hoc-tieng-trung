@@ -1,5 +1,6 @@
 /* ---- Bài đọc / đối thoại (file nghe: audio/<mã>.mp3, thiếu thì dùng giọng đọc của máy) ---- */
-const KIND_VI={'對話一':'Đối thoại 1','對話二':'Đối thoại 2','短文':'Bài đọc'};
+const KIND_VI={'對話一':'Đối thoại 1','對話二':'Đối thoại 2','短文':'Bài đọc','生詞一':'Đọc từ vựng 1','生詞二':'Đọc từ vựng 2'};
+const codeOf=id=>id.replace(/^d\d+-/,'');   // d1-01-02 → 01-02 (đúng mã in trong sách)
 const AUDIO_EXT=['mp3','m4a','wav','ogg'];
 const speakable=t=>t.replace(/[（(][^）)]*[）)]/g,'').replace(/[…]+/g,'，');
 function speakAll(texts){
@@ -23,12 +24,12 @@ function reading(){
   <div id="rdAll" class="${S.rdPy?'py ':''}${S.rdVi?'vi':''}">${items.map(({r,l},i)=>{
     const head=multi&&l!==lastL?`<h3 class="rl-h">${ic('flower','',"width:30px;height:30px;vertical-align:-8px")} Bài ${l.n} · ${esc(l.title||'')} <span class="muted small">${esc(l.titleVi||'')}</span></h3>`:'';lastL=l;
     return `${head}<div class="card rd">
-      <div class="rd-h"><span class="code">🎧 ${esc(r.id)}</span><span class="pill">${esc(KIND_VI[r.kind]||r.kind)}</span>
+      <div class="rd-h"><span class="code">🎧 ${esc(codeOf(r.id))}</span><span class="pill">${esc(KIND_VI[r.kind]||r.kind)}</span>
         <b class="rt" lang="zh-Hant">${esc(r.title)}</b><span class="muted small">${esc(r.titleVi)}</span></div>
       <div class="aud"><audio controls preload="metadata">${AUDIO_EXT.map(e=>`<source src="audio/${esc(r.id)}.${e}">`).join('')}</audio>
-        <div class="noaud" hidden>Chưa có file nghe <i>${esc(r.id)}</i> — </div>
-        <button class="btn" data-all="${i}">🔊 Nghe giọng máy</button></div>
-      <div class="board rdb">${r.lines.map((x,j)=>rline(x,i,j)).join('')}</div></div>`}).join('')}</div>`;
+        <div class="noaud" hidden>Chưa có file nghe <i>${esc(codeOf(r.id))}</i>${r.lines.length?' — ':''}</div>
+        ${r.lines.length?`<button class="btn" data-all="${i}">🔊 Nghe giọng máy</button>`:''}</div>
+      ${r.lines.length?`<div class="board rdb">${r.lines.map((x,j)=>rline(x,i,j)).join('')}</div>`:`<p class="muted small" style="margin:4px 4px 0">Nghe đọc từ vựng của phần này — xem chữ và nghĩa ở tab <b>Danh sách</b>.</p>`}</div>`}).join('')}</div>`;
   const all=$('#rdAll');
   $('#rdPy').onchange=e=>{S.rdPy=e.target.checked;save();all.classList.toggle('py',S.rdPy)};
   $('#rdVi').onchange=e=>{S.rdVi=e.target.checked;save();all.classList.toggle('vi',S.rdVi)};

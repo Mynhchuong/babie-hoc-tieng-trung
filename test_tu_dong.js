@@ -11,6 +11,14 @@ ok('Trang chủ hiển thị 15 bài',(await p.$$('.lesson')).length===15);
 // mở từng bài, đếm từ
 const counts=await p.evaluate(()=>DATA.books[0].lessons.map(l=>l.words.length));
 ok('Tổng số từ',counts.reduce((a,b)=>a+b,0)===726,counts.join(','));
+const bk=await p.evaluate(()=>DATA.books.map(b=>({id:b.id,n:b.lessons.length,w:b.lessons.reduce((a,l)=>a+l.words.length,0),r:b.lessons.reduce((a,l)=>a+(l.readings||[]).length,0)})));
+ok('3 cuốn theo thứ tự 時代華語1 → 當代中文1 → 當代中文2 (ID giữ nguyên 1,3,2)',bk.map(x=>x.id).join()==='1,3,2',JSON.stringify(bk));
+ok('Sách 3 (當代中文 1): 15 bài, 569 từ, 60 mục nghe (đối thoại + đọc từ vựng)',bk[1].n===15&&bk[1].w===569&&bk[1].r===60);
+ok('Sách 2 (當代中文 2): 15 bài, 657 từ',bk[2].n===15&&bk[2].w===657);
+ok('Từ sách 2, 3: không thiếu hán/pinyin/nghĩa, ID đúng tiền tố',await p.evaluate(()=>ALL.filter(w=>w.book>=1).every(w=>w.hz&&w.py&&w.vi&&(w.book===1?w.id.startsWith('3-'):w.id.startsWith('2-')))));
+const dlg=await p.evaluate(()=>DATA.books[1].lessons.flatMap(l=>l.readings).filter(r=>/^對話/.test(r.kind)));
+ok('Sách 3: 30 đối thoại, dòng nào cũng đủ Hán/pinyin/nghĩa; mã nghe dạng d1-LL-TT',dlg.length===30&&dlg.every(r=>/^d1-\d\d-0[13]$/.test(r.id)&&r.lines.length>=5&&r.lines.every(x=>x.length===4&&x[1]&&x[2]&&x[3])));
+ok('Sách 2: có tab chọn sách ở trang chủ',await p.$$eval('.row .tabs .tab',t=>t.length>=2));
 // dữ liệu: trùng/rỗng
 const bad=await p.evaluate(()=>ALL.filter(w=>!w.hz||!w.py||!w.vi).length);ok('Không có từ thiếu dữ liệu',bad===0,bad+' lỗi');
 // --- flashcard full run
@@ -159,13 +167,12 @@ ok('Quên 1 từ mới → vào sổ ở trạng thái đang học, đến hạn
 await r.click('#bBack');await r.waitForTimeout(250);
 ok('Thẻ bài hiện huy hiệu 🔁 số từ đến hạn',!!await r.$('.lesson .duebadge'));
 // 3) gộp nhiều sách: sách 2 đang học nhưng sách 1 đến hạn vẫn phải ôn
-await r.evaluate(()=>{DATA.books.push({id:2,name:'當代中文課程 2',short:'當代中文2',lessons:[{n:1,title:'x',titleVi:'x',words:[],_w:[]}]});
-  ['測|cè|đo','試|shì|thử'].forEach((t,i)=>{const [hz,py,vi]=t.split('|'),w={id:'2-1-'+i,hz,py,vi,orig:vi,book:1,lesson:1};ALL.push(w);BYID[w.id]=w;DATA.books[1].lessons[0]._w.push(w);Object.assign(P(w.id),{s:'r',iv:5,ef:2.5,ls:0,rp:1,lp:0,due:Date.now()-1000})});
+await r.evaluate(()=>{ALL.filter(w=>w.book===1).slice(0,2).forEach(w=>Object.assign(P(w.id),{s:'r',iv:5,ef:2.5,ls:0,rp:1,lp:0,due:Date.now()-1000}));
   ALL.slice(0,3).forEach(w=>{store.p[w.id].due=Date.now()-5000;store.p[w.id].s='r';store.p[w.id].iv=4});S.book=1;S.srsBook='';save();home()});
 await r.waitForTimeout(300);
 ok('Đang ở tab Sách 2 vẫn thấy từ sách 1 đến hạn (gộp tất cả sách)',await r.evaluate(()=>S.book===1&&srsDueList().filter(w=>w.book===0).length>=4&&srsDueList().filter(w=>w.book===1).length===2));
 ok('Thẻ ôn tập hiện số từ đến hạn theo từng sách',(await r.textContent('.srs-books')).includes('đến hạn')&&(await r.$$('.srs-books span')).length===2);
-ok('Có chip lọc theo sách (Tất cả / từng sách)',(await r.$$('.srs-chips .tab')).length===3);
+ok('Có chip lọc theo sách (Tất cả + 3 sách)',(await r.$$('.srs-chips .tab')).length===4);
 ok('Báo cáo cho Ken: đếm đến hạn gộp mọi sách, không bị lọc',await r.evaluate(()=>{S.srsBook=1;const n=reportPayload().due,all=srsDueList(true).length;S.srsBook='';return n===all&&all>2}));
 // 4) phiên ôn: lật thẻ
 await r.evaluate(()=>{S.rvMode='flip';save()});await r.click('#srsGo');await r.waitForTimeout(350);
@@ -287,6 +294,19 @@ await u.reload();await u.waitForTimeout(1800);
 ok('Mở bản mới lần đầu: báo "Đã cập nhật app" + còn nguyên tiến độ',(await u.textContent('#toast')).includes('Đã cập nhật app')&&await u.evaluate(()=>typeof store.p==='object'));
 ok('Cập nhật: không lỗi JS',uerrs.length===0,uerrs.join(' | '));
 await uc.close();
+}
+// --- sách 3: bài đọc có file nghe thật
+{
+const fs=require('fs'),path=require('path');
+const ids=await p.evaluate(()=>DATA.books[1].lessons.flatMap(l=>l.readings.map(r=>r.id)));
+const haveAudio=fs.existsSync(path.join(__dirname,'audio'));   // audio/ không nằm trong git (bản quyền) → máy chưa có thì bỏ qua
+ok('File nghe sách 3: đủ 60 file audio/d1-LL-TT.mp3 khớp từng mục',!haveAudio||ids.length===60&&ids.every(id=>fs.existsSync(path.join(__dirname,'audio',id+'.mp3'))&&fs.statSync(path.join(__dirname,'audio',id+'.mp3')).size>50000),ids.length+' mục');
+await p.evaluate(()=>{home()});await p.waitForTimeout(250);
+await p.evaluate(()=>{S.book=1;save();home()});await p.waitForTimeout(250);
+await p.click('.lesson >> nth=0');await p.waitForTimeout(300);await p.click('[data-m=read]');await p.waitForTimeout(500);
+ok('Sách 3 bài 1: 4 mục (đối thoại 1, đọc từ vựng 1, đối thoại 2, đọc từ vựng 2) hiện mã 01-01…01-04',await p.$$eval('.rd .code',e=>e.map(x=>x.textContent.replace('🎧 ','')).join())==='01-01,01-02,01-03,01-04');
+ok('Mục đọc từ vựng: có trình phát, không có bảng chữ và không có nút giọng máy',await p.$$eval('.rd',el=>el[1].querySelector('audio')&&!el[1].querySelector('.rdb')&&!el[1].querySelector('[data-all]')));
+await p.evaluate(()=>{S.book=0;save()});
 }
 // --- mobile
 const m=await b.newPage({viewport:{width:390,height:800},deviceScaleFactor:2,hasTouch:true});

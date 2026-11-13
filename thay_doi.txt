@@ -1,2 +1,2 @@
 # Dòng đầu tiên (không bắt đầu bằng #) = 'có gì mới' hiện sau khi app tự cập nhật. Sửa trước mỗi lần đẩy bản mới.
-Thêm bài đọc, ôn tập kiểu Anki, báo cáo học tập
+Thêm sách 當代中文課程 1 (569 từ) + 60 bài nghe đối thoại & từ vựng, sách 當代中文課程 2 (657 từ)

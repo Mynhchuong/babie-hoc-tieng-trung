@@ -4,3 +4,5 @@ __pycache__/
 node_modules/
 package-lock.json
 windows/he_thong/che_do.txt
+# File nghe của sách (bản quyền nhà xuất bản) — KHÔNG đưa lên git; chỉ nằm trong bộ cài / gói cập nhật
+audio/
