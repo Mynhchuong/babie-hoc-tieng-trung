@@ -20,7 +20,7 @@ function quiz(){
     </div>
     <div class="choices">${opts.map((o,k)=>`<button class="choice ${askHz?'':'hzc'}" data-k="${k}"><span class="k">${k+1}</span><span>${esc(askHz?o.vi:o.hz)}${!askHz&&S.showPy?`<div class="small muted" style="font-family:var(--ui)">${esc(o.py)}</div>`:''}</span></button>`).join('')}</div>
     <div id="fb"></div>`;
-    $('[data-s]').onclick=()=>speak(w.hz);
+    $('[data-s]').onclick=()=>speak(w.hz,true);
     if(S.auto&&askHz)speak(w.hz);
     const pick=k=>{
       if(locked){next();return}locked=true;

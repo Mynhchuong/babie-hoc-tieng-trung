@@ -5,7 +5,7 @@ function tone(f,t0,d,type='sine',vol=.12){const a=actx,o=a.createOscillator(),g=
   g.gain.setValueAtTime(0,a.currentTime+t0);g.gain.linearRampToValueAtTime(vol,a.currentTime+t0+.01);g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+t0+d);
   o.connect(g).connect(a.destination);o.start(a.currentTime+t0);o.stop(a.currentTime+t0+d+.02)}
 function sfx(k){
-  if(!S.sound)return;try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume();
+  if(!S.sound||isWork())return;try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume();
   if(k==='ok'){tone(880,0,.12);tone(1318,.09,.22)}
   else if(k==='no'){tone(260,0,.18,'triangle',.14);tone(196,.12,.25,'triangle',.12)}
   else if(k==='flip'){tone(620,0,.06,'sine',.06)}
@@ -14,6 +14,7 @@ function sfx(k){
   else if(k==='pop'){tone(1200,0,.05,'sine',.05)}}catch(e){}
 }
 function burst(el,n=14,good=true){
+  if(isWork())return;
   const r=el.getBoundingClientRect();burstAt(r.left+r.width/2,r.top+r.height/2,n,good)}
 function burstAt(cx,cy,n=14,good=true,far=1){
   const chars=good?['♥','✦','♥','★','♡']:['💧'];
@@ -24,6 +25,7 @@ function burstAt(cx,cy,n=14,good=true,far=1){
     document.body.appendChild(sp);setTimeout(()=>sp.remove(),1000)}
 }
 function confetti(){
+  if(isWork())return;
   const cols=['#ff5aa9','#ffd34d','#9fe7f5','#e0218a','#ff8cc6','#fff'];
   for(let k=0;k<70;k++){const c=document.createElement('span');c.className='conf';c.textContent=k%3?'':'♥';
     c.style.cssText=`left:${Math.random()*100}vw;background:${k%3?cols[k%cols.length]:'transparent'};color:${cols[k%cols.length]};animation-duration:${2+Math.random()*2}s;animation-delay:${Math.random()*.6}s;--sx:${Math.random()*160-80}px;transform:rotate(${Math.random()*360}deg)`;
@@ -31,7 +33,7 @@ function confetti(){
 }
 function shake(el){if(!el)return;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake')}
 let combo=0;
-function comboUp(el){combo++;if(combo>=3){const c=document.createElement('div');c.className='combo';c.innerHTML=`🔥 Combo x${combo}!`;
+function comboUp(el){combo++;if(isWork())return;if(combo>=3){const c=document.createElement('div');c.className='combo';c.innerHTML=`🔥 Combo x${combo}!`;
   document.body.appendChild(c);setTimeout(()=>c.remove(),1100);sfx('combo')}
   if(combo>=5)dance(combo)}
 const MSG={
@@ -69,7 +71,7 @@ function dance(n){
 function fxGood(el){sfx('ok');burst(el);comboUp(el);if(!isDancing())mascot('good')}
 function fxBad(el){sfx('no');shake(el);burst(el,5,false);combo=0;mascot('bad')}
 function celebrate(){sfx('win');confetti();setTimeout(()=>mascot('win'),200)}
-function mascotHTML(){return `<div class="mascot" id="mascot" title="Bấm vào tớ nè"><div class="bubble">${pick(MSG.hi)}</div><svg class="ic"><use href="#i-doll"/></svg></div>`}
+function mascotHTML(){if(isWork())return '';return `<div class="mascot" id="mascot" title="Bấm vào tớ nè"><div class="bubble">${pick(MSG.hi)}</div><svg class="ic"><use href="#i-doll"/></svg></div>`}
 function bindMascot(){const m=$('#mascot');if(m)m.onclick=()=>{sfx('pop');burst(m.querySelector('svg'),10);mascot('hi')}}
 document.addEventListener('pointerdown',e=>{const b=e.target.closest('.btn,.tab,.choice');if(b&&S.sound)sfx('pop')});
 

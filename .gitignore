@@ -6,3 +6,5 @@ package-lock.json
 windows/he_thong/che_do.txt
 # File nghe của sách (bản quyền nhà xuất bản) — KHÔNG đưa lên git; chỉ nằm trong bộ cài / gói cập nhật
 audio/
+# Ảnh bìa sách (bản quyền nhà xuất bản) — chỉ nằm trên máy, build nhúng vào dist
+bia/

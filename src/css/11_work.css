@@ -1,0 +1,147 @@
+/* ================= GIAO DIỆN LÀM VIỆC (trung tính, xám xanh) =================
+   Bật: html[data-theme=work] (Cài đặt, nút "Giao diện làm việc" hoặc đường link ?theme=work).
+   Nguyên tắc: không hồng, không bóng/gradient "game", không búp bê/icon trang trí, chữ gọn như tài liệu văn phòng.
+   Đứng CUỐI cùng để ghi đè các màu viết cứng của giao diện hồng. */
+html[data-theme=work]{
+  --ink:#1f2933; --muted:#6b7785; --line:#d5dbe3;
+  --pink:#3b6ea5; --hot:#2f5d8c; --deep:#244a73; --soft:#eef2f7;
+  --gold:#c3ccd6; --gold2:#a3aeba; --brown:#8e99a6;
+  --green:#2e8b57; --red:#c0392b;
+  --red-soft:#fbeaea; --green-soft:#e6f4ec; --blue:#2f5d8c; --blue-soft:#eef2f7; --pink2:#8aa4c2;
+  --fun:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --script:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+}
+html[data-theme=work] body{background:#f3f5f8}
+html[data-theme=work] .deco,html[data-theme=work] .mascot,html[data-theme=work] .home-doll,html[data-theme=work] .done-doll,
+html[data-theme=work] .brand-ic,html[data-theme=work] .corner-ic,html[data-theme=work] .lesson-ic,html[data-theme=work] .tab-ic,
+html[data-theme=work] .studyhead>svg.ic,html[data-theme=work] .rl-h svg,html[data-theme=work] .top-ic,html[data-theme=work] .modal h3>svg.ic,
+html[data-theme=work] .cal .corner-ic,html[data-theme=work] .days .d.l3::after{display:none!important}
+html[data-theme=work] .lesson .tt,html[data-theme=work] .lesson .tv{padding-right:0}
+html[data-theme=work] .today{padding-right:22px!important}
+html[data-theme=work] .q,html[data-theme=work] .flash{margin-top:0}
+
+/* khung trên cùng + thẻ */
+html[data-theme=work] header.top,html[data-theme=work] .studyhead{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 2px rgba(31,41,51,.06);padding:10px 16px}
+html[data-theme=work] .brand{font-family:var(--ui);font-size:20px;font-weight:700;color:var(--ink);text-shadow:none}
+html[data-theme=work] .studyhead h2{color:var(--ink);font-weight:700}
+html[data-theme=work] .card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 3px rgba(31,41,51,.07)}
+html[data-theme=work] .card.gold{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 1px 3px rgba(31,41,51,.07)}
+html[data-theme=work] .gold .muted,html[data-theme=work] .gold .small{color:var(--muted);text-shadow:none;font-weight:500}
+html[data-theme=work] .gold .py{color:var(--ink);text-shadow:none}
+html[data-theme=work] .today h3,html[data-theme=work] .sec-title{color:var(--ink);text-shadow:none;font-weight:700}
+html[data-theme=work] .today p,html[data-theme=work] .stats{color:var(--muted)}
+html[data-theme=work] .stats b{color:var(--ink);text-shadow:none}
+html[data-theme=work] .ring{background:conic-gradient(#2f5d8c calc(var(--p)*1%),#e3e8ef 0);box-shadow:none}
+html[data-theme=work] .ring>div{background:#fff;box-shadow:none}
+html[data-theme=work] .ring b{color:var(--ink)} html[data-theme=work] .ring span{color:var(--muted)}
+html[data-theme=work] .lead{color:var(--muted);font-weight:500}
+html[data-theme=work] .hint{color:var(--muted)}
+
+/* nút: phẳng */
+html[data-theme=work] .btn,html[data-theme=work] .tab{font-family:var(--ui);font-weight:600;letter-spacing:0;border-radius:8px;background:#fff;color:var(--deep);
+  border:1px solid var(--line);box-shadow:0 1px 2px rgba(31,41,51,.06);text-shadow:none}
+html[data-theme=work] .btn::before,html[data-theme=work] .tab::before{display:none}
+html[data-theme=work] .btn:hover,html[data-theme=work] .tab:hover{background:var(--soft);filter:none}
+html[data-theme=work] .btn:active{transform:none;box-shadow:none}
+html[data-theme=work] .btn.primary,html[data-theme=work] .tab.on{background:#2f5d8c;color:#fff;border-color:#2f5d8c;box-shadow:0 1px 2px rgba(31,41,51,.15);text-shadow:none}
+html[data-theme=work] .btn.primary:hover{background:#244a73}
+html[data-theme=work] .btn.yes{background:#2e8b57;border-color:#2e8b57;color:#fff;box-shadow:none;text-shadow:none}
+html[data-theme=work] .btn.no{background:#c0392b;border-color:#c0392b;color:#fff;box-shadow:none;text-shadow:none}
+html[data-theme=work] .btn.ghost{background:transparent;border-color:transparent;box-shadow:none}
+html[data-theme=work] .btn.big{border-radius:10px}
+html[data-theme=work] .btn.big kbd{background:rgba(255,255,255,.25);border-color:transparent;color:inherit}
+html[data-theme=work] .btn:not(.primary):not(.yes):not(.no).big kbd{background:var(--soft);color:var(--muted)}
+html[data-theme=work] .btn.big.primary kbd,html[data-theme=work] .btn.big.yes kbd,html[data-theme=work] .btn.big.no kbd{color:#fff}
+html[data-theme=work] .btn.starb .i{color:#aab4c0;text-shadow:none}
+html[data-theme=work] .btn.starb.on{background:#fff7dd;border-color:#e0b84a;color:#7a5a00;box-shadow:none}
+html[data-theme=work] .btn.starb.on .i{color:#d9a400;text-shadow:none}
+html[data-theme=work] kbd{border-color:var(--line);color:var(--muted);font-family:var(--ui)}
+html[data-theme=work] .tabs.modes .tab{padding:8px 16px}
+html[data-theme=work] .seg{box-shadow:0 0 0 1px var(--line);border-radius:8px}
+html[data-theme=work] .seg button{background:#fff;color:var(--deep);font-family:var(--ui);font-weight:600}
+html[data-theme=work] .seg button.on{background:#2f5d8c;color:#fff}
+html[data-theme=work] .opts{background:#fff;border:1px solid var(--line);border-radius:10px;color:var(--ink)}
+html[data-theme=work] .opts input{accent-color:#2f5d8c}
+html[data-theme=work] .timer{background:var(--soft);color:var(--muted);font-family:var(--ui);font-weight:600}
+html[data-theme=work] .progress{color:var(--muted);font-family:var(--ui)}
+
+/* lịch, thẻ bài, thanh tiến độ */
+html[data-theme=work] .cal .hd b{color:var(--ink);font-family:var(--ui)}
+html[data-theme=work] .cal .hd button{background:#fff;color:var(--deep);border:1px solid var(--line);box-shadow:none}
+html[data-theme=work] .days .w{color:var(--muted);font-family:var(--ui)}
+html[data-theme=work] .days .d{background:#f3f5f8;color:#8a95a3;font-family:var(--ui);border-radius:6px}
+html[data-theme=work] .days .d.l1{background:#d6e2f0;color:var(--ink)}
+html[data-theme=work] .days .d.l2{background:#7fa3c9;color:#fff}
+html[data-theme=work] .days .d.l3{background:#2f5d8c;color:#fff;box-shadow:none}
+html[data-theme=work] .days .d.td{box-shadow:0 0 0 2px #2f5d8c}
+html[data-theme=work] .legend i{border-radius:3px}
+html[data-theme=work] .lesson{transform:none!important}
+html[data-theme=work] .lesson:hover{box-shadow:0 3px 10px rgba(31,41,51,.14)}
+html[data-theme=work] .lesson .num{background:#2f5d8c;box-shadow:none;border-radius:6px;font-family:var(--ui)}
+html[data-theme=work] .lesson .meta{font-family:var(--ui);font-weight:500}
+html[data-theme=work] .lesson.sel{border-color:#2f5d8c;box-shadow:0 0 0 2px #2f5d8c}
+html[data-theme=work] .chk{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+html[data-theme=work] .lesson.sel .chk{background:#2f5d8c;box-shadow:none}
+html[data-theme=work] .bar{background:#e3e8ef;box-shadow:none;padding:0;height:8px}
+html[data-theme=work] .bar>i{background:#2e8b57;box-shadow:none}
+html[data-theme=work] .duebadge{background:#fff1d6!important;color:#8a5a00!important}
+html[data-theme=work] .bk .cover{box-shadow:0 2px 6px rgba(31,41,51,.25),inset 4px 0 0 rgba(255,255,255,.2)}
+html[data-theme=work] .bk.on .cover{box-shadow:0 3px 8px rgba(31,41,51,.3),0 0 0 3px #2f5d8c}
+html[data-theme=work] .bk-n{color:var(--ink);font-family:var(--ui)}
+html[data-theme=work] .bk-p i{background:#2e8b57}
+
+/* bảng học: navy giữ nguyên (đã trung tính); chỉnh nút nhỏ và đáp án */
+html[data-theme=work] .board{box-shadow:0 2px 8px rgba(4,30,66,.25)}
+html[data-theme=work] .big-hz{text-shadow:none}
+html[data-theme=work] .vi,html[data-theme=work] .done .score{text-shadow:none}
+html[data-theme=work] .face .corner{background:rgba(255,255,255,.14)}
+html[data-theme=work] .spk{background:rgba(255,255,255,.12);box-shadow:none;border:1px solid rgba(255,255,255,.5)}
+html[data-theme=work] .choice{font-family:var(--ui);font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 2px rgba(31,41,51,.06)}
+html[data-theme=work] .choice:hover{background:var(--soft);filter:none}
+html[data-theme=work] .choice:active{transform:none;box-shadow:none}
+html[data-theme=work] .choice .k{background:var(--soft);color:var(--deep);box-shadow:none}
+html[data-theme=work] .choice.ok{background:#e6f4ec;border-color:#2e8b57;color:#1d6b40;box-shadow:none}
+html[data-theme=work] .choice.bad{background:#fbeaea;border-color:#c0392b;color:#992d22;box-shadow:none}
+html[data-theme=work] .write input{background:#fff;color:var(--ink);border:1px solid #8aa4c2;box-shadow:none;font-family:var(--ui);font-weight:500}
+html[data-theme=work] .write input::placeholder{color:#8a95a3}
+html[data-theme=work] .feedback.ok{background:#e6f4ec;color:#1d6b40;box-shadow:none;border:1px solid #2e8b57}
+html[data-theme=work] .feedback.bad{background:#fbeaea;color:#992d22;box-shadow:none;border:1px solid #c0392b}
+html[data-theme=work] .board .feedback.ok,html[data-theme=work] .board .feedback.bad{color:inherit}
+html[data-theme=work] .pill{background:#2e8b57;font-family:var(--ui)} html[data-theme=work] .pill.r{background:#c0392b}
+html[data-theme=work] .star{color:#c3ccd6;text-shadow:none} html[data-theme=work] .star.on{color:#d9a400;text-shadow:none}
+
+/* danh sách, ô nhập, hộp thoại */
+html[data-theme=work] .search{border:1px solid var(--line);border-radius:8px}
+html[data-theme=work] .search:focus,html[data-theme=work] .vi-ed:focus{border-color:#2f5d8c}
+html[data-theme=work] table.list td,html[data-theme=work] table.list th{border-bottom:1px solid #e3e8ef}
+html[data-theme=work] table.list th{font-family:var(--ui);color:var(--muted)}
+html[data-theme=work] .vi-ed:hover{border-color:var(--line)}
+html[data-theme=work] .vi-ed.edited{background:#eef2f7;border-color:#8aa4c2}
+html[data-theme=work] .modal{background:rgba(31,41,51,.4);backdrop-filter:none}
+html[data-theme=work] .modal .card{border:1px solid var(--line);box-shadow:0 10px 30px rgba(31,41,51,.3)}
+html[data-theme=work] .modal h3{font-family:var(--ui);color:var(--ink)}
+html[data-theme=work] .logrow{border-bottom:1px solid #e3e8ef} html[data-theme=work] .logrow b{color:var(--deep);font-family:var(--ui)}
+html[data-theme=work] .field input[type=number]{border:1px solid var(--line);border-radius:8px;font-family:var(--ui);color:var(--ink)}
+html[data-theme=work] .note{background:#f3f5f8;border:1px solid var(--line);border-radius:8px}
+html[data-theme=work] .banner{border-radius:10px}
+html[data-theme=work] .toast{background:#364b63;border-radius:8px;font-family:var(--ui);font-weight:500}
+html[data-theme=work] .combo{display:none}
+
+/* ôn tập, báo cáo, bài đọc */
+html[data-theme=work] .srs h3,html[data-theme=work] .srs-big b{font-family:var(--ui);color:var(--ink)}
+html[data-theme=work] .srs-big span,html[data-theme=work] .fcast div,html[data-theme=work] .fcast em{font-family:var(--ui)}
+html[data-theme=work] .fcast i{background:#7fa3c9}
+html[data-theme=work] .srs-state .l{background:#e0a64a} html[data-theme=work] .srs-state .y{background:#7fa3c9} html[data-theme=work] .srs-state .m{background:#2e8b57}
+html[data-theme=work] .cl{color:#a76b12} html[data-theme=work] .cy{color:#2f5d8c} html[data-theme=work] .cm{color:#1d6b40}
+html[data-theme=work] .srs-stats div{background:#f3f5f8} html[data-theme=work] .srs-stats b{font-family:var(--ui);color:var(--ink)}
+html[data-theme=work] .rbar{background:#e3e8ef} html[data-theme=work] .rbar i{background:#7fa3c9}
+html[data-theme=work] .rbar.g i{background:#2e8b57} html[data-theme=work] .rbar.y i{background:#e0a64a} html[data-theme=work] .rbar.r i{background:#c0392b}
+html[data-theme=work] #rpBody h4,html[data-theme=work] .rl-h{font-family:var(--ui);color:var(--ink)}
+html[data-theme=work] .rp-box.good{background:#e6f4ec;border-color:#a9d4bb} html[data-theme=work] .rp-box.bad{background:#fff4e0;border-color:#ecc98a} html[data-theme=work] .rp-box.tip{background:#eef2f7;border-color:#c3d3e6}
+html[data-theme=work] .bdg.on{background:#fff4d6;color:#7a5a00;box-shadow:none;border:1px solid #e3c36a}
+html[data-theme=work] .rd-h .code{background:var(--soft);border-color:var(--line);font-family:var(--ui)}
+html[data-theme=work] .rd-h{color:var(--ink);font-family:var(--ui)}
+html[data-theme=work] .rl .who{color:#c9d6e6}
+html[data-theme=work] .legend i:nth-of-type(1){background:#d6e2f0!important}
+html[data-theme=work] .legend i:nth-of-type(2){background:#7fa3c9!important}
+html[data-theme=work] .legend i:nth-of-type(3){background:#2f5d8c!important}

@@ -52,6 +52,11 @@ for path in sorted(glob.glob(os.path.join(ROOT, 'data', 'bai_doc', '*.txt'))):
             parts = line.split('|')
             assert cur and len(parts) == 4, f'Sai định dạng ({path}): {line}'
             cur['lines'].append(parts)
+# Ảnh bìa thật (nếu có): bia/bia_<ID sách>.jpg -> nhúng base64 vào trang; không có thì app tự vẽ bìa. Tạo bằng: python3 tao_bia.py
+for k, bk in books.items():
+    p = os.path.join(ROOT, 'bia', f'bia_{k}.jpg')
+    if os.path.exists(p):
+        bk['cover'] = 'data:image/jpeg;base64,' + base64.b64encode(open(p, 'rb').read()).decode()
 data = {'books': [books[k] for k in sorted(books, key=lambda k: BOOK_ORDER.index(k) if k in BOOK_ORDER else 99 + k)]}
 total = sum(len(l['words']) for b in data['books'] for l in b['lessons'])
 print(f'{len(data["books"])} cuốn, {total} từ, {n_read} bài đọc')

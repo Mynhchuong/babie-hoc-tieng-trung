@@ -10,19 +10,20 @@ function home(){
   const msg=td.s<60?'Hôm nay mình chưa học nè, học một chút nha ♡':pct<100?`Còn ${Math.max(1,Math.ceil((S.goal*60-td.s)/60))} phút nữa là đủ mục tiêu rồi!`:'Hôm nay giỏi quá, đủ mục tiêu rồi 🎀';
   $('#app').innerHTML=`
   <header class="top">
-    ${ic('crown','brand-ic')}<div class="brand">Halken nhắc Babie học tiếng Trung ${ic('heart','',"width:.8em;height:.8em;vertical-align:-.05em")}</div>
+    ${ic('crown','brand-ic')}<div class="brand">${isWork()?'Ôn tiếng Trung':`Halken nhắc Babie học tiếng Trung ${ic('heart','',"width:.8em;height:.8em;vertical-align:-.05em")}`}</div>
     <div class="spacer"></div>
-    <span class="timer" id="fstat"></span>${REPORT_URL?`<span class="timer" title="Tiến độ học được gửi cho Halken mỗi ngày">📤 Báo cáo cho Halken</span>`:""}
+    <span class="timer" id="fstat"></span>${REPORT_URL&&!isWork()?`<span class="timer" title="Tiến độ học được gửi cho Halken mỗi ngày">📤 ${isWork()?'Báo cáo':'Báo cáo cho Halken'}</span>`:""}
     <button class="btn primary" id="bRep">📈 Báo cáo</button>
     <button class="btn" id="bLog">📒 Nhật ký</button>
+    <button class="btn" id="bTheme" title="Đổi giao diện hồng / làm việc">◐ ${isWork()?'Giao diện hồng':'Giao diện làm việc'}</button>
     <button class="btn" id="bSet">⚙️ Cài đặt</button>
   </header>
   ${fileBanner()}
   <div class="dash">
-    <div class="card gold today">${ic('wand','corner-ic',"top:-26px;right:18px;width:64px;height:64px;--r:14deg")}<div class="home-doll" id="homeDoll"><div class="bubble">${pick(MSG.hi)}</div>${ic('doll-wave')}</div>
+    <div class="card gold today">${ic('wand','corner-ic',"top:-26px;right:18px;width:64px;height:64px;--r:14deg")}${isWork()?'':`<div class="home-doll" id="homeDoll"><div class="bubble">${pick(MSG.hi)}</div>${ic('doll-wave')}</div>`}
       <div class="ring" style="--p:${pct}"><div><b>${Math.floor(td.s/60)}</b><span>/ ${S.goal} phút</span></div></div>
       <div style="flex:1">
-        <h3>${hi} ♡</h3><p>${msg}</p>
+        <h3>${hi}${plain(' ♡')}</h3><p>${plain(msg)}</p>
         <div class="stats">
           <div><b>🔥 ${st}</b>ngày liên tiếp</div>
           <div><b>${days.length}</b>ngày đã học</div>
@@ -36,7 +37,8 @@ function home(){
   </div>
   ${srsCard()}
   <div class="row">
-    <div class="tabs">${DATA.books.map((x,i)=>`<button class="tab ${i==S.book?'on':''}" data-b="${i}">${esc(x.name)}</button>`).join('')}</div>
+    <div class="books">${DATA.books.map((x,i)=>{const t=ALL.filter(w=>w.book===i),k=t.filter(w=>P(w.id).k).length;
+      return `<button class="bk ${i==S.book?'on':''}" data-b="${i}" title="${esc(x.name)}">${coverHTML(x)}<span class="bk-n">${esc(x.name)}</span><span class="bk-p"><i style="width:${t.length?Math.round(k*100/t.length):0}%"></i></span><span class="bk-s">${k}/${t.length} từ thuộc</span></button>`}).join('')}</div>
     <div class="spacer"></div>
     ${stars?`<button class="btn" id="bStar">★ Đánh dấu (${stars})</button>`:''}
     ${hard?`<button class="btn" id="bHard">💔 Hay sai (${hard})</button>`:''}
@@ -54,7 +56,7 @@ function home(){
   ${sel.size?`<div class="card selbar">${ic('heart','',"width:30px;height:30px")}<b>Đã chọn ${sel.size} bài</b><span class="muted small">(${selWords().length} từ)</span><div class="spacer"></div>
     <button class="btn ghost" id="bClr">Bỏ chọn</button><button class="btn primary" id="bGo">Ôn các bài đã chọn →</button></div>`:''}
   `;
-  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{S.book=+t.dataset.b;save();home()});
+  document.querySelectorAll('[data-b]').forEach(t=>t.onclick=()=>{S.book=+t.dataset.b;save();home()});
   document.querySelectorAll('.lesson').forEach(el=>el.onclick=e=>{
     const c=e.target.closest('.chk');
     if(c){const k=c.dataset.c;sel.has(k)?sel.delete(k):sel.add(k);home();return}
@@ -70,6 +72,7 @@ function home(){
   $('#cP').onclick=()=>{calM.setMonth(calM.getMonth()-1);home()};
   $('#cN').onclick=()=>{calM.setMonth(calM.getMonth()+1);home()};
   $('#bRep').onclick=()=>showReport();$('#bLog').onclick=showLog;checkBadges();$('#bSet').onclick=showSettings;bindBanner();bindSrs();showFileStatus();
+  const bt=$('#bTheme');if(bt)bt.onclick=()=>{setTheme(isWork()?'pink':'work');home()};
   const hd=$('#homeDoll');if(hd)hd.onclick=()=>{sfx('pop');burst(hd,12);const b=hd.querySelector('.bubble');b.textContent=pick(MSG.hi.concat(MSG.good));hd.classList.remove('bounce');void hd.offsetWidth;hd.classList.add('bounce')};
   const rg=$('.ring');if(rg){const p=rg.style.getPropertyValue('--p');rg.style.setProperty('--p',0);requestAnimationFrame(()=>requestAnimationFrame(()=>rg.style.setProperty('--p',p)))}
   document.querySelectorAll('.stats b').forEach(el=>{const m=el.textContent.match(/(\D*)(\d+)/);if(!m)return;const end=+m[2],pre=m[1];let t0=null;
@@ -102,6 +105,8 @@ function showSettings(){
   <div class="field" style="margin-top:10px">🔁 Mỗi lượt ôn tập tối đa: <input type="number" id="srsMax" min="5" max="200" value="${S.srsMax}"> từ</div>
   <div class="field" style="margin-top:12px">🔊 Giọng đọc: <select id="vSel"></select> <button class="btn" id="vTry">▶ Nghe thử</button></div>
   <div class="muted small">Mặc định tự chọn giọng nam tiếng Đài Loan nếu máy có (Windows: Zhiwei · Edge: YunJhe · Mac: Eddy, Reed…).</div>
+  <div class="field" style="margin-top:12px">🎨 Giao diện: <span class="seg"><button data-th="pink" class="${isWork()?'':'on'}">Hồng</button><button data-th="work" class="${isWork()?'on':''}">Làm việc (trung tính, im lặng)</button></span></div>
+  <div class="muted small">Giao diện làm việc: màu xám xanh, không búp bê, không tiếng hiệu ứng, không tự đọc to (chỉ đọc khi bấm 🔊). Mẹo: mở trang bằng đường link có đuôi <b>?theme=work</b> để vào thẳng giao diện này.</div>
   <h3 style="margin-top:18px">⏰ Nhắc học trên máy tính</h3>
   <div class="note">Khi cài, máy đã tự bật nhắc lúc <b>6 giờ tối</b> mỗi ngày. Tới giờ Windows hiện thông báo <i>"Anh người yêu nhắc em học tiếng Trung nè ♥"</i>, bấm <b>"Học ngay"</b> là mở trang này 🎀<br>
   Muốn <b>đổi giờ</b> hoặc <b>tắt nhắc</b>: bấm nút <b>Start</b> (cửa sổ Windows) → gõ <b>đổi giờ</b> → mở <b>"Đổi giờ nhắc học"</b>.<br>
@@ -127,10 +132,11 @@ function showSettings(){
     el.querySelectorAll('[data-bk]').forEach(b=>b.onclick=async()=>{if(confirm('Khôi phục tiến độ về bản này? (Tiến độ hiện tại vẫn được cất lại để quay về nếu cần)')){toast('Đang khôi phục…');await bkRestore(b.dataset.bk)}})});
   const uc=$('#upChk');if(uc)uc.onclick=async()=>{const o=$('#upRes');o.textContent='Đang hỏi…';const r=await checkUpdate();
     o.textContent=r.err?'Không kiểm tra được (máy có mạng chưa?)':r.newer?`Có bản mới (${fmtVer(r.ver)}) — máy sẽ tự cập nhật trong vài giờ, hoặc bấm "Cập nhật app ngay" ở menu Start rồi mở lại app.`:'Đang là bản mới nhất rồi ♥'};
+  m.querySelectorAll('[data-th]').forEach(b=>b.onclick=()=>{setTheme(b.dataset.th);m.remove();home()});
   const vs=$('#vSel'),fillV=()=>{const l=zhVoices();vs.innerHTML=`<option value="">Tự động (ưu tiên giọng nam)</option>`+l.map(v=>`<option value="${esc(v.name)}" ${S.voice===v.name?'selected':''}>${esc(v.name)} · ${esc(v.lang)}</option>`).join('')};
   fillV();if(!zhVoices().length)vs.insertAdjacentHTML('afterend',' <span class="muted small">(máy chưa có giọng tiếng Trung)</span>');
-  vs.onchange=()=>{S.voice=vs.value;save();pickVoice();speak('你好，我是你的中文老師。')};
-  $('#vTry').onclick=()=>speak('你好，我是你的中文老師。');
+  vs.onchange=()=>{S.voice=vs.value;save();pickVoice();speak('你好，我是你的中文老師。',true)};
+  $('#vTry').onclick=()=>speak('你好，我是你的中文老師。',true);
   $('#srsMax').onchange=e=>{S.srsMax=Math.max(5,Math.min(200,+e.target.value||30));save();toast('Mỗi lượt ôn '+S.srsMax+' từ')};
   $('#goal').onchange=e=>{S.goal=Math.max(1,Math.min(240,+e.target.value||15));save();toast('Đã lưu mục tiêu '+S.goal+' phút')};
   $('#bk').onclick=()=>dl(`Sao_luu_tieng_Trung_${today()}.json`,JSON.stringify(store),'application/json');

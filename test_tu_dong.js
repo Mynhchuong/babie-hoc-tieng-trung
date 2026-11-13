@@ -18,7 +18,7 @@ ok('Sách 2 (當代中文 2): 15 bài, 657 từ',bk[2].n===15&&bk[2].w===657);
 ok('Từ sách 2, 3: không thiếu hán/pinyin/nghĩa, ID đúng tiền tố',await p.evaluate(()=>ALL.filter(w=>w.book>=1).every(w=>w.hz&&w.py&&w.vi&&(w.book===1?w.id.startsWith('3-'):w.id.startsWith('2-')))));
 const dlg=await p.evaluate(()=>DATA.books[1].lessons.flatMap(l=>l.readings).filter(r=>/^對話/.test(r.kind)));
 ok('Sách 3: 30 đối thoại, dòng nào cũng đủ Hán/pinyin/nghĩa; mã nghe dạng d1-LL-TT',dlg.length===30&&dlg.every(r=>/^d1-\d\d-0[13]$/.test(r.id)&&r.lines.length>=5&&r.lines.every(x=>x.length===4&&x[1]&&x[2]&&x[3])));
-ok('Sách 2: có tab chọn sách ở trang chủ',await p.$$eval('.row .tabs .tab',t=>t.length>=2));
+ok('Trang chủ: chọn sách bằng thẻ bìa (3 bìa, có tiến độ)',await p.$$eval('.books .bk',t=>t.length===3&&t.every(b=>b.querySelector('.cover')&&b.querySelector('.bk-s'))));
 // dữ liệu: trùng/rỗng
 const bad=await p.evaluate(()=>ALL.filter(w=>!w.hz||!w.py||!w.vi).length);ok('Không có từ thiếu dữ liệu',bad===0,bad+' lỗi');
 // --- flashcard full run
@@ -170,7 +170,8 @@ ok('Thẻ bài hiện huy hiệu 🔁 số từ đến hạn',!!await r.$('.less
 await r.evaluate(()=>{ALL.filter(w=>w.book===1).slice(0,2).forEach(w=>Object.assign(P(w.id),{s:'r',iv:5,ef:2.5,ls:0,rp:1,lp:0,due:Date.now()-1000}));
   ALL.slice(0,3).forEach(w=>{store.p[w.id].due=Date.now()-5000;store.p[w.id].s='r';store.p[w.id].iv=4});S.book=1;S.srsBook='';save();home()});
 await r.waitForTimeout(300);
-ok('Đang ở tab Sách 2 vẫn thấy từ sách 1 đến hạn (gộp tất cả sách)',await r.evaluate(()=>S.book===1&&srsDueList().filter(w=>w.book===0).length>=4&&srsDueList().filter(w=>w.book===1).length===2));
+const dueInfo=await r.evaluate(()=>({b:S.book,d0:srsDueList().filter(w=>w.book===0).length,d1:srsDueList().filter(w=>w.book===1).length,all:srsDueList(true).length}));
+ok('Đang ở tab Sách 2 vẫn thấy từ sách 1 đến hạn (gộp tất cả sách)',dueInfo.b===1&&dueInfo.d0>=3&&dueInfo.d1===2,JSON.stringify(dueInfo));
 ok('Thẻ ôn tập hiện số từ đến hạn theo từng sách',(await r.textContent('.srs-books')).includes('đến hạn')&&(await r.$$('.srs-books span')).length===2);
 ok('Có chip lọc theo sách (Tất cả + 3 sách)',(await r.$$('.srs-chips .tab')).length===4);
 ok('Báo cáo cho Ken: đếm đến hạn gộp mọi sách, không bị lọc',await r.evaluate(()=>{S.srsBook=1;const n=reportPayload().due,all=srsDueList(true).length;S.srsBook='';return n===all&&all>2}));
@@ -307,6 +308,47 @@ await p.click('.lesson >> nth=0');await p.waitForTimeout(300);await p.click('[da
 ok('Sách 3 bài 1: 4 mục (đối thoại 1, đọc từ vựng 1, đối thoại 2, đọc từ vựng 2) hiện mã 01-01…01-04',await p.$$eval('.rd .code',e=>e.map(x=>x.textContent.replace('🎧 ','')).join())==='01-01,01-02,01-03,01-04');
 ok('Mục đọc từ vựng: có trình phát, không có bảng chữ và không có nút giọng máy',await p.$$eval('.rd',el=>el[1].querySelector('audio')&&!el[1].querySelector('.rdb')&&!el[1].querySelector('[data-all]')));
 await p.evaluate(()=>{S.book=0;save()});
+}
+// --- bìa sách + giao diện làm việc
+{
+const tc=await b.newContext({viewport:{width:1200,height:900}});const t=await tc.newPage();const terrs=[];t.on('pageerror',e=>terrs.push(e.message));
+await t.route('https://script.google.com/**',x=>x.fulfill({status:200,body:'ok'}));
+await t.goto(url);await t.waitForTimeout(500);
+const hasReal=await t.evaluate(()=>DATA.books.every(b=>!!b.cover));
+ok('Bìa sách: có ảnh bìa thật (nếu có thư mục bia/) hoặc tự vẽ; luôn hiện đủ 3',await t.$$eval('.books .bk .cover',e=>e.length===3&&e.every(c=>c.querySelector('img')||c.classList.contains('gen'))),hasReal?'ảnh thật':'tự vẽ');
+await t.evaluate(()=>{DATA.books.forEach(b=>{delete b.cover});home()});await t.waitForTimeout(200);
+ok('Bìa tự vẽ khi không có ảnh: có số sách + tên chữ Hán',await t.$$eval('.books .cover.gen',e=>e.length===3&&e[0].textContent.includes('時代華語')&&e[1].querySelector('.cv-no').textContent==='1'));
+await t.click('.books .bk >> nth=2');await t.waitForTimeout(300);
+ok('Bấm bìa: chọn sách đó (đổi danh sách bài, nhớ lựa chọn)',await t.evaluate(()=>S.book===2&&DATA.books[2].id===2)&&await t.$eval('.books .bk >> nth=2',e=>e.classList.contains('on')));
+await t.click('.lesson >> nth=0');await t.waitForTimeout(250);
+ok('Trong bài học: có bìa nhỏ của sách ở đầu trang',!!await t.$('.studyhead .bk-mini .cover'));
+await t.click('#bBack');await t.waitForTimeout(250);
+// giao diện làm việc
+ok('Mặc định giao diện hồng, tiêu đề tab có tên app',await t.evaluate(()=>S.theme==='pink'&&document.documentElement.dataset.theme==='pink')&&(await t.title()).includes('Babie'));
+await t.click('#bTheme');await t.waitForTimeout(300);
+ok('Bấm "Giao diện làm việc": đổi data-theme, tiêu đề tab trung tính, không còn chữ Babie/♥',await t.evaluate(()=>document.documentElement.dataset.theme==='work')&&(await t.title())==='Ôn tiếng Trung'&&!(await t.innerText('body')).includes('Babie')&&!(await t.innerText('header.top')).includes('♥'));
+ok('Giao diện làm việc: nền xám xanh, không còn hồng',await t.evaluate(()=>{const c=getComputedStyle(document.body).backgroundColor;const [r,g,b]=c.match(/\d+/g).map(Number);return Math.abs(r-g)<25&&b>=r-5&&b<=g+25}));
+ok('Giao diện làm việc: không búp bê, không hình trang trí',await t.evaluate(()=>!document.querySelector('#homeDoll')&&getComputedStyle(document.querySelector('.deco')).display==='none'));
+ok('Nút hồng đã thành nút phẳng xanh xám',await t.evaluate(()=>{const c=getComputedStyle(document.querySelector('.btn.primary')).backgroundColor;const [r,g,b]=c.match(/\d+/g).map(Number);return b>r&&b>g&&!(r>200&&g<120)}));
+await t.click('.lesson >> nth=0');await t.waitForTimeout(300);
+ok('Học trong giao diện làm việc: không có búp bê',!await t.$('#mascot'));
+// im lặng: không phát tiếng, không tự đọc, không hiệu ứng
+const quiet=await t.evaluate(()=>{let spoke=0,tones=0;const os=speechSynthesis.speak;speechSynthesis.speak=u=>{spoke++};speak('你好');const a=spoke;speak('你好',true);
+  actx=null;sfx('ok');const noCtx=actx===null;burst(document.body);confetti();return {auto:a,manual:spoke-a,noCtx,fx:document.querySelectorAll('.fxp,.conf').length}});
+ok('Giao diện làm việc: không tự đọc to (chỉ đọc khi bấm 🔊), không phát tiếng, không hạt/pháo giấy',quiet.auto===0&&quiet.manual===1&&quiet.noCtx&&quiet.fx===0,JSON.stringify(quiet));
+await t.click('#bBack');await t.waitForTimeout(250);
+await t.click('#bSet');await t.waitForTimeout(250);
+ok('Cài đặt có chọn giao diện (Hồng / Làm việc)',(await t.$$('[data-th]')).length===2&&await t.$eval('[data-th=work]',e=>e.classList.contains('on')));
+await t.click('[data-th=pink]');await t.waitForTimeout(300);
+ok('Chọn lại Hồng trong Cài đặt: trở về giao diện hồng',await t.evaluate(()=>document.documentElement.dataset.theme==='pink')&&(await t.title()).includes('Babie'));
+// đường link ?theme=work
+await t.goto(url+'?theme=work');await t.waitForTimeout(500);
+ok('Đường link ?theme=work vào thẳng giao diện làm việc (và nhớ)',await t.evaluate(()=>S.theme==='work'&&document.documentElement.dataset.theme==='work'));
+await t.goto(url);await t.waitForTimeout(400);
+ok('Mở lại không có ?theme: vẫn nhớ giao diện làm việc',await t.evaluate(()=>S.theme==='work'));
+await t.screenshot({path:require('path').join(__dirname,'dist','test_work.png')});
+ok('Bìa + giao diện làm việc: không lỗi JS',terrs.length===0,terrs.join(' | '));
+await tc.close();
 }
 // --- mobile
 const m=await b.newPage({viewport:{width:390,height:800},deviceScaleFactor:2,hasTouch:true});

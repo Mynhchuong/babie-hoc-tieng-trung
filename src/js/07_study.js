@@ -9,7 +9,7 @@ function study(){
   $('#app').innerHTML=`
   <div class="studyhead">
     <button class="btn" id="bBack">← Trang chủ</button>
-    ${ic('tiara','',"width:42px;height:42px")}<h2>${esc(deckName)}</h2><span class="muted small" style="font-weight:600">${deck.length} từ</span>
+    ${deckLessons.length===1&&DATA.books[deckLessons[0]._bi]?`<span class="bk-mini">${coverHTML(DATA.books[deckLessons[0]._bi])}</span>`:ic('tiara','',"width:42px;height:42px")}<h2>${esc(deckName)}</h2><span class="muted small" style="font-weight:600">${deck.length} từ</span>
     <span class="timer" id="tmr">⏱ Hôm nay: ${fmt((LOG[today()]||{s:0}).s)}</span>
     <button class="btn round" id="bOpt" title="Tùy chọn">⚙️</button>
   </div>

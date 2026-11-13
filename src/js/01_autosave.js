@@ -54,7 +54,7 @@ async function pickOldFile(){
 function fileBanner(){
   if(!FS_OK)return '';
   if(fileState==='need')return `<div class="banner card" id="fbn">💾 <b>Bấm để tiếp tục tự lưu tiến độ</b> vào file <i>${esc(fh.name)}</i><div class="spacer"></div><button class="btn primary" id="fRes">Cho phép lưu</button></div>`;
-  if(fileState==='none'&&!(S.hideFileTip&&Date.now()-S.hideFileTip<3*864e5))return `<div class="banner card" id="fbn">💾 <span><b>Bật tự lưu tiến độ</b> (làm 1 lần, để khỏi mất khi cập nhật app): bấm nút hồng → cửa sổ hiện ra thì bấm <b>Save / Lưu</b> là xong.</span><div class="spacer"></div><button class="btn ghost" id="fHide">Để sau</button><button class="btn primary" id="fNew">Bật tự lưu</button></div>`;
+  if(fileState==='none'&&!(S.hideFileTip&&Date.now()-S.hideFileTip<3*864e5))return `<div class="banner card" id="fbn">💾 <span><b>Bật tự lưu tiến độ</b> (làm 1 lần, để khỏi mất khi cập nhật app): bấm nút ${isWork()?'xanh':'hồng'} → cửa sổ hiện ra thì bấm <b>Save / Lưu</b> là xong.</span><div class="spacer"></div><button class="btn ghost" id="fHide">Để sau</button><button class="btn primary" id="fNew">Bật tự lưu</button></div>`;
   return '';
 }
 function showFileStatus(){

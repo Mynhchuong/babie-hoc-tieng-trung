@@ -20,7 +20,7 @@ function list(){
   const qi=$('#q');const reQ=()=>{search=qi.value;const pos=qi.selectionStart;list();const n=$('#q');n.focus();n.setSelectionRange(pos,pos)};
   qi.oninput=e=>{if(!e.isComposing)reQ()};qi.oncompositionend=reQ;
   document.querySelectorAll('[data-st]').forEach(b=>b.onclick=()=>{const p=P(b.dataset.st);p.st^=1;save();b.classList.toggle('on')});
-  document.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>speak(b.dataset.sp));
+  document.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>speak(b.dataset.sp,true));
   document.querySelectorAll('[data-ed]').forEach(inp=>{
     const commit=()=>{const w=ALL.find(x=>x.id===inp.dataset.ed);let v=inp.value.trim();
       if(!v)v=w.orig;if(v===w.vi){inp.value=v;return}

@@ -45,3 +45,27 @@
 .sec-title{font-family:var(--fun);font-weight:800;color:#fff;font-size:22px;text-shadow:0 2px 0 rgba(180,20,100,.45);margin:0}
 .lead{color:var(--deep);font-size:13px;margin:8px 0 0;font-weight:600}
 
+
+/* ---------- bìa sách (chọn sách) ---------- */
+.books{display:flex;gap:14px;flex-wrap:wrap}
+.bk{border:0;background:transparent;padding:0;width:104px;display:flex;flex-direction:column;align-items:stretch;gap:5px;text-align:center;color:var(--ink);font-family:var(--fun)}
+.bk .cover{display:block;position:relative;width:100%;aspect-ratio:3/4;border-radius:6px 10px 10px 6px;overflow:hidden;
+  box-shadow:0 5px 12px rgba(80,20,60,.28),inset 5px 0 0 rgba(255,255,255,.25),0 0 0 3px transparent;transition:transform .15s,box-shadow .15s}
+.bk .cover img{width:100%;height:100%;object-fit:cover;display:block}
+.bk:hover .cover{transform:translateY(-3px)}
+.bk.on .cover{box-shadow:0 7px 16px rgba(80,20,60,.35),0 0 0 4px var(--gold)}
+.bk:not(.on){opacity:.82}
+.bk-n{font-weight:800;font-size:13px;line-height:1.2;color:var(--deep)}
+.bk-p{display:block;height:6px;border-radius:99px;background:rgba(0,0,0,.12);overflow:hidden}
+.bk-p i{display:block;height:100%;background:#2fb12b}
+.bk-s{font-size:11px;color:var(--muted);font-weight:600}
+.cover.gen{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#fff;padding:8px 6px;text-shadow:0 2px 3px rgba(0,0,0,.3)}
+.cover.gen::before{content:"";position:absolute;inset:6px;border:2px solid rgba(255,255,255,.55);border-radius:4px}
+.cv-hz{font-family:var(--hz);font-weight:700;font-size:15px;line-height:1.25;text-align:center;position:relative}
+.cv-no{font-family:var(--fun);font-weight:800;font-size:46px;line-height:1;position:relative}
+.cv-sub{font-size:9px;letter-spacing:.08em;opacity:.9;position:relative}
+.bk-mini{display:inline-block;width:34px;flex:none}
+.bk-mini .cover{display:block;position:relative;width:34px;aspect-ratio:3/4;border-radius:3px 5px 5px 3px;overflow:hidden;box-shadow:0 2px 5px rgba(0,0,0,.3)}
+.bk-mini .cover img{width:100%;height:100%;object-fit:cover}
+.bk-mini .cover.gen{padding:2px}.bk-mini .cv-hz{font-size:5px}.bk-mini .cv-no{font-size:17px}.bk-mini .cv-sub,.bk-mini .cover.gen::before{display:none}
+@media (max-width:640px){.bk{width:86px}.cv-no{font-size:38px}}

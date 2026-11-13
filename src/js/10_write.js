@@ -26,7 +26,7 @@ function write(){
       <div class="fc-actions"><button class="btn big" id="hint"><span class="i">💡</span><b>Gợi ý nghĩa</b></button><button class="btn big no" id="skip"><span class="i">?</span><b>Không biết</b></button><button class="btn big primary" id="chk"><span class="i">✓</span><b>Kiểm tra</b><kbd>Enter</kbd></button></div>
     </div>`;
     const inp=$('#ans');inp.focus();
-    $('[data-s]').onclick=()=>speak(w.hz);
+    $('[data-s]').onclick=()=>speak(w.hz,true);
     if(S.auto)speak(w.hz);
     $('#hint').onclick=()=>{$('#fb').innerHTML=`<div class="feedback" style="background:#fff;color:var(--hot)">Nghĩa: <b>${esc(w.vi)}</b></div>`;inp.focus()};
     const check=give=>{

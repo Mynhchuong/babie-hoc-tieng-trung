@@ -42,7 +42,7 @@ function flash(q){
       fc.style.transition='';
       if(Math.abs(dx)>110)mark(dx>0?1:0);
       else{fc.style.transform='';fc.querySelectorAll('.stamp').forEach(x=>x.style.opacity=0)}};
-    fc.querySelector('[data-s]').onclick=e=>{e.stopPropagation();speak(w.hz)};
+    fc.querySelector('[data-s]').onclick=e=>{e.stopPropagation();speak(w.hz,true)};
     $('#flipb').onclick=doFlip;
     $('#prev').onclick=()=>{i--;draw('from-left')};
     $('#no').onclick=()=>mark(0);$('#yes').onclick=()=>mark(1);

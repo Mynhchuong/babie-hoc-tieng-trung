@@ -168,7 +168,7 @@ function review(queue){
         `<button class="btn big ${c}" id="g${g}"><span class="i">${i}</span><b>${t}</b><small>${lab(g)}</small><kbd>${g+1}</kbd></button>`).join('');
       [0,1,2,3].forEach(g=>$('#g'+g).onclick=()=>grade(g))};
     fc.onclick=e=>{if(e.target.closest('[data-s]'))return;doFlip()};
-    fc.querySelector('[data-s]').onclick=e=>{e.stopPropagation();speak(w.hz)};
+    fc.querySelector('[data-s]').onclick=e=>{e.stopPropagation();speak(w.hz,true)};
     $('#show').onclick=doFlip;
     if('speechSynthesis' in window)speechSynthesis.cancel();
     keyHandler=e=>{
@@ -187,7 +187,7 @@ function review(queue){
       ${askHz?`<div class="big-hz" style="font-size:64px">${esc(w.hz)}</div>${pyHtml(w)}`:`<div class="vi">${esc(w.vi)}</div>`}</div>
     <div class="choices">${opts.map((o,k)=>`<button class="choice ${askHz?'':'hzc'}" data-k="${k}"><span class="k">${k+1}</span><span>${esc(askHz?o.vi:o.hz)}${!askHz&&S.showPy?`<div class="small muted" style="font-family:var(--ui)">${esc(o.py)}</div>`:''}</span></button>`).join('')}</div>
     <div id="fb"></div>`;
-    $('[data-s]').onclick=()=>speak(w.hz);
+    $('[data-s]').onclick=()=>speak(w.hz,true);
     const pick=k=>{
       if(locked){go();return}locked=true;busy=true;
       const ok=opts[k].id===w.id,btns=document.querySelectorAll('.choice');
@@ -210,7 +210,7 @@ function review(queue){
       <div id="fb"></div>
       <div class="fc-actions"><button class="btn big" id="hint"><span class="i">💡</span><b>Gợi ý nghĩa</b></button><button class="btn big no" id="skip"><span class="i">?</span><b>Không biết</b></button><button class="btn big primary" id="chk"><span class="i">✓</span><b>Kiểm tra</b><kbd>Enter</kbd></button></div>
     </div>`;
-    const inp=$('#ans');inp.focus();$('[data-s]').onclick=()=>speak(w.hz);
+    const inp=$('#ans');inp.focus();$('[data-s]').onclick=()=>speak(w.hz,true);
     $('#hint').onclick=()=>{$('#fb').innerHTML=`<div class="feedback" style="background:#fff;color:var(--hot)">Nghĩa: <b>${esc(w.vi)}</b></div>`;inp.focus()};
     const check=give=>{
       if(st){go();return}
